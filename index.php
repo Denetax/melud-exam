@@ -21,7 +21,7 @@
 
 	if(isset($_SESSION) && isset($_SESSION['fb-token']))
 	{
-		//$session = new FacebookSession($_SESSION['fb-token']);
+		$session = new FacebookSession($_SESSION['fb-token']);
 		echo "variable session existe";
 	}
 	else
@@ -31,6 +31,7 @@
 			} catch(FacebookRequestException $ex) {
 				echo "Erreur Facebook";
 			} catch(\Exception $ex) {
+				echo "Probleme Local";
 			}
 	}
 ?>
