@@ -26,11 +26,6 @@
 	{
 		$session = $helper->getSessionFromRedirect();
 	}
-	FB.getLoginStatus(function(response) {
-	  if (response.status === 'connected') {
-		console.log(response.authResponse.accessToken);
-	  }
-	});
 ?>
 
 <!DOCTYPE html>
@@ -62,6 +57,7 @@
 		if($session)
 		{
 			$_SESSION['fb-token'] = (string) $session->getAccessToken();
+			var_dump($_SESSION['fb-token'] = (string) $session->getAccessToken());
 			$request_user = new FacebookRequest($session,"GET","/me");
 			$request_user_executed = $request_user->execute();
 			$user = $request_user_executed->getGraphObject(GraphUser::className());
