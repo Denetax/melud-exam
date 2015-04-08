@@ -11,12 +11,12 @@
 
 	session_start();
 
-	const APPID = "450284708481891";
+	const APPID = "1574686139449224";
 	const APPSECRET = "524593080ac4787b7d8eee65bd37955b";
 
 	FacebookSession::setDefaultApplication(APPID, APPSECRET);
 
-	$helper = new FacebookRedirectLoginHelper('https://meludproject.herokuapp.com/');
+	$helper = new FacebookRedirectLoginHelper('https://melud-exam.herokuapp.com/');
 
 	if(isset($_SESSION) && isset($_SESSION['fb-token']))
 	{
@@ -44,12 +44,12 @@
 	    });
 	  };
 
-	  (function(d, s, id){
-	     var js, fjs = d.getElementsByTagName(s)[0];
-	     if (d.getElementById(id)) {return;}
-	     js = d.createElement(s); js.id = id;
-	     js.src = "//connect.facebook.net/en_US/sdk.js";
-	     fjs.parentNode.insertBefore(js, fjs);
+		  (function(d, s, id){
+		 var js, fjs = d.getElementsByTagName(s)[0];
+		 if (d.getElementById(id)) {return;}
+		 js = d.createElement(s); js.id = id;
+		 js.src = "//connect.facebook.net/en_US/sdk.js";
+		 fjs.parentNode.insertBefore(js, fjs);
 	   }(document, 'script', 'facebook-jssdk'));
 	</script>
 	<h1>appli facebook</h1>
