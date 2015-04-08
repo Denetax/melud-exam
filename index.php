@@ -31,7 +31,6 @@
 			} catch(FacebookRequestException $ex) {
 				echo "Erreur Facebook";
 			} catch(\Exception $ex) {
-				echo "Probleme Local";
 			}
 	}
 ?>
