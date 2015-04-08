@@ -26,7 +26,9 @@
 	}
 	else
 	{
-		//$session = $helper->getSessionFromRedirect();
+		echo "variable session existe pas";
+		$session = $helper->getSessionFromRedirect();
+		echo "variable session existe pas";
 	}
 ?>
 
@@ -64,12 +66,13 @@
 				// $user = $request_user_executed->getGraphObject(GraphUser::className());
 
 				// echo "bonjour ".$user->getName();
-				echo "bonjour ";
+				echo "la session existe pas de bouton ";
 			}
 			else
 			{
 				$loginUrl = $helper->getLoginUrl();
 				echo "<a href=".$loginUrl.">Cliquez</a><br><br>";
+				echo "la session existe pas de bouton ";
 			}
 		?>
 		<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
