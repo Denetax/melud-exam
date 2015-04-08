@@ -20,7 +20,8 @@
 
 	if(isset($_SESSION) && isset($_SESSION['fb-token']))
 	{
-		$session = new FacebookSession($_SESSION['fb-token']);
+		//$session = new FacebookSession($_SESSION['fb-token']);
+		echo "variable session existe";
 	}
 	else
 	{
@@ -56,13 +57,13 @@
 		<?php
 			if($session)
 			{
-				$_SESSION['fb-token'] = (string) $session->getAccessToken();
-				$request_user = new FacebookRequest($session,"GET","/me");
-				$request_user_executed = $request_user->execute();
-				$user = $request_user_executed->getGraphObject(GraphUser::className());
+				// $_SESSION['fb-token'] = (string) $session->getAccessToken();
+				// $request_user = new FacebookRequest($session,"GET","/me");
+				// $request_user_executed = $request_user->execute();
+				// $user = $request_user_executed->getGraphObject(GraphUser::className());
 
+				// echo "bonjour ".$user->getName();
 				echo "bonjour ".$user->getName();
-				//var_dump($user);
 			}
 			else
 			{
