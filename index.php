@@ -12,11 +12,11 @@
 	session_start();
 
 	const APPID = "1574686139449224";
-	const APPSECRET = "524593080ac4787b7d8eee65bd37955b";
+	const APPSECRET = "6d8066b399193febf5f0a587443d4b48";
 
 	FacebookSession::setDefaultApplication(APPID, APPSECRET);
 
-	$helper = new FacebookRedirectLoginHelper('https://melud-exam.herokuapp.com/');
+	$helper = new FacebookRedirectLoginHelper('https://melud-exam.herokuapp.com');
 	print_r($helper);
 
 	if(isset($_SESSION) && isset($_SESSION['fb-token']))
