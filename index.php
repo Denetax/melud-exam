@@ -28,11 +28,15 @@
 	{
 		try {
 				$session = $helper->getSessionFromRedirect();
+				 var_dump($session);
 			} catch(FacebookRequestException $ex) {
 				echo "Erreur Facebook";
 			} catch(\Exception $ex) {
 				echo "Probleme Local";
 			}
+		if ($session) {
+		 echo "connecter";
+		}
 	}
 ?>
 
