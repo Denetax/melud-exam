@@ -25,7 +25,7 @@
 	}
 	else
 	{
-		$session = $helper->getSessionFromRedirect();
+		//$session = $helper->getSessionFromRedirect();
 	}
 ?>
 
