@@ -22,7 +22,6 @@
 	if(isset($_SESSION) && isset($_SESSION['fb-token']))
 	{
 		$session = new FacebookSession($_SESSION['fb-token']);
-		echo "variable session existe";
 	}
 	else
 	{
@@ -72,15 +71,12 @@
 				$request_user = new FacebookRequest($session,"GET","/me");
 				$request_user_executed = $request_user->execute();
 				$user = $request_user_executed->getGraphObject(GraphUser::className());
-
-				// echo "bonjour ".$user->getName();
-				echo "la session existe , pas de bouton ";
+				var_dump($user);
 			}
 			else
 			{
 				$loginUrl = $helper->getLoginUrl();
 				echo "<a href=".$loginUrl.">Cliquez</a><br><br>";
-				echo "la session existe pas ,bouton ";
 			}
 		?>
 		<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
