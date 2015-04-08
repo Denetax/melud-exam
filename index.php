@@ -71,7 +71,10 @@
 					$request_user_executed = $request_user->execute();
 					//$user = $request_user_executed->getGraphObject(GraphUser::className());
 					$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
-					var_dump($user);
+					var_dump($user); ?>
+					<a href="participe.php">Je Participe</a>
+					<a href="vote.php">Je vote</a> 
+				<?php
 				} catch (Exception $e)
 				{
 					$_SESSION = null;
@@ -87,6 +90,6 @@
 			}
 		?>
 		<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
-		<p>Yoooooooo</p>
+
 	</body>
 </html>
