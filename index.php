@@ -63,7 +63,7 @@
 				// $user = $request_user_executed->getGraphObject(GraphUser::className());
 
 				// echo "bonjour ".$user->getName();
-				echo "bonjour ".$user->getName();
+				echo "bonjour ";
 			}
 			else
 			{
