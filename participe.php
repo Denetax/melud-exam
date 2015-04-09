@@ -4,10 +4,7 @@
 
 	session_start();
 
-	use Facebook\FacebookSession;
-	use Facebook\FacebookRedirectLoginHelper;
-	use Facebook\FacebookRequest;
-	use Facebook\GraphObject;
+	include 'web/namespaces.php';
 
 	FacebookSession::setDefaultApplication(APPID, APPSECRET);
 
