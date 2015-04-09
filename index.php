@@ -1,14 +1,13 @@
 <?php
-	include 'include/config.php';
-	include 'inclue/FBuseTool.php';
+	require 'include/config.php';
 	require "SDKPHP/autoload.php";
 
-	/*use Facebook\FacebookSession;
+	session_start();
+
+	use Facebook\FacebookSession;
 	use Facebook\FacebookRedirectLoginHelper;
 	use Facebook\FacebookRequest;
-	use Facebook\GraphObject;*/
-
-	session_start();
+	use Facebook\GraphObject;
 
 	FacebookSession::setDefaultApplication(APPID, APPSECRET);
 
@@ -37,27 +36,11 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Test</title>
+		<script src="web/js/FBconfig.js"></script>
+		<title>Jeux Coucours</title>
 	</head>
 	<body>
-		<script>
-		  window.fbAsyncInit = function() {
-			FB.init({
-			  appId      : '<?php echo APPID; ?>',
-			  xfbml      : true,
-			  version    : 'v2.3'
-			});
-		  };
-
-			  (function(d, s, id){
-			 var js, fjs = d.getElementsByTagName(s)[0];
-			 if (d.getElementById(id)) {return;}
-			 js = d.createElement(s); js.id = id;
-			 js.src = "//connect.facebook.net/en_US/sdk.js";
-			 fjs.parentNode.insertBefore(js, fjs);
-		   }(document, 'script', 'facebook-jssdk'));
-		</script>
-		<h1>appli facebook</h1>
+		<h1>Yes</h1>
 		<?php
 			if($session)
 			{
@@ -86,6 +69,5 @@
 			}
 		?>
 		<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
-
 	</body>
 </html>
