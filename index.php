@@ -1,18 +1,5 @@
 <?php
-	error_reporting(E_ALL);
-	ini_set("display_error", 1);
-
-	require "SDKPHP/autoload.php";
-
-	use Facebook\FacebookSession;
-	use Facebook\FacebookRedirectLoginHelper;
-	use Facebook\FacebookRequest;
-	use Facebook\GraphObject;
-
-	session_start();
-
-	const APPID = "1574686139449224";
-	const APPSECRET = "6d8066b399193febf5f0a587443d4b48";
+	include 'include/include.php';
 
 	FacebookSession::setDefaultApplication(APPID, APPSECRET);
 
@@ -71,9 +58,9 @@
 					$request_user_executed = $request_user->execute();
 					//$user = $request_user_executed->getGraphObject(GraphUser::className());
 					$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
-					var_dump($user); ?>
-					<a href="participe.php">Je Participe</a>
-					<a href="vote.php">Je vote</a> 
+					?>
+					<a href="https://melud-exam.herokuapp.com/participe.php">Je Participe</a>
+					<a href="https://melud-exam.herokuapp.com/vote.php">Je vote</a> 
 				<?php
 				} catch (Exception $e)
 				{
