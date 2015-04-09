@@ -7,6 +7,6 @@
 	
 	/* Chargement des controllers */
 
-	require 'controller/SessionController.php';
+	require 'controllers/SessionController.php';
 
 ?>
