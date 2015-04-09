@@ -4,7 +4,7 @@
 
 	session_start();
 
-	<?php include 'web/namespaces.php'; ?>
+	include 'web/namespaces.php';
 
 	FacebookSession::setDefaultApplication(APPID, APPSECRET);
 
