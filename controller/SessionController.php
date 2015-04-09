@@ -1,4 +1,6 @@
 <?php
+	require 'config/config.php';
+	
 	use Facebook\FacebookSession;
 	use Facebook\FacebookRedirectLoginHelper;
 	use Facebook\FacebookRequest;
