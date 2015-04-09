@@ -1,6 +1,7 @@
 <?php
 	require 'config/config.php';
-	
+	require 'SDKPHP/autoload.php';
+
 	use Facebook\FacebookSession;
 	use Facebook\FacebookRedirectLoginHelper;
 	use Facebook\FacebookRequest;
