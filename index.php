@@ -1,15 +1,15 @@
 <?php
-	include 'include/include.php';
+	include 'include/config.php';
 
 	error_reporting(E_ALL);
 	ini_set("display_error", 1);
 
 	require "SDKPHP/autoload.php";
 
-	use Facebook\FacebookSession;
+	/*use Facebook\FacebookSession;
 	use Facebook\FacebookRedirectLoginHelper;
 	use Facebook\FacebookRequest;
-	use Facebook\GraphObject;
+	use Facebook\GraphObject;*/
 
 	session_start();
 
