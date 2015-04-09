@@ -1,5 +1,10 @@
 <?php
 	include 'include/include.php';
+
+	use Facebook\FacebookSession;
+	use Facebook\FacebookRedirectLoginHelper;
+	use Facebook\FacebookRequest;
+	use Facebook\GraphObject;
 ?>
 <!DOCTYPE html>
 <html>
