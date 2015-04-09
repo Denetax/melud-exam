@@ -8,8 +8,17 @@
 ?>
 <!DOCTYPE html>
 <html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="web/css/bootstrap.min.css">
+	<script src="web/js/bootstrap.min.js"></script>
+	<script src="web/js/FBconfig.js"></script>
+	<title>Jeux Coucours</title>
+</head>
+<body>
+	<!-- template header -->
 	<?php include 'web/header.php'; ?>
-	<body>
+	<!-- Fin template -->
 		<h1>Yes</h1>
 		<?php
 			if($session)
@@ -39,6 +48,8 @@
 			}
 		?>
 		<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
-	</body>
+	<!-- template footer -->
 	<?php include 'web/footer.php'; ?>
+	<!-- Fin template -->
+</body>
 </html>
