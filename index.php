@@ -19,7 +19,7 @@
 	<!-- template header -->
 	<?php include 'web/header.php'; ?>
 	<!-- Fin template -->
-		<h1>Yes</h1>
+		<h1>Jeux Concours - Faite ton affiche de cinéma d'horreur</h1>
 		<?php
 			if($session)
 			{
@@ -30,8 +30,8 @@
 					//$user = $request_user_executed->getGraphObject(GraphUser::className());
 					$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
 					?>
-					<a href="https://melud-exam.herokuapp.com/views/participe.php">Je Participe</a>
-					<a href="https://melud-exam.herokuapp.com/views/vote.php">Je vote</a> 
+					<a href="https://melud-exam.herokuapp.com/views/participe.php" class="btn btn-primary btn-lg">Je Participe</a>
+					<a href="https://melud-exam.herokuapp.com/views/vote.php" class="btn btn-info btn-lg">Je vote</a> 
 				<?php
 				} catch (Exception $e)
 				{
@@ -44,7 +44,7 @@
 			else
 			{
 				$loginUrl = $helper->getLoginUrl(['email']);
-				echo "<a href=".$loginUrl.">Se Connecter</a><br><br>";
+				echo "<a href=".$loginUrl." class='btn btn-primary btn-lg'>Se Connecter</a><br><br>";
 			}
 		?>
 		<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
