@@ -22,9 +22,6 @@
 			} catch(\Exception $ex) {
 				echo "Probleme Local";
 			}
-		if ($session) {
-		 echo "connecter";
-		}
 	}
 
 ?>

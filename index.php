@@ -19,6 +19,7 @@
 	<!-- template header -->
 	<?php include 'web/header.php'; ?>
 	<!-- Fin template -->
+	<div class="container">
 		<h1>Jeux Concours - Faite ton affiche de cinéma d'horreur</h1>
 		<?php
 			if($session)
@@ -48,6 +49,7 @@
 			}
 		?>
 		<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
+	</div>
 	<!-- template footer -->
 	<?php include 'web/footer.php'; ?>
 	<!-- Fin template -->
