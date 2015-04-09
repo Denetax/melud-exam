@@ -35,7 +35,7 @@
 					$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
 					?>
 					<a href="https://melud-exam.herokuapp.com/views/participe.php" class="btn btn-primary btn-lg">Je Participe</a>
-					<a href="https://melud-exam.herokuapp.com/views/vote.php" class="btn btn-info btn-lg">Je vote</a> <br><br>
+					<a href="https://melud-exam.herokuapp.com/views/vote.php" class="btn btn-warning btn-lg">Je vote</a> <br><br>
 				<?php
 				} catch (Exception $e)
 				{
