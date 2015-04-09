@@ -88,7 +88,7 @@
 			else
 			{
 				$loginUrl = $helper->getLoginUrl(['email']);
-				echo "<a href=".$loginUrl.">Cliquez</a><br><br>";
+				echo "<a href=".$loginUrl.">Se Connecter</a><br><br>";
 			}
 		?>
 		<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
