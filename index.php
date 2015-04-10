@@ -26,8 +26,9 @@
 			Minions ipsum tulaliloo chasy potatoooo. Belloo! jiji jiji wiiiii wiiiii pepete underweaaar wiiiii. Poopayee bananaaaa poopayee poopayee jeje uuuhhh hana dul sae aaaaaah potatoooo. Hana dul sae bee do bee do bee do belloo! Bee do bee do bee do pepete pepete baboiii. Hana dul sae tank yuuu! Belloo! Chasy bee do bee do bee do. Poulet tikka masala gelatooo daa tank yuuu! Bee do bee do bee do ti aamoo! Hahaha la bodaaa.
 		</p>
 		<?php
-			if(session_auto($session))
-			{?>
+			if($session)
+			{
+				session_auto($session);?>
 				<a href="https://melud-exam.herokuapp.com/views/participe.php" class="btn btn-primary btn-lg">Je Participe</a>
 				<a href="https://melud-exam.herokuapp.com/views/vote.php" class="btn btn-warning btn-lg">Je vote</a> <br><br>
 			<?php

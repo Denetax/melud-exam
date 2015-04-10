@@ -1,7 +1,6 @@
 <?php 
 	function session_auto($session = ""){
-		if($session != "")
-			{
+
 				try{
 					$_SESSION['fb-token'] = (string) $session->getAccessToken();
 					$request_user = new FacebookRequest($session,"GET","/me");
@@ -18,7 +17,6 @@
 					session_destroy();
 					header('Location:index.php');
 				}
-			}
 	}
 
 ?>
