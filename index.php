@@ -38,8 +38,12 @@
 				<div class="row">
 					<div class="col-sm-4 col-sm-offset-4">
 						<div class="row">
-							<a href="https://melud-exam.herokuapp.com/views/participe.php" class="btn btn-primary btn-lg col-sm-4 col-sm-offset-4">Je Participe</a>
-							<a href="https://melud-exam.herokuapp.com/views/vote.php" class="btn btn-warning btn-lg col-sm-4">Je vote</a> <br><br>
+							<div class="col-sm-4 col-sm-offset-4">
+								<a href="https://melud-exam.herokuapp.com/views/participe.php" class="btn btn-primary btn-lg">Je Participe</a>
+							</div>
+							<div class="col-sm-4">
+								<a href="https://melud-exam.herokuapp.com/views/vote.php" class="btn btn-warning btn-lg">Je vote</a> <br><br>
+							</div>
 						</div>
 					</div>
 				</div>
