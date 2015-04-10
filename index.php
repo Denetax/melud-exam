@@ -35,8 +35,12 @@
 			if($session)
 			{ ?>
 				<?php session_auto($session); ?>
-				<a href="https://melud-exam.herokuapp.com/views/participe.php" class="btn btn-primary btn-lg">Je Participe</a>
-				<a href="https://melud-exam.herokuapp.com/views/vote.php" class="btn btn-warning btn-lg">Je vote</a> <br><br>
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2">
+						<a href="https://melud-exam.herokuapp.com/views/participe.php" class="btn btn-primary btn-lg">Je Participe</a>
+						<a href="https://melud-exam.herokuapp.com/views/vote.php" class="btn btn-warning btn-lg">Je vote</a> <br><br>
+					</div>
+				</div>
 			<?php
 			}
 			else
