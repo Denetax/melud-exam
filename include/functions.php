@@ -1,6 +1,6 @@
 <?php 
-	function session_auto($session){
-		if($session)
+	function session_auto($session = ""){
+		if($session != "")
 			{
 				try{
 					$_SESSION['fb-token'] = (string) $session->getAccessToken();
