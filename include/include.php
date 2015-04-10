@@ -2,10 +2,10 @@
 
 	/* Config css / js */
 
-	$bootstrapCSS = "melud-exam/web/css/bootstrap.min.css";
-	$bootstrapJS = "melud-exam/web/js/bootstrap.min.js";
-	$fbJS = "melud-exam/web/js/FBconfig.js";
-	$stylePerso = "melud-exam/web/css/styles.css"
+	$bootstrapCSS = "https://melud-exam.herokuapp.com/web/css/bootstrap.min.css";
+	$bootstrapJS = "https://melud-exam.herokuapp.com/web/js/bootstrap.min.js";
+	$fbJS = "https://melud-exam.herokuapp.com/web/js/FBconfig.js";
+	$stylePerso = "https://melud-exam.herokuapp.com/web/css/styles.css"
 
 	/* Config Générale */
 
