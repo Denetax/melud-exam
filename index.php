@@ -9,12 +9,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="<?php echo $bootstrapCSS; ?>">
-	<script src="<?php echo $bootstrapJS; ?>"></script>
-	<script src="<?php echo $fbJS; ?>"></script>
-	<title>Jeux Coucours</title>
-</head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://melud-exam.herokuapp.com/web/css/bootstrap.min.css">
+		<script src="https://melud-exam.herokuapp.com/web/js/bootstrap.min.js"></script>
+		<script src="https://melud-exam.herokuapp.com/web/js/FBconfig.js"></script>
+		<title>Jeux Coucours</title>
+	</head>
 <body>
 	<!-- template header -->
 	<?php include 'web/header.php'; ?>
