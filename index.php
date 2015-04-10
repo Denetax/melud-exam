@@ -25,31 +25,14 @@
 			Minions ipsum tulaliloo chasy potatoooo. Belloo! jiji jiji wiiiii wiiiii pepete underweaaar wiiiii. Poopayee bananaaaa poopayee poopayee jeje uuuhhh hana dul sae aaaaaah potatoooo. Hana dul sae bee do bee do bee do belloo! Bee do bee do bee do pepete pepete baboiii. Hana dul sae tank yuuu! Belloo! Chasy bee do bee do bee do. Poulet tikka masala gelatooo daa tank yuuu! Bee do bee do bee do ti aamoo! Hahaha la bodaaa.
 		</p>
 		<?php
-			if($session)
-			{
-				try{
-					$_SESSION['fb-token'] = (string) $session->getAccessToken();
-					$request_user = new FacebookRequest($session,"GET","/me");
-					$request_user_executed = $request_user->execute();
-					//$user = $request_user_executed->getGraphObject(GraphUser::className());
-					$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
-					?>
-					<a href="https://melud-exam.herokuapp.com/views/participe.php" class="btn btn-primary btn-lg">Je Participe</a>
-					<a href="https://melud-exam.herokuapp.com/views/vote.php" class="btn btn-warning btn-lg">Je vote</a> <br><br>
-				<?php
-				} catch (Exception $e)
-				{
-					?>
-					<?php
-					$_SESSION = null;
-					session_destroy();
-					header('Location:index.php');
-				}
-				
+			if(session_auto($session) == "test")
+			{?>
+				<a href="https://melud-exam.herokuapp.com/views/participe.php" class="btn btn-primary btn-lg">Je Participe</a>
+				<a href="https://melud-exam.herokuapp.com/views/vote.php" class="btn btn-warning btn-lg">Je vote</a> <br><br>
+			<?php
 			}
 			else
 			{
-				$loginUrl = $helper->getLoginUrl(['email']);
 				echo "<a href=".$loginUrl." class='btn btn-primary btn-lg'>Se Connecter</a><br><br>";
 			}
 		?>
