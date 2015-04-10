@@ -21,7 +21,7 @@
 	<!-- template header -->
 	<?php include 'web/header.php'; ?>
 	<!-- Fin template -->
-	<div class="container col-sm-7 col-sm-offset-3">
+	<div class="container col-sm-7 col-sm-offset-1">
 		<h2>Jeux Concours - Fait ton affiche de cinéma d'horreur</h2>
 		<p>
 			Minions ipsum tulaliloo chasy potatoooo. Belloo! jiji jiji wiiiii wiiiii pepete underweaaar wiiiii. Poopayee bananaaaa poopayee poopayee jeje uuuhhh hana dul sae aaaaaah potatoooo. Hana dul sae bee do bee do bee do belloo! Bee do bee do bee do pepete pepete baboiii. Hana dul sae tank yuuu! Belloo! Chasy bee do bee do bee do. Poulet tikka masala gelatooo daa tank yuuu! Bee do bee do bee do ti aamoo! Hahaha la bodaaa.
