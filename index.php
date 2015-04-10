@@ -37,8 +37,12 @@
 				<?php session_auto($session); ?>
 				<div class="row">
 					<div class="col-sm-6 col-sm-offset-3">
-						<a href="https://melud-exam.herokuapp.com/views/participe.php" class="btn btn-primary btn-lg">Je Participe</a>
-						<a href="https://melud-exam.herokuapp.com/views/vote.php" class="btn btn-warning btn-lg">Je vote</a> <br><br>
+						<div class="col-sm-6">
+							<a href="https://melud-exam.herokuapp.com/views/participe.php" class="btn btn-primary btn-lg">Je Participe</a>
+						</div>
+						<div class="col-sm-6">
+							<a href="https://melud-exam.herokuapp.com/views/vote.php" class="btn btn-warning btn-lg">Je vote</a> <br><br>
+						</div>
 					</div>
 				</div>
 			<?php
