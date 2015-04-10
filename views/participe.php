@@ -20,6 +20,7 @@
 		<?php include 'web/header.php'; ?>
 		<!-- Fin template -->
 		<div class="container">
+			<img src="http://melud-exam.fr/views/web/images/title.png"/>
 			<h2>Jeux Concours - Fait ton affiche de cinéma d'horreur</h2>
 			<p>
 				Enregistre ton image pour participer au concours.
