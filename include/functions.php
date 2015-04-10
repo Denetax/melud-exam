@@ -1,5 +1,5 @@
 <?php 
-	function session_auto($session = "")
+	function session_auto($session)
 	{
 		if($session != ""){
 			try
