@@ -1,4 +1,9 @@
 <?php 
+	use Facebook\FacebookSession;
+	use Facebook\FacebookRedirectLoginHelper;
+	use Facebook\FacebookRequest;
+	use Facebook\GraphObject;
+	
 	function session_auto($session)
 	{
 		if($session != ""){
