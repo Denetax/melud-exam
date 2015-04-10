@@ -10,9 +10,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="../web/css/bootstrap.min.css">
-		<script src="../web/js/bootstrap.min.js"></script>
-		<script src="../web/js/FBconfig.js"></script>
+		<link rel="stylesheet" href="<?php echo $bootstrapCSS; ?>">
+		<link rel="stylesheet" href="<?php echo $stylePerso; ?>">
+		<script src="<?php echo $bootstrapJS; ?>"></script>
+		<script src="<?php echo $fbJS; ?>"></script>
 		<title>Jeux Coucours</title>
 	</head>
 	<body>
