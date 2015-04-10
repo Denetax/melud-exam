@@ -22,9 +22,11 @@
 		<div class="container">
 			<h2>Jeux Concours - Fait ton affiche de cinéma d'horreur</h2>
 			<p>
-				Enregistre ton image pour participer au concours
+				Enregistre ton image pour participer au concours.
+				<input type="file" class="filestyle" data-buttonName="btn-primary">
 			</p>
 			<p>
+				Ou Récupérer une image de ton album pour participer au concours.
 			</p>
 			<?php
 				if($session)
