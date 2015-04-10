@@ -1,5 +1,5 @@
 <?php
-	include 'https://melud-exam.herokuapp.com/include/include.php';
+	include 'include/include.php';
 
 	use Facebook\FacebookSession;
 	use Facebook\FacebookRedirectLoginHelper;
