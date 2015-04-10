@@ -1,5 +1,5 @@
 <?php
-	include 'include/include.php';
+	include '../include/include.php';
 
 	use Facebook\FacebookSession;
 	use Facebook\FacebookRedirectLoginHelper;
