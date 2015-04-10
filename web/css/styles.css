@@ -1,12 +1,10 @@
 .container{
+	background-color: #046380;
+	color: #ffffff;
 }
 .container h2{
 	text-align: center;
 }
 .container p{
 	text-align: justify;
-}
-
-.laColor{
-	background-color: #03326A;
 }
