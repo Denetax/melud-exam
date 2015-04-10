@@ -33,6 +33,7 @@
 			}
 			else
 			{
+				$loginUrl = $helper->getLoginUrl(['email']);
 				echo "<a href=".$loginUrl." class='btn btn-primary btn-lg'>Se Connecter</a><br><br>";
 			}
 		?>

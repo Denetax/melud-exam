@@ -20,11 +20,6 @@
 				}
 				return "test";
 			}
-			else
-			{
-				$loginUrl = $helper->getLoginUrl(['email']);
-				return $loginUrl;
-			}
 	}
 
 ?>
