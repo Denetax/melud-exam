@@ -11,7 +11,6 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="<?php echo $bootstrapCSS; ?>">
-	<link rel="stylesheet" href="<?php echo $stylePerso; ?>">
 	<script src="<?php echo $bootstrapJS; ?>"></script>
 	<script src="<?php echo $fbJS; ?>"></script>
 	<title>Jeux Coucours</title>
