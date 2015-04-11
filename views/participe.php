@@ -30,9 +30,31 @@
 				Ou Récupérer une image de ton album pour participer au concours.
 			</p>
 			<?php
-				session_auto($session); 
+				if($session)
+				{
+					echo"j'ai passer le if";
+					try{
+						echo"dans le catch";
+						$_SESSION['fb-token'] = (string) $session->getAccessToken();
+						$request_user = new FacebookRequest($session,"GET","/me");
+						$request_user_executed = $request_user->execute();
+						//$user = $request_user_executed->getGraphObject(GraphUser::className());
+						$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
+						echo"j'ai tous fait";
+						?>
+					<?php
+					} catch (Exception $e)
+					{
+						echo"j'ai un soucis dans le try";
+						$_SESSION = null;
+						session_destroy();
+						header('Location:index.php');
+					}
+					
+				}
 				else
 				{
+					echo"je suis pas co";
 					$loginUrl = $helper->getLoginUrl(['email']);
 					echo "<a href=".$loginUrl." class='btn btn-primary btn-lg'>Se Connecter</a><br><br>";
 				}
