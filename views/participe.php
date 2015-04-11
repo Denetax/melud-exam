@@ -1,5 +1,6 @@
 <?php
 	include 'include/include.php';
+	include 'include/functions.php';
 
 	use Facebook\FacebookSession;
 	use Facebook\FacebookRedirectLoginHelper;
@@ -11,6 +12,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="https://melud-exam.herokuapp.com/web/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://melud-exam.herokuapp.com/web/css/styles.css">
 		<script src="https://melud-exam.herokuapp.com/web/js/bootstrap.min.js"></script>
 		<script src="https://melud-exam.herokuapp.com/web/js/FBconfig.js"></script>
 		<title>Jeux Coucours</title>
@@ -19,8 +21,12 @@
 		<!-- template header -->
 		<?php include 'web/header.php'; ?>
 		<!-- Fin template -->
-		<div class="container">
-			<img src="http://melud-exam.fr/views/web/images/title.png"/>
+		<div class="container col-sm-10 col-sm-offset-1">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2">
+					<img src="http://melud-exam.fr/views/web/images/title.png"/>
+				</div>
+			</div>
 			<h2>Jeux Concours - Fait ton affiche de cinéma d'horreur</h2>
 			<p>
 				Enregistre ton image pour participer au concours.
@@ -33,24 +39,7 @@
 				if($session)
 				{
 					echo"j'ai passer le if";
-					try{
-						echo"dans le catch";
-						$_SESSION['fb-token'] = (string) $session->getAccessToken();
-						$request_user = new FacebookRequest($session,"GET","/me");
-						$request_user_executed = $request_user->execute();
-						//$user = $request_user_executed->getGraphObject(GraphUser::className());
-						$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
-						echo"j'ai tous fait";
-						?>
-					<?php
-					} catch (Exception $e)
-					{
-						echo"j'ai un soucis dans le try";
-						$_SESSION = null;
-						session_destroy();
-						header('Location:index.php');
-					}
-					
+					session_auto($session);
 				}
 				else
 				{
