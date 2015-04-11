@@ -1,6 +1,9 @@
 <?php
-	include '../include/include.php';
+	// include '../include/include.php';
 	include '../include/functions.php';
+	
+	require '../config/config.php';
+	require '../SDKPHP/autoload.php';
 
 	use Facebook\FacebookSession;
 	use Facebook\FacebookRedirectLoginHelper;
