@@ -9,14 +9,14 @@
 ?>
 <!DOCTYPE html>
 <html>
-	<head>
-			<meta charset="UTF-8">
-			<link rel="stylesheet" href="https://melud-exam.herokuapp.com/web/css/bootstrap.min.css">
-			<link rel="stylesheet" href="https://melud-exam.herokuapp.com/web/css/styles.css">
-			<script src="https://melud-exam.herokuapp.com/web/js/bootstrap.min.js"></script>
-			<script src="https://melud-exam.herokuapp.com/web/js/FBconfig.js"></script>
-			<title>Jeux Coucours</title>
-		</head>
+<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://melud-exam.herokuapp.com/web/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://melud-exam.herokuapp.com/web/css/styles.css">
+		<script src="https://melud-exam.herokuapp.com/web/js/bootstrap.min.js"></script>
+		<script src="https://melud-exam.herokuapp.com/web/js/FBconfig.js"></script>
+		<title>Jeux Coucours</title>
+	</head>
 	<body>
 		<!-- template header -->
 		<?php include 'web/header.php'; ?>
@@ -49,7 +49,7 @@
 				}
 				else
 				{
-					$loginUrl = $helper->getLoginUrl([ginUrl(['email']);
+					$loginUrl = $helper->getLoginUrl(['email']);
 					echo "<a href=".$loginUrl." class='btn btn-primary btn-lg'>Se Connecter</a><br><br>";
 				}
 			?>
