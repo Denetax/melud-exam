@@ -11,6 +11,7 @@
 
 	if(isset($_SESSION) && isset($_SESSION['fb-token']))
 	{
+		echo "Session ?";
 		$session = new FacebookSession($_SESSION['fb-token']);
 	}
 	else
