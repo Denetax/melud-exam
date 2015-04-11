@@ -50,6 +50,7 @@
 				else
 				{
 					$loginUrl = $helper->getLoginUrl(['user_photos']);
+					var_dump($loginUrl);
 					echo "<a href=".$loginUrl." class='btn btn-primary btn-lg'>Se Connecter</a><br><br>";
 				}
 			?>
