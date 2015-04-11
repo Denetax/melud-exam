@@ -4,7 +4,7 @@
 	use Facebook\FacebookRedirectLoginHelper;
 	use Facebook\FacebookRequest;
 	use Facebook\GraphObject;
-
+	echo "3 pas";
 	FacebookSession::setDefaultApplication(APPID, APPSECRET);
 	
 	$monUrl = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; 
