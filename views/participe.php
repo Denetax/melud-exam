@@ -30,28 +30,7 @@
 				Ou Récupérer une image de ton album pour participer au concours.
 			</p>
 			<?php
-				if($session)
-				{
-					try{
-						$_SESSION['fb-token'] = (string) $session->getAccessToken();
-						$request_user = new FacebookRequest($session,"GET","/me");
-						$request_user_executed = $request_user->execute();
-						//$user = $request_user_executed->getGraphObject(GraphUser::className());
-						$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
-						?>
-						<a href="https://melud-exam.herokuapp.com/views/participe.php" class="btn btn-primary btn-lg">Je Participe</a>
-						<a href="https://melud-exam.herokuapp.com/views/vote.php" class="btn btn-warning btn-lg">Je vote</a> <br><br>
-					<?php
-					} catch (Exception $e)
-					{
-						?>
-						<?php
-						$_SESSION = null;
-						session_destroy();
-						header('Location:index.php');
-					}
-					
-				}
+				session_auto($session); 
 				else
 				{
 					$loginUrl = $helper->getLoginUrl(['email']);
