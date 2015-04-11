@@ -4,10 +4,10 @@
 	use Facebook\FacebookRedirectLoginHelper;
 	use Facebook\FacebookRequest;
 	use Facebook\GraphObject;
+	
 	FacebookSession::setDefaultApplication(APPID, APPSECRET);
 	
-	$monUrl = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; 
-	$helper = new FacebookRedirectLoginHelper("$monUrl");
+	$helper = new FacebookRedirectLoginHelper('https://melud-exam.herokuapp.com/index.php');
 
 	if(isset($_SESSION) && isset($_SESSION['fb-token']))
 	{
