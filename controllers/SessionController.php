@@ -4,12 +4,11 @@
 	use Facebook\FacebookRedirectLoginHelper;
 	use Facebook\FacebookRequest;
 	use Facebook\GraphObject;
-	echo "3 pas";
+	
 	FacebookSession::setDefaultApplication(APPID, APPSECRET);
 	
 	$monUrl = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; 
-	echo $monUrl;
-	$helper = new FacebookRedirectLoginHelper('https://melud-exam.herokuapp.com/index.php');
+	$helper = new FacebookRedirectLoginHelper($monUrl);
 
 	if(isset($_SESSION) && isset($_SESSION['fb-token']))
 	{

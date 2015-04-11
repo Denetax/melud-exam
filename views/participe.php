@@ -42,12 +42,10 @@
 			<?php
 				if($session)
 				{
-					echo"j'ai passer le if";
 					session_auto($session);
 				}
 				else
 				{
-					echo"je suis pas co";
 					$loginUrl = $helper->getLoginUrl(['email']);
 					echo "<a href=".$loginUrl." class='btn btn-primary btn-lg'>Se Connecter</a><br><br>";
 				}
