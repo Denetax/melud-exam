@@ -7,7 +7,7 @@
 	FacebookSession::setDefaultApplication(APPID, APPSECRET);
 	
 	$monUrl = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; 
-	$helper = new FacebookRedirectLoginHelper($monUrl);
+	$helper = new FacebookRedirectLoginHelper("$monUrl");
 
 	if(isset($_SESSION) && isset($_SESSION['fb-token']))
 	{
