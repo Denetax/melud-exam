@@ -6,18 +6,18 @@
 	use Facebook\GraphObject;
 
 	FacebookSession::setDefaultApplication(APPID, APPSECRET);
-
+	
+	$monUrl = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; 
+	echo $monUrl;
 	$helper = new FacebookRedirectLoginHelper('https://melud-exam.herokuapp.com/index.php');
 
 	if(isset($_SESSION) && isset($_SESSION['fb-token']))
 	{
-		echo "Session ?";
 		$session = new FacebookSession($_SESSION['fb-token']);
 	}
 	else
 	{
 		try {
-				echo "je passe la ?";
 				$session = $helper->getSessionFromRedirect();
 			} catch(FacebookRequestException $ex) {
 				echo "Erreur Facebook";
