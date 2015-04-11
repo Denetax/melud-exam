@@ -16,7 +16,7 @@
 	else
 	{
 		try {
-				echo "je passe la ?"
+				echo "je passe la ?";
 				$session = $helper->getSessionFromRedirect();
 			} catch(FacebookRequestException $ex) {
 				echo "Erreur Facebook";
