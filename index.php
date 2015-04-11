@@ -49,7 +49,7 @@
 				}
 				else
 				{
-					$loginUrl = $helper->getLoginUrl(['email','user_photos']);
+					$loginUrl = $helper->getLoginUrl(['user_photos']);
 					echo "<a href=".$loginUrl." class='btn btn-primary btn-lg'>Se Connecter</a><br><br>";
 				}
 			?>
