@@ -2,7 +2,7 @@
 
 	/* Config Générale */
 	echo "premier pas";
-	require 'config/config.php';
+	require 'https://melud-exam.herokuapp.com/config/config.php';
 	require 'SDKPHP/autoload.php';
 	
 	/* Chargement des controllers */
