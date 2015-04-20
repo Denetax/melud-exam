@@ -47,9 +47,6 @@
 			$request_user_executed = $request_user->execute(); 
 			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
 			//var_dump($user);
-			foreach ($element as $user->getProperty('data')) {
-				echo $element[1];
-			};
 			return $monId;
 		}
 	}
