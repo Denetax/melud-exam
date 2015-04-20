@@ -47,7 +47,7 @@
 					$facebook->setFileUploadSupport(true);  
 
 					# File is relative to the PHP doc  
-					$file = "@".realpath("../web/img/section8-image.png");  
+					$file = "@".realpath("https://melud-exam.herokuapp.com/web/img/section8-image.png");  
 
 					$args = array(  
 					    'message' => 'Photo Caption',  
