@@ -47,7 +47,7 @@
 					$file = "https://melud-exam.herokuapp.com/web/img/example_image.png";  
 					
 					 $response = (new FacebookRequest(
-					  $session, 'POST', '/me/album/10153169477079799', array(
+					  $session, 'POST', '/me/10153169477079799/photos', array(
 						'url' => $file,
 						'message' => 'User provided message'
 					  )
