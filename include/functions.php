@@ -6,6 +6,7 @@
 	
 	function session_auto($session)
 	{
+		$test = "";
 		if($session != ""){
 			try
 			{
@@ -15,7 +16,9 @@
 				$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
 				// $object = $response->getGraphObject();
 				// $user = $response->getGraphObject(GraphUser::className());
-				var_dump($user);
+				$test = $response->getProperty('id');
+				var_dump($test);
+				return $test
 			}
 			catch (Exception $e)
 			{
