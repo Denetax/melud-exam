@@ -44,6 +44,7 @@
 				if($session)
 				{
 					session_auto($session);
+					var_dump('$args');
 					$facebook->setFileUploadSupport(true);  
 
 					# File is relative to the PHP doc  
@@ -57,8 +58,8 @@
 
 					var_dump($args);
 
-					$data = $facebook->api('/me/albums', 'post', $args);
-					if ($data) print_r("success");
+					//$data = $facebook->api('/me/albums', 'post', $args);
+					//if ($data) print_r("success");
 				}
 				else
 				{
