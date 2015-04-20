@@ -55,6 +55,7 @@
 					    "image" => $file  
 					);  
 
+					var_dump($args);
 
 					$data = $facebook->api('/me/albums', 'post', $args);
 					if ($data) print_r("success");
