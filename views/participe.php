@@ -44,39 +44,14 @@
 				if($session)
 				{
 					session_auto($session);
-					var_dump('$args');
-					//$facebook->setFileUploadSupport(true);  
-
-					# File is relative to the PHP doc  
 					$file = "https://melud-exam.herokuapp.com/web/img/section8-image.png";  
-
-					// $args = array(  
-					//     'message' => 'Photo Caption',  
-					//     "access_token" => "AQBA4jAPglppzljiBpQXMuFxP61WRX-PzGm3s6tTgUfnjJbJA-vBvglOQaoVFiH9yk9FNNj7NM01tbCiXLm3qQFvCufAFmD1kgpNgM9vwI8u6_2k89zVjZFd8rP9oi09LwktUBOlgEWywVtJgtXyZfzSzkl-ATnbJWlYTHyUv2qBndWIMQaMIv83sjNGHEcvwP2_jvZTVTun827Vm39paC99sT1mA_mA-9EpHrbXnndfpZCg9lgOujxjTYQ1wJRzB3pf5hHkNPgp8-ZHfNsd487ln5J0hb81A7RGySA9CLc6u_y3UaYNfTKmmpuM6cWJu10&state=a2a43de956ab1678d4b4b4970d31d592#_=_",  
-					//     "image" => $file  
-					// );
-
-					// $photo = $facebook->api(
-	  					// '/me/photos', 
-	  					// 'POST',
-	  					// array(
-	    				// 'source' => '@' . $file,
-	    				// 'message' => 'Photo uploaded via the PHP SDK!'
-	  					// )
-					// );
 					
 					 $response = (new FacebookRequest(
-					  $session, 'POST', '/me/photos', array(
+					  $session, 'POST', '/me/albums', array(
 						'url' => $file,
 						'message' => 'User provided message'
 					  )
 					))->execute()->getGraphObject();
-
-
-					var_dump($photo);
-
-					//$data = $facebook->api('/me/albums', 'post', $args);
-					//if ($data) print_r("success");
 				}
 				else
 				{
