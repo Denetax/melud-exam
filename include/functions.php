@@ -15,7 +15,7 @@
 				$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
 				// $object = $response->getGraphObject();
 				// $user = $response->getGraphObject(GraphUser::className());
-				var_dump("<pre>".$user."</pre>");
+				echo "<pre>".$user."</pre>";
 			}
 			catch (Exception $e)
 			{
