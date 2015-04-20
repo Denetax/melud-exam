@@ -18,7 +18,7 @@
 				// $user = $response->getGraphObject(GraphUser::className());
 				$test = $response->getProperty('id');
 				var_dump($test);
-				return $test
+				return $test;
 			}
 			catch (Exception $e)
 			{
