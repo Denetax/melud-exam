@@ -6,7 +6,6 @@
 	
 	function session_auto($session)
 	{
-		$test = "";
 		if($session != ""){
 			try
 			{
@@ -16,8 +15,6 @@
 				$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
 				// $object = $response->getGraphObject();
 				// $user = $response->getGraphObject(GraphUser::className());
-				$test = $response->getProperty('id');
-				var_dump($test);
 			}
 			catch (Exception $e)
 			{
@@ -25,8 +22,15 @@
 				session_destroy();
 				header('Location:index.php');
 			}
+		}
+	}
 
-		return $test;
+	function recup_user_id($session)
+	{
+		if($session != ""){
+			$_SESSION['fb-token'] = (string) $session->getAccessToken();
+			$request_user = new FacebookRequest($session,"GET","/me");
+			var_dump($request_user->getProperty('id'));
 		}
 	}
 ?>
