@@ -53,16 +53,16 @@
 	
 	function uploadImage()
 	{
-		echo("test");
 		recup_user_picture_concours($session);
 		$link = "/".recup_user_id($session)."/photos";
 		$file = "https://melud-exam.herokuapp.com/web/img/example_image.png";  
-		echo("test2");			
+		
 		$response = (new FacebookRequest(
 			$session, 'POST', $link, array(
 				'source' => new CURLFile($file, 'image/png'),
 				'message' => 'User provided message'
 			)
 		))->execute()->getGraphObject();
+		echo("La fonction uploadImage OK");	
 	}
 ?>

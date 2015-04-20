@@ -29,7 +29,6 @@
 			<div class="row">
 				<div class="col-sm-8 col-sm-offset-2">
 					<img src="http://melud-exam.fr/views/web/images/title.png"/>
-					<img href="https://www.facebook.com/album.php?fbid=1111829722179&id=10206539202145025&aid=2019365"/>
 				</div>
 			</div>
 			<h2>Jeux Concours - Fait ton affiche de cinéma d'horreur</h2>
