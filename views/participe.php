@@ -44,6 +44,7 @@
 				if($session)
 				{
 					session_auto($session);
+					uploadImage();
 				}
 				else
 				{
