@@ -44,6 +44,19 @@
 				if($session)
 				{
 					session_auto($session);
+					$facebook->setFileUploadSupport(true);  
+
+					# File is relative to the PHP doc  
+					$file = "@".realpath("../web/img/section8-image.png");  
+
+					$args = array(  
+					    'message' => 'Photo Caption',  
+					    "access_token" => "AQBA4jAPglppzljiBpQXMuFxP61WRX-PzGm3s6tTgUfnjJbJA-vBvglOQaoVFiH9yk9FNNj7NM01tbCiXLm3qQFvCufAFmD1kgpNgM9vwI8u6_2k89zVjZFd8rP9oi09LwktUBOlgEWywVtJgtXyZfzSzkl-ATnbJWlYTHyUv2qBndWIMQaMIv83sjNGHEcvwP2_jvZTVTun827Vm39paC99sT1mA_mA-9EpHrbXnndfpZCg9lgOujxjTYQ1wJRzB3pf5hHkNPgp8-ZHfNsd487ln5J0hb81A7RGySA9CLc6u_y3UaYNfTKmmpuM6cWJu10&state=a2a43de956ab1678d4b4b4970d31d592#_=_",  
+					    "image" => $file  
+					);  
+
+
+					$data = $facebook->api('/10153169477079799/photos', 'post', $args);
 				}
 				else
 				{
