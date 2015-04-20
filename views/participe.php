@@ -66,7 +66,7 @@
 					);
 
 
-					// var_dump($args);
+					var_dump($photo);
 
 					//$data = $facebook->api('/me/albums', 'post', $args);
 					//if ($data) print_r("success");
