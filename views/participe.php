@@ -57,6 +57,7 @@
 
 
 					$data = $facebook->api('/10153169477079799/photos', 'post', $args);
+					if ($data) print_r("success");
 				}
 				else
 				{
