@@ -44,7 +44,7 @@
 				if($session)
 				{
 					session_auto($session);
-					$file = "https://melud-exam.herokuapp.com/web/img/section8-image.png";  
+					$file = "https://melud-exam.herokuapp.com/web/img/example_image.png";  
 					
 					 $response = (new FacebookRequest(
 					  $session, 'POST', '/me/albums', array(
