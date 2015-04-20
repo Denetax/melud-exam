@@ -27,12 +27,14 @@
 
 	function recup_user_id($session)
 	{
+		$monId="";
 		if($session != ""){
 			$_SESSION['fb-token'] = (string) $session->getAccessToken();
 			$request_user = new FacebookRequest($session,"GET","/me");
 			$request_user_executed = $request_user->execute(); 
 			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
-			var_dump($user->getProperty('id'));
+			$monId = $user->getProperty('id');
+			return $monId;
 		}
 	}
 ?>
