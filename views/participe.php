@@ -49,7 +49,7 @@
 					
 					 $response = (new FacebookRequest(
 					  $session, 'POST', $link, array(
-						'url' => new CURLFile($file, 'image/png'),
+						'source' => new CURLFile($file),
 						'message' => 'User provided message'
 					  )
 					))->execute()->getGraphObject();
