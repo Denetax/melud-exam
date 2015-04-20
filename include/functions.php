@@ -46,7 +46,7 @@
 			$request_user = new FacebookRequest($session,"GET","/me/albums");
 			$request_user_executed = $request_user->execute(); 
 			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
-			var_dump($user);
+			//var_dump($user);
 			$monId = $user->getProperty('data')[0];
 			return $monId;
 		}
