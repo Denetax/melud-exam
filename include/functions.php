@@ -18,7 +18,6 @@
 				// $user = $response->getGraphObject(GraphUser::className());
 				$test = $response->getProperty('id');
 				var_dump($test);
-				return $test;
 			}
 			catch (Exception $e)
 			{
@@ -26,6 +25,8 @@
 				session_destroy();
 				header('Location:index.php');
 			}
+
+		return $test;
 		}
 	}
 ?>
