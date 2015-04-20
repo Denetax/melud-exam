@@ -43,11 +43,12 @@
 			<?php
 				if($session)
 				{
+					echo recup_user_id($session);
 					session_auto($session);
 					$file = "https://melud-exam.herokuapp.com/web/img/example_image.png";  
 					
 					 $response = (new FacebookRequest(
-					  $session, 'POST', '/'.echo recup_user_id($session);.'/photos', array(
+					  $session, 'POST', '/me/photos', array(
 						'url' => $file,
 						'message' => 'User provided message'
 					  )
