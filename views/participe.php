@@ -43,7 +43,7 @@
 			<?php
 				if($session)
 				{
-					echo recup_user_id($session);
+					echo $link = "/me/".recup_user_id($session)."/photos";
 					session_auto($session);
 					$file = "https://melud-exam.herokuapp.com/web/img/example_image.png";  
 					
