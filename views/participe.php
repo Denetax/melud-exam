@@ -45,7 +45,7 @@
 				{
 					session_auto($session);
 					var_dump('$args');
-					$facebook->setFileUploadSupport(true);  
+					//$facebook->setFileUploadSupport(true);  
 
 					# File is relative to the PHP doc  
 					$file = "https://melud-exam.herokuapp.com/web/img/section8-image.png";  
@@ -56,14 +56,21 @@
 					//     "image" => $file  
 					// );
 
-					$photo = $facebook->api(
-	  					'/me/photos', 
-	  					'POST',
-	  					array(
-	    				'source' => '@' . $file,
-	    				'message' => 'Photo uploaded via the PHP SDK!'
-	  					)
-					);
+					// $photo = $facebook->api(
+	  					// '/me/photos', 
+	  					// 'POST',
+	  					// array(
+	    				// 'source' => '@' . $file,
+	    				// 'message' => 'Photo uploaded via the PHP SDK!'
+	  					// )
+					// );
+					
+					 $response = (new FacebookRequest(
+					  $session, 'POST', '/me/photos', array(
+						'url' => $file,
+						'message' => 'User provided message'
+					  )
+					))->execute()->getGraphObject();
 
 
 					// var_dump($args);
