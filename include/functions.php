@@ -10,7 +10,7 @@
 			try
 			{
 				$_SESSION['fb-token'] = (string) $session->getAccessToken();
-				$request_user = new FacebookRequest($session,"GET","/me/albums");
+				$request_user = new FacebookRequest($session,"GET","/me");
 				$request_user_executed = $request_user->execute(); 
 				$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
 				// $object = $response->getGraphObject();
