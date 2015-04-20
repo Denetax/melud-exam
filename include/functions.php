@@ -16,7 +16,6 @@
 				// $object = $response->getGraphObject();
 				// $user = $response->getGraphObject(GraphUser::className());
 				//var_dump($user);
-				echo "<img src=\"https://www.facebook.com/album.php?fbid=1111829722179&id=10206539202145025&aid=2019365\"/>"
 			}
 			catch (Exception $e)
 			{
