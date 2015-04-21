@@ -63,7 +63,7 @@
 				)
 			);
 
-		$response = $request->execute();
- 		$graphObject = $response->getGraphObject();
+		$request = $response->execute();
+ 		$graphObject = $request->getGraphObject();
 	}
 ?>
