@@ -58,7 +58,7 @@
 
 		$response = new FacebookRequest(
 				$session, 'POST', $link, array(
-					'source' => file_get_contents($file),
+					'source' => file_get_contents($file, TRUE),
 					'message' => 'User provided message'
 				)
 			);
