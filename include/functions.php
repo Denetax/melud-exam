@@ -8,14 +8,14 @@
 	{		
 			
 		try {
-			echo("test1");
+			echo "test1";
 			$dbh = new PDO('mysql:host=meludexaprstocky.mysql.db''dbname=meludexaprstocky','meludexaprstocky','Di062005D');
-			echo("test2");
+			echo "test2";
 			foreach($dbh->query('SELECT * from melud_user') as $row) {
-			echo("test3");
+			echo "test3";
 				print_r($row);
 			}
-			echo("test4");
+			echo "test4";
 			$dbh = null;
 		} catch (PDOException $e) {
 			print "Erreur !: " . $e->getMessage() . "<br/>";
