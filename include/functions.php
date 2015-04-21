@@ -58,10 +58,10 @@
 		$file = "https://melud-exam.herokuapp.com/web/img/example_image.png";  
 		
 		$response = (new FacebookRequest(
-			$session, 'POST', $link, array(
-				'url' => $file,
-				'message' => 'User provided message'
-			)
+			$session, 'POST', $link, 'POST', [
+				'source' => new CURLFile($file, 'image/png'),
+				'message' => 'User provided message',
+			]
 		))->execute()->getGraphObject();
 	}
 ?>
