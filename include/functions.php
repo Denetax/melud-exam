@@ -15,11 +15,11 @@
 			
 			$pdo = new PDO('mysql:host=meludexaprstocky.mysql.db;dbname=meludexaprstocky', 'meludexaprstocky', 'Di062005D'); 
 			//$dbh = new PDO($serveur,$user,$mdp);
-			var_dump($dbh);
-			echo "test2";
-			$resultats=$pdo->query("SELECT * FROM melud_user");
-			var_dump($resultats);
-			$dbh = null;
+			// var_dump($dbh);
+			// echo "test2";
+			// $resultats=$pdo->query("SELECT * FROM melud_user");
+			// var_dump($resultats);
+			 $pdo = null;
 		} catch (PDOException $e) {
 			print "Erreur !: " . $e->getMessage() . "<br/>";
 			die();
