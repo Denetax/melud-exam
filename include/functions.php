@@ -63,16 +63,16 @@
 		$ch = curl_init();
 		$up = array('source' => $test, 'message' => 'User provided message');
 		$response = (new FacebookRequest(
-				$session, 'POST', $link, curl_setopt($ch, CURLOPT_POSTFIELDS, $up), curl_exec($ch), curl_close($ch)
+				$session, 'POST', $link, curl_setopt_array($ch, array(
+					CURLOPT_RETURNTRANSFER => 1,
+					CURLOPT_URL => $url,
+					CURLOPT_POST => 1,
+					CURLOPT_POSTFIELDS => $up
+					));
 			))->execute()->getGraphObject();
 
 		
  
-		// curl_setopt_array($ch, array(
-		// CURLOPT_RETURNTRANSFER => 1,
-		// CURLOPT_URL => $url,
-		// CURLOPT_POST => 1,
-		// CURLOPT_POSTFIELDS => $up
-		// ));
+		
 	}
 ?>
