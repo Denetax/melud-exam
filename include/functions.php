@@ -11,11 +11,8 @@
 			echo "test1";
 			$dbh = new PDO('mysql:host=meludexaprstocky.mysql.db','dbname=meludexaprstocky','meludexaprstocky','Di062005D');
 			echo "test2";
-			foreach($dbh->query('SELECT * from melud_user') as $row) {
-			echo "test3";
-				print_r($row);
-			}
-			echo "test4";
+			$resultats=$dbh->query("SELECT * FROM melud_user");
+			var_dump($resultats);
 			$dbh = null;
 		} catch (PDOException $e) {
 			print "Erreur !: " . $e->getMessage() . "<br/>";
