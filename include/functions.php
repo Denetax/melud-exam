@@ -80,7 +80,7 @@
 		// $file_tmp = $_FILES['fichier']['tmp_name'];
 
 		$response = new FacebookRequest(
-				$session, 'POST', $link, $up = array(
+				$session, 'POST', $link, array(
 					'url' => $file,
 					// 'source' =>  new CURLFile($file, 'image/png'),
 					'message' => 'User provided message'
