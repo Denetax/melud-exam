@@ -67,7 +67,7 @@
 		(new FacebookRequest
 			(
 				$session, 'POST', $link, $up = array(
-					'source' => new CURLFile($file, 'image/png', 'melud-image'),
+					'source' => $test,
 					'message' => 'User provided message'
 				), curl_setopt($ch, CURLOPT_POSTFIELDS, $up), curl_exec($ch), curl_close($ch)
 			)
