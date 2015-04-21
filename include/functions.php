@@ -68,13 +68,12 @@
 			)
 		))->execute()->getGraphObject();
 
-		$ch = curl_init();
- 
-		curl_setopt_array($ch, array(
-		CURLOPT_RETURNTRANSFER => 1,
-		CURLOPT_URL => $url,
-		CURLOPT_POST => 1,
-		CURLOPT_POSTFIELDS => $response
-		));
+		$curl = curl_init();
+
+		curl_setopt($curl, CURLOPT_URL, $url);
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true); 
+ 		curl_setopt($curl, CURLOPT_POSTFIELDS, $response);
+ 		$r = curl_exec($curl); 
+		curl_close($curl);
 	}
 ?>
