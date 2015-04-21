@@ -5,7 +5,7 @@
 	require '../config/config.php';
 	require '../SDKPHP/autoload.php';
 	require '../controllers/SessionController.php';
-	connexionBdd();
+	
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,6 +34,7 @@
 			<?php
 				if($session)
 				{
+					connexionBdd();
 					session_auto($session);
 				}
 				else
