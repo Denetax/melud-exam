@@ -70,12 +70,13 @@
 
 		var_dump($response);
 
-		$curl = curl_init();
-
-		curl_setopt($curl, CURLOPT_URL, $url);
-		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true); 
- 		curl_setopt($curl, CURLOPT_POSTFIELDS, $up);
- 		$r = curl_exec($curl); 
-		curl_close($curl);
+		$ch = curl_init();
+ 
+		curl_setopt_array($ch, array(
+		CURLOPT_RETURNTRANSFER => 1,
+		CURLOPT_URL => $url,
+		CURLOPT_POST => 1,
+		CURLOPT_POSTFIELDS => $up
+		));
 	}
 ?>
