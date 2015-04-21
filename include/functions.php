@@ -7,7 +7,7 @@
 	function connexionBdd()
 	{		
 		try {
-			$dbh = new PDO('mysql:host=meludexaprstocky.mysql.db;dbname=meludexaprstocky','meludexaprstocky','Di062005D');
+			$dbh = new PDO('mysql:host=meludexaprstocky.mysql.db','dbname=meludexaprstocky','meludexaprstocky','Di062005D');
 			foreach($dbh->query('SELECT * from melud_user') as $row) {
 				print_r($row);
 			}
