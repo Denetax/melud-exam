@@ -35,7 +35,7 @@
 				{ ?>
 					<?php 
 					session_auto($session);
-					if (isset($_POST=['participer']) && $_REQUEST['fichier'] != "")
+					if (isset($_POST['participer']) && $_REQUEST['fichier'] != "")
 					{
 						uploadImage($session, $_FILES['fichier']['name']);
 					}
