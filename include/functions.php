@@ -58,21 +58,28 @@
 		$link = "/".recup_user_id($session)."/photos";
 		$file = "https://melud-exam.herokuapp.com/web/img/example_image.png";  
 
-		$test = new CURLFile($file, 'image/png', 'melud-image');
+		// $test = new CURLFile($file, 'image/png', 'melud-image');
+		// var_dump($test->name);
 
-		$ch = curl_init();
-		$up = array('source' => $test, 'message' => 'User provided message');
-		$response = (new FacebookRequest(
-				$session, 'POST', $link, curl_setopt_array($ch, array(
-					CURLOPT_RETURNTRANSFER => 1,
-					CURLOPT_URL => $url,
-					CURLOPT_POST => 1,
-					CURLOPT_POSTFIELDS => $up
-					))
-			))->execute()->getGraphObject();
+		// $ch = curl_init();
+
+		$response = 
+		(new FacebookRequest
+			(
+				$session, 'POST', $link, array(
+					'source' => '@' . $file,
+					'message' => 'User provided message'
+				)
+			)
+		)->execute()->getGraphObject();
 
 		
  
-		
+		// curl_setopt_array($ch, array(
+		// CURLOPT_RETURNTRANSFER => 1,
+		// CURLOPT_URL => $url,
+		// CURLOPT_POST => 1,
+		// CURLOPT_POSTFIELDS => $up
+		// ));
 	}
 ?>
