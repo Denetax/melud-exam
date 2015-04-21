@@ -60,13 +60,6 @@
 
 		$test = new CURLFile($file, 'image/png');
 
-		$response = (new FacebookRequest(
-			$session, 'POST', $link, array(
-				'source' => $test,
-				'message' => 'User provided message'
-			)
-		))->execute()->getGraphObject();
-
 		$imgdata = array('myimage' => $test);
 		$curl = curl_init();
 		curl_setopt($curl, CURLOPT_URL, $target);
@@ -79,5 +72,12 @@
 		curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true); // if any redirection after upload
 		$r = curl_exec($curl); 
 		curl_close($curl);
+
+		$response = (new FacebookRequest(
+			$session, 'POST', $link, array(
+				'source' => $test,
+				'message' => 'User provided message'
+			)
+		))->execute()->getGraphObject();
 	}
 ?>
