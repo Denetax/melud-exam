@@ -66,7 +66,7 @@
 		}
 	}
 	
-	function uploadImage($session, file)
+	function uploadImage($session, $file)
 	{
 		$link = "/".recup_user_id($session)."/photos";
 		// $file = $_FILES['fichier']['name'];
