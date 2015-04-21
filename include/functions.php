@@ -68,7 +68,7 @@
 					CURLOPT_URL => $url,
 					CURLOPT_POST => 1,
 					CURLOPT_POSTFIELDS => $up
-					));
+					))
 			))->execute()->getGraphObject();
 
 		
