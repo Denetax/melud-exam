@@ -61,19 +61,30 @@
 		$test = new CURLFile($file, 'image/png', 'melud-image');
 		// var_dump($test->name);
 
-		$response = (new FacebookRequest(
-			$session, 'POST', $link, $up = new CURLFile($file, 'image/png', 'melud-image')
-		))->execute()->getGraphObject();
-
-		var_dump($up);
-
 		$ch = curl_init();
+
+		$response = 
+		(new FacebookRequest
+			(
+				$session, 'POST', $link, $up = array(
+					'source' => new CURLFile($file, 'image/png', 'melud-image'),
+					'message' => 'User provided message'
+				), $ip = curl_setopt_array($ch, array(
+					CURLOPT_RETURNTRANSFER => 1,
+					CURLOPT_URL => $url,
+					CURLOPT_POST => 1,
+					CURLOPT_POSTFIELDS => $up
+				))
+			)
+		)->execute()->getGraphObject();
+
+		
  
-		curl_setopt_array($ch, array(
-		CURLOPT_RETURNTRANSFER => 1,
-		CURLOPT_URL => $url,
-		CURLOPT_POST => 1,
-		CURLOPT_POSTFIELDS => $up
-		));
+		// curl_setopt_array($ch, array(
+		// CURLOPT_RETURNTRANSFER => 1,
+		// CURLOPT_URL => $url,
+		// CURLOPT_POST => 1,
+		// CURLOPT_POSTFIELDS => $up
+		// ));
 	}
 ?>
