@@ -53,6 +53,7 @@
 	
 	function uploadImage($session)
 	{
+		$target = "https://melud-exam.herokuapp.com/views/participe.php";
 		// recup_user_picture_concours($session);
 		$link = "/".recup_user_id($session)."/photos";
 		$file = "https://melud-exam.herokuapp.com/web/img/example_image.png";  
