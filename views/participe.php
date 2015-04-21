@@ -27,9 +27,7 @@
 				</div>
 			</div>
 			<h2>Jeux Concours - Fait ton affiche de cinéma d'horreur</h2>
-			<p>
-				Ou Récupérer une image de ton album pour participer au concours.
-			</p>
+			
 			<?php
 				if($session)
 				{ ?>
@@ -38,13 +36,18 @@
 					if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "")
 					{
 						uploadImage($session, $_FILES['fichier']['tmp_name']);
-					}
+						echo "Votre photo est upload, votre participation au concour est pris en compte";
+					}else{
 					?>
+					<p>
+						Ou Récupérer une image de ton album pour participer au concours.
+					</p>
 					<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
 						<input type="file" id="fichier" name="fichier" class="filestyle" data-buttonName="btn-primary">
 						<button id="participer" name="participer">Valider</button>
 					</form>
-			<?php	}
+			<?php 	}	
+				}
 				else
 				{
 					$loginUrl = $helper->getLoginUrl(['email','user_photos','publish_actions']);
