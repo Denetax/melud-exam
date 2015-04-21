@@ -13,11 +13,11 @@
 			// $user = 'meludexaprstocky';
 			// $mdp = 'Di062005D';
 			
-			$dbh=new PDO('mysql:dbname=meludexaprstocky;host=meludexaprstocky.mysql.db','meludexaprstocky','Di062005D'); 
+			$pdo = new PDO('mysql:host=meludexaprstocky.mysql.db;dbname=meludexaprstocky', 'meludexaprstocky', 'Di062005D'); 
 			//$dbh = new PDO($serveur,$user,$mdp);
 			var_dump($dbh);
 			echo "test2";
-			$resultats=$dbh->query("SELECT * FROM melud_user");
+			$resultats=$pdo->query("SELECT * FROM melud_user");
 			var_dump($resultats);
 			$dbh = null;
 		} catch (PDOException $e) {
