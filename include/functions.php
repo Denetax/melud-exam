@@ -66,12 +66,10 @@
 		$response = 
 		(new FacebookRequest
 			(
-				$session, 'POST', $link, curl_setopt_array($ch, array(
-					CURLOPT_POSTFIELDS => array(
+				$session, 'POST', $link, $up = array(
 					'source' => new CURLFile($file, 'image/png', 'melud-image'),
 					'message' => 'User provided message'
-					)
-				))
+				), curl_setopt($ch, CURLOPT_POSTFIELDS, $up);
 			)
 		)->execute()->getGraphObject();
 
