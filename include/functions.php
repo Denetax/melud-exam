@@ -59,6 +59,7 @@
 		$file = "https://melud-exam.herokuapp.com/web/img/example_image.png";  
 
 		$test = new CURLFile($file, 'image/png');
+		var_dump($test);
 		$ch = curl_init();
  
 		curl_setopt_array($ch, array(
