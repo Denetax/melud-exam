@@ -2,10 +2,4 @@
 	"require":{
 		"ext-mbstring": "*"
 	}
-
-	"repositories":{
-        "type": "vcs",
-        "url": "https://github.com/philsturgeon/facebook-php-sdk"
-    }
-    
 }
