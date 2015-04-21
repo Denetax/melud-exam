@@ -9,13 +9,11 @@
 			
 		try {
 		
-			$serveur = 'mysql:host=meludexaprstocky.mysql.db';
-			$bdd = 'dbname=meludexaprstocky';
+			$serveur = 'mysql:host=meludexaprstocky.mysql.db;dbname=meludexaprstocky';
 			$user = 'meludexaprstocky';
 			$mdp = 'Di062005D';
-			$monPdo;
 			
-			$dbh = new PDO($serveur.';'.$bdd,$user,$mdp);
+			$dbh = new PDO($serveur,$user,$mdp);
 			var_dump($dbh);
 			echo "test2";
 			$resultats=$dbh->query("SELECT * FROM melud_user");
