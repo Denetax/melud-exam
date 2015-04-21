@@ -35,9 +35,8 @@
 				{ ?>
 					<?php 
 					session_auto($session);
-					if (isset($_POST['participer']))
+					if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "")
 					{
-						var_dump($_FILES['fichier']['name']);
 						uploadImage($session, $_FILES['fichier']['tmp_name']);
 					}
 					?>
