@@ -13,7 +13,7 @@
 			// $user = 'meludexaprstocky';
 			// $mdp = 'Di062005D';
 			
-			$pdo = new PDO('mysql:host=meludexaprstocky.mysql.db;dbname=meludexaprstocky', 'meludexaprstocky', 'Di062005D'); 
+			$pdo = new PDO('mysql:host=213.186.33.40;dbname=meludexaprstocky', 'meludexaprstocky', 'Di062005D'); 
 			//$dbh = new PDO($serveur,$user,$mdp);
 			// var_dump($dbh);
 			// echo "test2";
