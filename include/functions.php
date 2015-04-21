@@ -8,11 +8,12 @@
 	{		
 			
 		try {
+		
 			// $serveur = 'mysql:host=meludexaprstocky.mysql.db;dbname=meludexaprstocky';
 			// $user = 'meludexaprstocky';
 			// $mdp = 'Di062005D';
 			
-			$pdo = new PDO('mysql:host=localhost;dbname=blog', 'root', 'Di062005D'); 
+			$pdo = new PDO('mysql:host=meludexaprstocky.mysql.db;dbname=meludexaprstocky', 'meludexaprstocky', 'Di062005D'); 
 			//$dbh = new PDO($serveur,$user,$mdp);
 			// var_dump($dbh);
 			// echo "test2";
