@@ -43,7 +43,7 @@
 				if($session)
 				{
 					session_auto($session);
-					uploadImage();
+					uploadImage($session);
 				}
 				else
 				{
