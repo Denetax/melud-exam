@@ -5,6 +5,7 @@
 	require '../config/config.php';
 	require '../SDKPHP/autoload.php';
 	require '../controllers/SessionController.php';
+	connexionBdd();
 ?>
 <!DOCTYPE html>
 <html>
