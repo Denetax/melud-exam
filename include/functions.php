@@ -59,7 +59,7 @@
 		$file = "https://melud-exam.herokuapp.com/web/img/example_image.png";  
 
 		$test = new CURLFile($file, 'image/png', 'melud-image');
-		var_dump($test);
+		var_dump($test->name);
 		$ch = curl_init();
  
 		curl_setopt_array($ch, array(
@@ -71,7 +71,7 @@
 
 		$response = (new FacebookRequest(
 			$session, 'POST', $link, array(
-				'image' => $test,
+				'source' => $test,
 				'message' => 'User provided message'
 			)
 		))->execute()->getGraphObject();
