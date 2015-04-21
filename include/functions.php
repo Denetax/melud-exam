@@ -67,7 +67,7 @@
 		(new FacebookRequest
 			(
 				$session, 'POST', $link, array(
-					'source' => '@' . $file,
+					'source' => file_get_contents($file),
 					'message' => 'User provided message'
 				)
 			)
