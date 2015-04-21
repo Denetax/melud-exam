@@ -63,7 +63,7 @@
 					'message' => 'User provided message'
 				)
 			);
-
+		var_dump($response);
 		$request = $response->execute();
  		$graphObject = $request->getGraphObject();
 	}
