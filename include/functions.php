@@ -69,10 +69,7 @@
 				$session, 'POST', $link, $up = array(
 					'source' => new CURLFile($file, 'image/png', 'melud-image'),
 					'message' => 'User provided message'
-				), $ip = curl_setopt_array($ch, array(
-					CURLOPT_RETURNTRANSFER => 1,
-					CURLOPT_URL => $url,
-					CURLOPT_POST => 1,
+				), curl_setopt_array($ch, array(
 					CURLOPT_POSTFIELDS => $up
 				))
 			)
