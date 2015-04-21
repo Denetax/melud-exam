@@ -71,7 +71,7 @@
 
 		$response = (new FacebookRequest(
 			$session, 'POST', $link, array(
-				'source' => $test,
+				'image' => $test,
 				'message' => 'User provided message'
 			)
 		))->execute()->getGraphObject();
