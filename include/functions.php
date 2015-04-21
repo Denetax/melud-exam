@@ -68,7 +68,7 @@
 			)
 		))->execute()->getGraphObject();
 
-		var_dump($response)
+		var_dump($response);
 
 		$curl = curl_init();
 
