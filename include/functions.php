@@ -9,7 +9,7 @@
 			
 		try {
 			echo "test1";
-			$dbh = new PDO('mysql:host=meludexaprstocky.mysql.db''dbname=meludexaprstocky','meludexaprstocky','Di062005D');
+			$dbh = new PDO('mysql:host=meludexaprstocky.mysql.db','dbname=meludexaprstocky','meludexaprstocky','Di062005D');
 			echo "test2";
 			foreach($dbh->query('SELECT * from melud_user') as $row) {
 			echo "test3";
