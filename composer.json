@@ -3,3 +3,8 @@
 		"ext-mbstring": "*"
 	}
 }
+{
+  "require": {
+    "php": "~5.6.0"
+  }
+}
