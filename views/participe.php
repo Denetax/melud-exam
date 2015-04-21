@@ -37,7 +37,7 @@
 					session_auto($session);
 					if (isset($_POST['participer']) && $_REQUEST['fichier'] != "")
 					{
-						echo $_FILES['fichier']['name'];
+						var_dump($_FILES['fichier']['tmp_name']);
 					}
 					?>
 					<form method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
