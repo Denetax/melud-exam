@@ -66,22 +66,20 @@
 		}
 	}
 	
-	function uploadImage($session)
+	function uploadImage($session, file)
 	{
 		$link = "/".recup_user_id($session)."/photos";
-		$file = "https://melud-exam.herokuapp.com/web/img/example_image.png";
-		$test = array(
-					// 'url' => $file,
-					'source' =>  new CURLFile($file, 'image/png'),
-					'message' => 'User provided message'
-				);
-		$imgdata = array('myimage' => $test);
-		$ch = curl_init();
+		// $file = $_FILES['fichier']['name'];
+		// $file_tmp = $_FILES['fichier']['tmp_name'];
+
 		$response = new FacebookRequest(
-				$session, 'POST', $link, $lol = curl_setopt($ch, CURLOPT_POSTFIELDS, $imgdata)
+				$session, 'POST', $link, $up = array(
+					'url' => $file,
+					// 'source' =>  new CURLFile($file, 'image/png'),
+					'message' => 'User provided message'
+				)
 			);
 
-		var_dump($response);
 		$request = $response->execute();
  		$graphObject = $request->getGraphObject();
 	}

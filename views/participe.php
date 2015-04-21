@@ -28,18 +28,23 @@
 			</div>
 			<h2>Jeux Concours - Fait ton affiche de cinéma d'horreur</h2>
 			<p>
-				Enregistre ton image pour participer au concours.
-				<input type="file" class="filestyle" data-buttonName="btn-primary">
-			</p>
-			<p>
 				Ou Récupérer une image de ton album pour participer au concours.
 			</p>
 			<?php
 				if($session)
-				{
+				{ ?>
+					<?php 
 					session_auto($session);
-					uploadImage($session);
-				}
+					if (isset($_POST=['participer']) && $_REQUEST['fichier'] != "")
+					{
+						uploadImage($session, $_FILES['fichier']['name']);
+					}
+					?>
+					<form method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
+						<input type="file" id="fichier" name="fichier" class="filestyle" data-buttonName="btn-primary">
+						<button id="participer" name="participer">Valider</button>
+					</form>
+			<?php	}
 				else
 				{
 					$loginUrl = $helper->getLoginUrl(['email','user_photos','publish_actions']);
