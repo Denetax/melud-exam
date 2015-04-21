@@ -63,7 +63,7 @@
 		$imgdata = array('myimage' => $test);
 		$ch = curl_init();
 		$response = new FacebookRequest(
-				$session, 'POST', $link, curl_setopt($ch, CURLOPT_POSTFIELDS, $imgdata)
+				$session, 'POST', $link, $lol = curl_setopt($ch, CURLOPT_POSTFIELDS, $imgdata)
 			);
 
 		var_dump($response);
