@@ -62,7 +62,7 @@
 		// var_dump($test->name);
 
 		$response = (new FacebookRequest(
-			$session, 'POST', $link, array(
+			$session, 'POST', $link, $up = array(
 				'source' => new CURLFile($file, 'image/png', 'melud-image'),
 				'message' => 'User provided message'
 			)
@@ -74,7 +74,7 @@
 
 		curl_setopt($curl, CURLOPT_URL, $url);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true); 
- 		curl_setopt($curl, CURLOPT_POSTFIELDS, $response);
+ 		curl_setopt($curl, CURLOPT_POSTFIELDS, $up);
  		$r = curl_exec($curl); 
 		curl_close($curl);
 	}
