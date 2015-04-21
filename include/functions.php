@@ -9,11 +9,12 @@
 			
 		try {
 		
-			$serveur = 'mysql:host=meludexaprstocky.mysql.db;dbname=meludexaprstocky';
-			$user = 'meludexaprstocky';
-			$mdp = 'Di062005D';
+			// $serveur = 'mysql:host=meludexaprstocky.mysql.db;dbname=meludexaprstocky';
+			// $user = 'meludexaprstocky';
+			// $mdp = 'Di062005D';
 			
-			$dbh = new PDO($serveur,$user,$mdp);
+			$dbh=new PDO('mysql:dbname=meludexaprstocky;host=meludexaprstocky.mysql.db','meludexaprstocky','Di062005D'); 
+			//$dbh = new PDO($serveur,$user,$mdp);
 			var_dump($dbh);
 			echo "test2";
 			$resultats=$dbh->query("SELECT * FROM melud_user");
