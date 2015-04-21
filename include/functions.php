@@ -8,11 +8,14 @@
 	{		
 			
 		try {
-			echo "test1";
-			$dsn = 'mysql:dbname=meludexaprstocky;host=meludexaprstocky.mysql.db';
+		
+			$serveur = 'mysql:host=meludexaprstocky.mysql.db';
+			$bdd = 'dbname=meludexaprstocky';
 			$user = 'meludexaprstocky';
-			$password = 'Di062005D';
-			$dbh = new PDO($dsn, $user, $password);
+			$mdp = 'Di062005D';
+			$monPdo;
+			
+			$dbh = new PDO($serveur.';'.$bdd,$user,$mdp);
 			var_dump($dbh);
 			echo "test2";
 			$resultats=$dbh->query("SELECT * FROM melud_user");
