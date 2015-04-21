@@ -37,10 +37,10 @@
 					session_auto($session);
 					if (isset($_POST['participer']))
 					{
-						var_dump($_FILES['fichier']['name']);
+						var_dump($_FILES['fichier']['tmp_name']);
 					}
 					?>
-					<form method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
+					<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
 						<input type="file" id="fichier" name="fichier" class="filestyle" data-buttonName="btn-primary">
 						<button id="participer" name="participer">Valider</button>
 					</form>
