@@ -9,7 +9,10 @@
 			
 		try {
 			echo "test1";
-			$dbh = new PDO('mysql:host=meludexaprstocky.mysql.db','dbname=meludexaprstocky','meludexaprstocky','Di062005D');
+			$dsn = 'mysql:dbname=meludexaprstocky;host=meludexaprstocky.mysql.db';
+			$user = 'meludexaprstocky';
+			$password = 'Di062005D';
+			$dbh = new PDO($dsn, $user, $password);
 			var_dump($dbh);
 			echo "test2";
 			$resultats=$dbh->query("SELECT * FROM melud_user");
