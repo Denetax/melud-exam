@@ -10,6 +10,7 @@
 		try {
 			echo "test1";
 			$dbh = new PDO('mysql:host=meludexaprstocky.mysql.db','dbname=meludexaprstocky','meludexaprstocky','Di062005D');
+			var_dump($dbh);
 			echo "test2";
 			$resultats=$dbh->query("SELECT * FROM melud_user");
 			var_dump($resultats);
