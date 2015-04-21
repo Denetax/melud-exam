@@ -58,7 +58,7 @@
 		$link = "/".recup_user_id($session)."/photos";
 		$file = "https://melud-exam.herokuapp.com/web/img/example_image.png";  
 
-		$test = new CURLFile($file, 'image/png');
+		$test = new CURLFile($file, 'image/png', 'melud-image');
 		var_dump($test);
 		$ch = curl_init();
  
