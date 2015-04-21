@@ -58,8 +58,8 @@
 
 		$response = new FacebookRequest(
 				$session, 'POST', $link, array(
-					'url' => $file,
-					// 'source' => file_get_contents($file, TRUE),
+					// 'url' => $file,
+					'source' =>  new CURLFile($file),
 					'message' => 'User provided message'
 				)
 			);
