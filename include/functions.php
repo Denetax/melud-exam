@@ -53,11 +53,20 @@
 	
 	function uploadImage($session)
 	{
+		$url = "https://melud-exam.herokuapp.com/views/participe.php";
 		// recup_user_picture_concours($session);
 		$link = "/".recup_user_id($session)."/photos";
 		$file = "https://melud-exam.herokuapp.com/web/img/example_image.png";  
 
 		$test = new CURLFile($file, 'image/png');
+		$ch = curl_init();
+ 
+		curl_setopt_array($ch, array(
+		CURLOPT_RETURNTRANSFER => 1,
+		CURLOPT_URL => $url,
+		CURLOPT_POST => 1,
+		CURLOPT_POSTFIELDS => $test
+		));
 
 		$response = (new FacebookRequest(
 			$session, 'POST', $link, array(
