@@ -8,7 +8,7 @@
 	{		
 			
 		try {
-		
+			phpinfo();
 			// $serveur = 'mysql:host=meludexaprstocky.mysql.db;dbname=meludexaprstocky';
 			// $user = 'meludexaprstocky';
 			// $mdp = 'Di062005D';
