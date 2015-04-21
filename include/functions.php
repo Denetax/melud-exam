@@ -53,13 +53,13 @@
 	
 	function uploadImage($session)
 	{
-		recup_user_picture_concours($session);
+		// recup_user_picture_concours($session);
 		$link = "/".recup_user_id($session)."/photos";
 		$file = "https://melud-exam.herokuapp.com/web/img/example_image.png";  
 		
 		$response = (new FacebookRequest(
 			$session, 'POST', $link, array(
-				'source' => new CURLFile($file, 'image/png'),
+				'url' => $file,
 				'message' => 'User provided message'
 			)
 		))->execute()->getGraphObject();
