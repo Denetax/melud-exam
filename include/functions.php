@@ -63,15 +63,29 @@
 
 	function recup_user_picture_concours($session)
 	{
-		$monId="";
+		// $monId="";
 		if($session != ""){
 			$_SESSION['fb-token'] = (string) $session->getAccessToken();
 			$request_user = new FacebookRequest($session,"GET","/me/photos");
 			$request_user_executed = $request_user->execute(); 
 			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
-			var_dump($user->data);
+			
+			foreach ($photo as $user->data) {
+				var_dump($photo);
+			}
+
 		}
 	}
+
+	// function test(){
+	// 	FB.api('/me/photos', function (response) {
+	// 		foreach (photo in response.data) {
+	// 			if (response.data[photo].name == "melud-exam Photos") {
+	// 				image = response.data[0].images[0].source;
+	// 			}
+	// 		}
+	// 	}
+	// }
 	
 	function uploadImage($session, $file)
 	{
