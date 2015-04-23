@@ -69,7 +69,7 @@
 			$request_user = new FacebookRequest($session,"GET","/me/photos");
 			$request_user_executed = $request_user->execute(); 
 			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
-			var_dump($user);
+			var_dump($user->data);
 		}
 	}
 	
@@ -82,7 +82,7 @@
 		$response = new FacebookRequest(
 				$session, 'POST', $link, array(
 					// 'url' => $file,
-					'source' =>  new CURLFile($file, 'image/png'),
+					'source' =>  new CURLFile($file, 'image/png', 'Coucours Melud-exam'),
 					'message' => 'User provided message'
 				)
 			);
