@@ -96,9 +96,7 @@
 			'name' => $nameAlbum
 			);
 
-		$create = new FacebookRequest(
-				$session, 'POST', $link, $albums_detail
-			);
+		$create = new FacebookRequest($session, 'POST', $link1, $albums_detail);
 
 		$album_uid = $create['id'];
 
