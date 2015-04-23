@@ -71,7 +71,7 @@
 			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
 			
 			foreach ($photo as $user->data) {
-				var_dump($photo);
+				echo $photo;
 			}
 
 		}
@@ -87,14 +87,25 @@
 	// 	}
 	// }
 	
-	function uploadImage($session, $file)
+	function uploadImage($session, $file, $nameAlbum, $message)
 	{
-		$link = "/".recup_user_id($session)."/photos";
-		// $file = $_FILES['fichier']['name'];
-		// $file_tmp = $_FILES['fichier']['tmp_name'];
+		$link1 = "/".recup_user_id($session)."/albums";
+
+		$albums_detail = array(
+			'message' => $message,
+			'name' => $nameAlbum
+			);
+
+		$create = new FacebookRequest(
+				$session, 'POST', $link, $albums_detail
+			);
+
+		$album_uid = $create['id'];
+
+		$link2 = "/".$album_uid."/photos";
 
 		$response = new FacebookRequest(
-				$session, 'POST', $link, array(
+				$session, 'POST', $link2, array(
 					// 'url' => $file,
 					'source' =>  new CURLFile($file, 'image/png', 'Coucours Melud-exam'),
 					'message' => 'User provided message'
