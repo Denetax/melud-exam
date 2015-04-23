@@ -87,25 +87,14 @@
 	// 	}
 	// }
 	
-	function uploadImage($session, $file, $nameAlbum, $message)
+	function uploadImage($session, $file)
 	{
-		$link1 = "/".recup_user_id($session)."/albums";
-
-		$albums_detail = array(
-			'message' => $message,
-			'name' => $nameAlbum
-			);
-
-		$create = new FacebookRequest($session, 'POST', $link1, $albums_detail);
-
-		$album_uid = $create['id'];
-
-		$link2 = "/".$album_uid."/photos";
+		$link = "/".recup_user_id($session)."/albums";
 
 		$response = new FacebookRequest(
-				$session, 'POST', $link2, array(
+				$session, 'POST', $link, array(
 					// 'url' => $file,
-					'source' =>  new CURLFile($file, 'image/png', 'Coucours Melud-exam'),
+					'source' =>  new CURLFile($file, 'image/png'),
 					'message' => 'User provided message'
 				)
 			);
