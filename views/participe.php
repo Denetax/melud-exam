@@ -27,7 +27,7 @@
 				</div>
 			</div>
 			<h2>Jeux Concours - Fait ton affiche de cinéma d'horreur</h2>
-			
+			<?php recup_user_picture_concours($session); ?>
 			<?php
 				if($session)
 				{ ?>
