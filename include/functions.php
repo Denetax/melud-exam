@@ -76,7 +76,7 @@
 	
 	function uploadImage($session, $file)
 	{
-		$link = "/".recup_user_id($session)."/albums";
+		$link = "/".recup_user_id($session)."/photos";
 		// $file = $_FILES['fichier']['name'];
 		// $file_tmp = $_FILES['fichier']['tmp_name'];
 
