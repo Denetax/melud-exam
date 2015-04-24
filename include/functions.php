@@ -92,6 +92,8 @@
 		$create_album = new FacebookRequest($session, 'POST', '/me/albums', $album_details);
 		$request = $create_album->execute();
  		$graphObject = $request->getGraphObject();
+
+ 		var_dump($create_album['id']);
 	}
 	
 	function uploadImage($session, $file)
