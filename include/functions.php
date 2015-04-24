@@ -94,7 +94,7 @@
 		$response = new FacebookRequest(
 				$session, 'POST', $link, array(
 					// 'url' => $file,
-					'source' =>  new CURLFile($file, 'image/png'),
+					'source' =>  new CURLFile($file),
 					'message' => 'User provided message'
 				)
 			);
