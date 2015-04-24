@@ -89,7 +89,7 @@
         	'message'=> 'Album desc',
         	'name'=> 'Melud'
   		);
-		$create_album = new FacebookRequest($session, '/me/albums', 'post', $album_details);
+		$create_album = new FacebookRequest($session, 'POST', '/me/albums', $album_details);
 		$request = $create_album->execute();
  		$graphObject = $request->getGraphObject();
 	}
