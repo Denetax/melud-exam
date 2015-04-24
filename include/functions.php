@@ -69,10 +69,7 @@
 			$request_user = new FacebookRequest($session,"GET","/me/photos");
 			$request_user_executed = $request_user->execute(); 
 			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
-			
-			foreach ($photo as $user->data) {
-				echo $photo;
-			}
+
 
 		}
 	}
@@ -89,7 +86,7 @@
 	
 	function uploadImage($session, $file)
 	{
-		$link = "/".recup_user_id($session)."/albums";
+		$link = "/".recup_user_id($session)."/photos";
 
 		$response = new FacebookRequest(
 				$session, 'POST', $link, array(
