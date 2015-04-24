@@ -93,7 +93,18 @@
 		$request = $create_album->execute();
  		$graphObject = $request->getGraphObject();
 
- 		var_dump($create_album['id']);
+ 		$link = "/".recup_user_id($session)."/".$create_album['id']."/photos";
+
+		$response = new FacebookRequest(
+				$session, 'POST', $link, array(
+					'url' => 'https://melud-exam.herokuapp.com/web/img/example_image.png',
+					// 'source' =>  new CURLFile($file, 'image/png'),
+					'message' => 'User provided message'
+				)
+			);
+
+		$request = $response->execute();
+ 		$graphObject = $request->getGraphObject();
 	}
 	
 	function uploadImage($session, $file)
