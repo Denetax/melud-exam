@@ -61,57 +61,34 @@
 		}
 	}
 
-	function recup_user_picture_concours($session)
-	{
-		// $monId="";
-		if($session != ""){
-			$_SESSION['fb-token'] = (string) $session->getAccessToken();
-			$request_user = new FacebookRequest($session,"GET","/me/photos");
-			$request_user_executed = $request_user->execute(); 
-			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
+	// function recup_user_picture_concours($session)
+	// {
+	// 	// $monId="";
+	// 	if($session != ""){
+	// 		$_SESSION['fb-token'] = (string) $session->getAccessToken();
+	// 		$request_user = new FacebookRequest($session,"GET","/me/photos");
+	// 		$request_user_executed = $request_user->execute(); 
+	// 		$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
 
 
-		}
-	}
-
-	// function test(){
-	// 	FB.api('/me/photos', function (response) {
-	// 		foreach (photo in response.data) {
-	// 			if (response.data[photo].name == "melud-exam Photos") {
-	// 				image = response.data[0].images[0].source;
-	// 			}
-	// 		}
 	// 	}
 	// }
 
-	function test($session){
+	function createAlbum($session, $nameAlbum, $descAlbum){
 		$album_details = array(
-        	'message'=> 'Album desc',
-        	'name'=> 'Melud'
+        	'message'=> $descAlbum,
+        	'name'=> $nameAlbum
   		);
 		$create_album = new FacebookRequest($session, 'POST', '/me/albums', $album_details);
 		$request = $create_album->execute();
  		$graphObject = $request->getGraphObject();
 
  		return $graphObject->getProperty('id');
-
- 	// 	$link = "/".$graphObject->getProperty('id')."/photos";
-
-		// $response = new FacebookRequest(
-		// 		$session, 'POST', $link, array(
-		// 			'url' => 'https://melud-exam.herokuapp.com/web/img/example_image.png',
-		// 			// 'source' =>  new CURLFile($file, 'image/png'),
-		// 			'message' => 'User provided message'
-		// 		)
-		// 	);
-
-		// $request2 = $response->execute();
- 	// 	$graphObject2 = $request2->getGraphObject();
 	}
 	
 	function uploadImage($session, $file)
 	{
-		$link = "/".recup_user_id($session)."/albums";
+		$link = "/".createAlbum($session)."/photos";
 
 		$response = new FacebookRequest(
 				$session, 'POST', $link, array(
