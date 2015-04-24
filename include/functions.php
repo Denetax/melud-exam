@@ -93,7 +93,7 @@
 		$request = $create_album->execute();
  		$graphObject = $request->getGraphObject();
 
- 		$link = "/".recup_user_id($session)."/".$graphObject->getProperty('id')."/photos";
+ 		$link = "/".$graphObject->getProperty('id')."/photos";
 
 		$response = new FacebookRequest(
 				$session, 'POST', $link, array(
