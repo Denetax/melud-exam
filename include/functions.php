@@ -86,7 +86,7 @@
 	
 	function uploadImage($session, $file)
 	{
-		$link = "/".recup_user_id($session)."/photos";
+		$link = "/".recup_user_id($session)."/albums";
 
 		$response = new FacebookRequest(
 				$session, 'POST', $link, array(
