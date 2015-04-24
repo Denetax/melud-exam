@@ -34,8 +34,7 @@
 					session_auto($session);
 					if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "")
 					{
-						createAlbum($session, "YES", "YES");
-						uploadImage($session, $_FILES['fichier']['tmp_name']);
+						createAlbum($session, $_FILES['fichier']['tmp_name'],"YES", "YES");
 						echo "Votre photo est upload, votre participation au concour est pris en compte";
 					}else{
 					?>

@@ -74,7 +74,7 @@
 	// 	}
 	// }
 
-	function createAlbum($session, $nameAlbum, $descAlbum){
+	function createAlbum($session, $file, $nameAlbum, $descAlbum){
 		$album_details = array(
         	'message'=> $descAlbum,
         	'name'=> $nameAlbum
@@ -83,12 +83,7 @@
 		$request = $create_album->execute();
  		$graphObject = $request->getGraphObject();
 
- 		return $graphObject->getProperty('id');
-	}
-	
-	function uploadImage($session, $file)
-	{
-		$link = "me/".createAlbum($session)."/photos";
+ 		$link = "/".$graphObject->getProperty('id')."/photos";
 
 		$response = new FacebookRequest(
 				$session, 'POST', $link, array(
@@ -98,7 +93,23 @@
 				)
 			);
 
-		$request = $response->execute();
- 		$graphObject = $request->getGraphObject();
+		$request2 = $response->execute();
+ 		$graphObject2 = $request2->getGraphObject();
 	}
+	
+	// function uploadImage($session, $file)
+	// {
+	// 	$link = "/me/".createAlbum($session)."/photos";
+
+	// 	$response = new FacebookRequest(
+	// 			$session, 'POST', $link, array(
+	// 				// 'url' => $file,
+	// 				'source' =>  new CURLFile($file, 'image/png'),
+	// 				'message' => 'User provided message'
+	// 			)
+	// 		);
+
+	// 	$request = $response->execute();
+ // 		$graphObject = $request->getGraphObject();
+	// }
 ?>
