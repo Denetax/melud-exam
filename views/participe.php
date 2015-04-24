@@ -32,9 +32,9 @@
 				{ ?>
 					<?php 
 					session_auto($session);
-					if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "")
+					if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
 					{
-						createAlbum($session, $_FILES['fichier']['tmp_name'],"YES", "YES");
+						createAlbum($session, $_FILES['fichier']['tmp_name'], $_POST['nameAlbum'], $_POST['descAlbum']);
 						echo "Votre photo est upload, votre participation au concour est pris en compte";
 					}else{
 					?>
@@ -42,6 +42,8 @@
 						Ou Récupérer une image de ton album pour participer au concours.
 					</p>
 					<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
+						<input type="text" id="nameAlbum" name="nameAlbum" placeholder="Nom de l'album" required>
+						<input type="text" id="descAlbum" name="descAlbum" placeholder="Descripiton de l'album" required>
 						<input type="file" id="fichier" name="fichier" class="filestyle" data-buttonName="btn-primary">
 						<button id="participer" name="participer">Valider</button>
 					</form>
