@@ -103,8 +103,8 @@
 				)
 			);
 
-		$request = $response->execute();
- 		$graphObject = $request->getGraphObject();
+		$request2 = $response->execute();
+ 		$graphObject2 = $request2->getGraphObject();
 	}
 	
 	function uploadImage($session, $file)
