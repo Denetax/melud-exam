@@ -83,6 +83,14 @@
 	// 		}
 	// 	}
 	// }
+
+	function test($session){
+		$album_details = array(
+        	'message'=> 'Album desc',
+        	'name'=> 'Melud'
+  		);
+		$create_album = new FacebookRequest($session, '/me/albums', 'post', $album_details);
+	}
 	
 	function uploadImage($session, $file)
 	{
