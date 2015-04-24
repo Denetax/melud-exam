@@ -93,18 +93,20 @@
 		$request = $create_album->execute();
  		$graphObject = $request->getGraphObject();
 
- 		$link = "/".$graphObject->getProperty('id')."/photos";
+ 		return $graphObject->getProperty('id');
 
-		$response = new FacebookRequest(
-				$session, 'POST', $link, array(
-					'url' => 'https://melud-exam.herokuapp.com/web/img/example_image.png',
-					// 'source' =>  new CURLFile($file, 'image/png'),
-					'message' => 'User provided message'
-				)
-			);
+ 	// 	$link = "/".$graphObject->getProperty('id')."/photos";
 
-		$request2 = $response->execute();
- 		$graphObject2 = $request2->getGraphObject();
+		// $response = new FacebookRequest(
+		// 		$session, 'POST', $link, array(
+		// 			'url' => 'https://melud-exam.herokuapp.com/web/img/example_image.png',
+		// 			// 'source' =>  new CURLFile($file, 'image/png'),
+		// 			'message' => 'User provided message'
+		// 		)
+		// 	);
+
+		// $request2 = $response->execute();
+ 	// 	$graphObject2 = $request2->getGraphObject();
 	}
 	
 	function uploadImage($session, $file)
