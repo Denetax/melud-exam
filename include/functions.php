@@ -88,7 +88,7 @@
 	
 	function uploadImage($session, $file)
 	{
-		$link = "/".createAlbum($session)."/photos";
+		$link = "me/".createAlbum($session)."/photos";
 
 		$response = new FacebookRequest(
 				$session, 'POST', $link, array(
