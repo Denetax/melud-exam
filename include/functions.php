@@ -70,7 +70,7 @@
 			$request_user_executed = $request_user->execute(); 
 			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
 
-			$user->getProperty("data")->getProperty("name");
+			var_dump($user->getProperty("data")->getProperty("name"));
 			
 		}
 	}
