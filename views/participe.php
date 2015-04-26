@@ -26,16 +26,17 @@
 					<img src="http://melud-exam.fr/views/web/images/title.png"/>
 				</div>
 			</div>
-			<h2>Jeux Concours - Fait ton affiche de cinéma d'horreur</h2>
+			<h2>Jeux Concours - Fais ton affiche de cinéma d'horreur</h2>
 			<?php
 				if($session)
 				{ ?>
 					<?php 
+					recup_user_picture_concours($session);
 					session_auto($session);
 					if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
 					{
 						createAlbum($session, $_FILES['fichier']['tmp_name'], $_POST['nameAlbum'], $_POST['descAlbum']);
-						echo "Votre photo est upload, votre participation au concour est pris en compte";
+						echo "Votre photo est upload, votre participation au concours est pris en compte";
 					}else{
 					?>
 					<p>

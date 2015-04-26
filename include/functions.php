@@ -61,18 +61,18 @@
 		}
 	}
 
-	// function recup_user_picture_concours($session)
-	// {
-	// 	// $monId="";
-	// 	if($session != ""){
-	// 		$_SESSION['fb-token'] = (string) $session->getAccessToken();
-	// 		$request_user = new FacebookRequest($session,"GET","/me/photos");
-	// 		$request_user_executed = $request_user->execute(); 
-	// 		$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
+	function recup_user_picture_concours($session)
+	{
+		$monId="";
+		if($session != ""){
+			$_SESSION['fb-token'] = (string) $session->getAccessToken();
+			$request_user = new FacebookRequest($session,"GET","/me/albums");
+			$request_user_executed = $request_user->execute(); 
+			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
 
-
-	// 	}
-	// }
+			var_dump($user);
+		}
+	}
 
 	function createAlbum($session, $file, $nameAlbum, $descAlbum){
 		$album_details = array(
@@ -96,20 +96,4 @@
 		$request2 = $response->execute();
  		$graphObject2 = $request2->getGraphObject();
 	}
-	
-	// function uploadImage($session, $file)
-	// {
-	// 	$link = "/me/".createAlbum($session)."/photos";
-
-	// 	$response = new FacebookRequest(
-	// 			$session, 'POST', $link, array(
-	// 				// 'url' => $file,
-	// 				'source' =>  new CURLFile($file, 'image/png'),
-	// 				'message' => 'User provided message'
-	// 			)
-	// 		);
-
-	// 	$request = $response->execute();
- // 		$graphObject = $request->getGraphObject();
-	// }
 ?>
