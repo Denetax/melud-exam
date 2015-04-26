@@ -66,7 +66,7 @@
 		$monId="";
 		if($session != ""){
 			$_SESSION['fb-token'] = (string) $session->getAccessToken();
-			$request_user = new FacebookRequest($session,"GET","/me/10153210403429799/photos");
+			$request_user = new FacebookRequest($session,"GET","/1073741841/photos");
 			$request_user_executed = $request_user->execute(); 
 			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
 
