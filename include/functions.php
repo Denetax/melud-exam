@@ -66,11 +66,11 @@
 		$monId="";
 		if($session != ""){
 			$_SESSION['fb-token'] = (string) $session->getAccessToken();
-			$request_user = new FacebookRequest($session,"GET","/me/albums");
+			$request_user = new FacebookRequest($session,"GET","/me/10153210403429799/photos");
 			$request_user_executed = $request_user->execute(); 
 			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
 
-			var_dump($user->getProperty("data")->getProperty(0));
+			var_dump($user);
 			
 		}
 	}
