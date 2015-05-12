@@ -31,7 +31,6 @@
 				if($session)
 				{ ?>
 					<?php 
-					var_dump($session);
 					recup_user_picture_concours($session);
 					session_auto($session);
 					if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
