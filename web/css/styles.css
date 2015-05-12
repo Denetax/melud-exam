@@ -9,6 +9,9 @@
 	padding-top: 20px;
 	width: 100%;
 }
+.container input{
+	color: #000000;
+}
 .container p{
 	text-align: justify;
 }
