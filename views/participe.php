@@ -1,4 +1,4 @@
-	<?php
+<?php
 	// include '../include/include.php';
 	include '../include/functions.php';
 	
@@ -28,21 +28,16 @@
 			</div>
 			<h2>Jeux Concours - Fais ton affiche de cinéma d'horreur</h2>
 			<?php
-				echo "yo";
 				if($session)
 				{ ?>
 					<?php 
-					echo $session;
 					recup_user_picture_concours($session);
-					echo "yo2";
 					session_auto($session);
-					echo "yo3";
 					if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
 					{
 						createAlbum($session, $_FILES['fichier']['tmp_name'], $_POST['nameAlbum'], $_POST['descAlbum']);
 						echo "Votre photo est upload, votre participation au concours est pris en compte";
 					}else{
-					echo "yo4";
 					?>
 					<p>
 						Ou Récupérer une image de ton album pour participer au concours.
