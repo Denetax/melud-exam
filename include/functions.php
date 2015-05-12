@@ -69,9 +69,6 @@
 			$request_user = new FacebookRequest($session,"GET","/10153210403429799/photos");
 			$request_user_executed = $request_user->execute(); 
 			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
-
-			var_dump($user);
-			
 		}
 	}
 
