@@ -32,7 +32,7 @@
 				if($session)
 				{ ?>
 					<?php 
-					echo "yo1";
+					echo $session;
 					recup_user_picture_concours($session);
 					echo "yo2";
 					session_auto($session);
