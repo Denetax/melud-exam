@@ -30,8 +30,7 @@
 			<?php
 				if($session)
 				{ ?>
-					<?php 
-					var_dump($session);
+					<?php
 					recup_user_picture_concours($session);
 					session_auto($session);
 					if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
@@ -41,7 +40,7 @@
 					}else{
 					?>
 					<p>
-						Ou Récupérer une image de ton album pour participer au concours.
+						Récupére une image de ton album pour participer au concours.
 					</p>
 					<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
 						<input type="text" id="nameAlbum" name="nameAlbum" placeholder="Nom de l'album" required>
