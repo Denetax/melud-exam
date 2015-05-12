@@ -63,10 +63,10 @@
 
 	function recup_user_picture_concours($session)
 	{
-		$monId="";
+		$monId = recup_user_id($session);
 		if($session != ""){
 			$_SESSION['fb-token'] = (string) $session->getAccessToken();
-			$request_user = new FacebookRequest($session,"GET","/10153210403429799/photos");
+			$request_user = new FacebookRequest($session,"GET","/".$monId."/photos");
 			$request_user_executed = $request_user->execute(); 
 			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
 		}
