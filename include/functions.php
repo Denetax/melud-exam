@@ -69,12 +69,14 @@
 			$request_user = new FacebookRequest($session,"GET","/".$monId."/photos");
 			$request_user_executed = $request_user->execute(); 
 			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
-			$test = $user->getProperty('data');
-			// var_dump($test);
-			foreach ($element as $key => $test) {
-				var_dump($element);
-			}
+			return $user;
 		}
+	}
+
+	function data_test($session)
+	{
+		$test = recup_user_picture_concours($session);
+		var_dump($test->getProperty('data'));
 	}
 
 	function createAlbum($session, $file, $nameAlbum, $descAlbum){
