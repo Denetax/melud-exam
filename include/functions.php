@@ -69,7 +69,7 @@
 			$request_user = new FacebookRequest($session,"GET","/".$monId."/photos");
 			$request_user_executed = $request_user->execute(); 
 			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
-			return $user;
+			return $user->getProperty('data');
 		}
 	}
 
