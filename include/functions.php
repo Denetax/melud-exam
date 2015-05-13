@@ -71,7 +71,7 @@
 			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
 			$test = $user->getProperty('data');
 			foreach ($element as $key => $test) {
-				var_dump($element);
+				echo $element;
 			}
 		}
 	}
