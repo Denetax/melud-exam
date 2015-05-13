@@ -69,9 +69,9 @@
 			$request_user = new FacebookRequest($session,"GET","/".$monId."/photos");
 			$request_user_executed = $request_user->execute(); 
 			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
-			$test = $user->getProperty('data')->getProperty(0);
-			foreach ($element as $test) {
-				foreach ($element2 as $element->getProperty('images')) {
+			$test = $user->getProperty('data');
+			foreach ($element as $key1 => $test) {
+				foreach ($element2 as $key2 => $element->getProperty('images')) {
 					var_dump($element2);
 				}
 			}
