@@ -70,8 +70,8 @@
 			$request_user_executed = $request_user->execute(); 
 			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
 			$test = $user->getProperty('data');
-			for ($i=0; $i <= count($test) ; $i++) { 
-				var_dump($i);
+			foreach ($element as $key => $test) {
+				var_dump($element);
 			}
 		}
 	}
