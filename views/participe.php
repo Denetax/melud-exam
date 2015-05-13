@@ -32,7 +32,7 @@
 				{ ?>
 					<?php
 					$test = recup_user_picture_concours($session);
-					echo $test; 
+					var_dump($test); 
 					// foreach ($variable as $test) 
 					// {
 					// 	var_dump($variable);
