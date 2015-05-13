@@ -34,7 +34,7 @@
 					$test = recup_user_picture_concours($session);
 					var_dump($test);
 					for ($i=0; $i < count($test) ; $i++) { 
-						var_dump($i);
+						var_dump($i[0]);
 					}
 					// foreach ($variable as $test) 
 					// {
