@@ -31,8 +31,7 @@
 				if($session)
 				{ ?>
 					<?php
-					recup_user_picture_concours($session);
-					$test = data_test($session);
+					$test = recup_user_picture_concours($session);
 					foreach ($variable as $key => $test) {
 						var_dump($variable);
 					}
