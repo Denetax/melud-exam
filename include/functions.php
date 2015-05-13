@@ -73,13 +73,13 @@
 		}
 	}
 
-	function data_test($session)
-	{
-		$test = recup_user_picture_concours($session);
-		foreach ($variable as $test) {
-			var_dump($variable);
-		}
-	}
+	// function data_test($session)
+	// {
+	// 	$test = recup_user_picture_concours($session);
+	// 	foreach ($variable as $test) {
+	// 		var_dump($variable);
+	// 	}
+	// }
 
 	function createAlbum($session, $file, $nameAlbum, $descAlbum){
 		$album_details = array(
