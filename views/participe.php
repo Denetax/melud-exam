@@ -37,7 +37,9 @@
 						foreach ($variable->images as $element) {
 							// var_dump($element);
 							?>
+							<div id="picture_fb">
 							<img src="<?php echo $element->source ?>" width="50" />
+							</div>
 							<?php
 						}
 					}

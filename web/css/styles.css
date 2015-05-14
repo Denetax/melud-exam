@@ -15,3 +15,6 @@
 .container p{
 	text-align: justify;
 }
+#picture_fb img{
+	width: 20%;
+}
