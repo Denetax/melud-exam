@@ -34,7 +34,7 @@
 			<?php
 				if($session)
 				{
-					connexionBdd();
+					// connexionBdd();
 					session_auto($session);
 				}
 				else
