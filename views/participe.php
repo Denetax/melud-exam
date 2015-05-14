@@ -32,15 +32,15 @@
 				{ ?>
 					<?php
 					$test = recup_user_picture_concours($session);
-					var_dump($test);
+					// var_dump($test);
 					// for ($i=0; $i < count($test) ; $i++) { 
 					// 	var_dump($i);
 					// }
-					// foreach ($test as $variable) 
-					// {
-					// 	var_dump($variable->id);
-					// }
-					// session_auto($session);
+					foreach ($variable as $test) 
+					{
+						var_dump($variable);
+					}
+					session_auto($session);
 					if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
 					{
 						createAlbum($session, $_FILES['fichier']['tmp_name'], $_POST['nameAlbum'], $_POST['descAlbum']);
