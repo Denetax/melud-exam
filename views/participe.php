@@ -32,9 +32,10 @@
 				{ ?>
 					<?php
 					$test = recup_user_picture_concours($session);
-					for ($i=0; $i < count($test) ; $i++) { 
-						var_dump($i);
-					}
+					var_dump($test);
+					// for ($i=0; $i < count($test) ; $i++) { 
+					// 	var_dump($i);
+					// }
 					// foreach ($variable as $test) 
 					// {
 					// 	var_dump($variable);
