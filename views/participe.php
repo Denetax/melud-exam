@@ -36,7 +36,7 @@
 					// for ($i=0; $i < count($test) ; $i++) { 
 					// 	var_dump($i);
 					// }
-					foreach ($variable as $test) 
+					foreach ($variable as $key => $test) 
 					{
 						var_dump($variable->getProperty('id'));
 					}
