@@ -35,9 +35,9 @@
 					foreach ($test as $variable) 
 					{
 						foreach ($variable->images as $element) {
-							var_dump($element);
+							// var_dump($element);
 							?>
-
+							<img src="<?php echo $element->source ?>" />
 							<?php
 						}
 					}
