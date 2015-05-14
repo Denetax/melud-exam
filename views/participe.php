@@ -32,7 +32,7 @@
 				{ ?>
 					<?php
 					$test = recup_user_picture_concours($session);
-					var_dump($test);
+					var_dump($test->getProperty(0));
 					// for ($i=0; $i < count($test) ; $i++) { 
 					// 	var_dump($i);
 					// }
