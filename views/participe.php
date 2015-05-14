@@ -38,7 +38,7 @@
 					// }
 					foreach ($test as $variable) 
 					{
-						var_dump($variable["images"]);
+						var_dump($variable);
 					}
 					session_auto($session);
 					if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
