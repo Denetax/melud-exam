@@ -6,25 +6,9 @@
 	
 	function connexionBdd()
 	{		
-			
-		try {
-		
-			// $serveur = 'mysql:host=meludexaprstocky.mysql.db;dbname=meludexaprstocky';
-			// $user = 'meludexaprstocky';
-			// $mdp = 'Di062005D';
-			
-			$pdo = new PDO('mysql:host=213.186.33.40;dbname=meludexaprstocky', 'meludexaprstocky', 'Di062005D'); 
-			//$dbh = new PDO($serveur,$user,$mdp);
-			// var_dump($dbh);
-			// echo "test2";
-			// $resultats=$pdo->query("SELECT * FROM melud_user");
-			// var_dump($resultats);
-			 $pdo = null;
-		} catch (PDOException $e) {
-			print "Erreur !: " . $e->getMessage() . "<br/>";
-			die();
-		}
-
+		alert("Avant connexion bdd");
+		$dbconn3 = pg_connect("host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com port=5432 dbname=d5iqngvvkvdj0o user=vcgyjwcpqrizgf password= DlgzzsaQvO0PamJBLqxj5fxlKK");
+		alert("Apres connexion bdd");
 	}
 	
 	function session_auto($session)
