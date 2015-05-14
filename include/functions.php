@@ -9,11 +9,13 @@
 	{		
 		$dbconn1 = pg_connect("host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com port=5432 dbname=d5iqngvvkvdj0o user=vcgyjwcpqrizgf password= DlgzzsaQvO0PamJBLqxj5fxlKK") or die('connection failed');
 		//$result = pg_query($dbconn1, "CREATE TABLE utilisateur(id INT PRIMARY KEY NOT NULL,tokenUser VARCHAR(100),href VARCHAR(100))");
-		pg_query($dbconn1, "INSERT INTO utilisateur (tokenUser, href VALUES ('oghruoufeu651781', 'http://blablabla.fr'))");
-		$result = pg_query($dbconn1, "SELECT tokenUser, href FROM utilisateur");
-		while ($row = pg_fetch_row($result)) {
-		echo "TokenUser: $row[0]  href: $row[1]";
-		echo "<br />\n";
+		
+		$result = pg_query($dbconn1, "DROP TABLE utilisateur")
+		//pg_query($dbconn1, "INSERT INTO utilisateur (tokenUser, href VALUES ('oghruoufeu651781', 'http://blablabla.fr'))");
+		//$result = pg_query($dbconn1, "SELECT tokenUser, href FROM utilisateur");
+		//while ($row = pg_fetch_row($result)) {
+		//echo "TokenUser: $row[0]  href: $row[1]";
+		//echo "<br />\n";
 }
 		
 	}	
