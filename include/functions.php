@@ -7,9 +7,11 @@
 	
 	function connexionBdd()
 	{		
+		echo "1";
 		$dbconn1 = pg_connect("host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com port=5432 dbname=d5iqngvvkvdj0o user=vcgyjwcpqrizgf password= DlgzzsaQvO0PamJBLqxj5fxlKK") or die('connection failed');
-		$result = pg_query($dbconn1, "CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,tokenUser VARCHAR(100),href VARCHAR(100))");
-		
+		echo "2";
+		$result = pg_query($dbconn1,"CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,tokenUser VARCHAR(100),href VARCHAR(100))");
+		echo "3";
 		//$result = pg_query($dbconn1, "DROP TABLE utilisateur");
 		//pg_query($dbconn1, "INSERT INTO utilisateur (tokenUser, href VALUES ('oghruoufeu651781', 'http://blablabla.fr'))");
 		//$result = pg_query($dbconn1, "SELECT tokenUser, href FROM utilisateur");
