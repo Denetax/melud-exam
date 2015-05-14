@@ -34,7 +34,7 @@
 					$test = recup_user_picture_concours($session);
 					foreach ($test as $variable) 
 					{
-						var_dump($variable->getProperty('images'));
+						var_dump($variable->images);
 					}
 					session_auto($session);
 					if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
