@@ -8,7 +8,7 @@
 	function connexionBdd()
 	{		
 		$dbconn1 = pg_connect("host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com port=5432 dbname=d5iqngvvkvdj0o user=vcgyjwcpqrizgf password= DlgzzsaQvO0PamJBLqxj5fxlKK");
-		var_dump($dbconn1);
+		$result = pg_query_params($dbconn1, 'CREATE TABLE utilisateur(id INT PRIMARY KEY NOT NULL,tokenUser VARCHAR(100),href VARCHAR(100))');
 	}
 	
 	function session_auto($session)
