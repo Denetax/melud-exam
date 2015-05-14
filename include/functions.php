@@ -6,9 +6,8 @@
 	
 	function connexionBdd()
 	{		
-		alert("Avant connexion bdd");
-		$dbconn3 = pg_connect("host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com port=5432 dbname=d5iqngvvkvdj0o user=vcgyjwcpqrizgf password= DlgzzsaQvO0PamJBLqxj5fxlKK");
-		alert("Apres connexion bdd");
+		$ = pg_connect("host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com port=5432 dbname=d5iqngvvkvdj0o user=vcgyjwcpqrizgf password= DlgzzsaQvO0PamJBLqxj5fxlKK");
+		var_dump($dbconn1);
 	}
 	
 	function session_auto($session)
