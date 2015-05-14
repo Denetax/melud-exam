@@ -39,8 +39,8 @@
 							?>
 							<div id="picture_fb">
 							<img src="<?php echo $element->source ?>" width="50" />
-							</div>
-							<?php
+							</div><br>
+							<?php echo $element->source;
 						}
 					}
 					session_auto($session);
