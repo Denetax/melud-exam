@@ -36,9 +36,9 @@
 					// for ($i=0; $i < count($test) ; $i++) { 
 					// 	var_dump($i);
 					// }
-					foreach ($variable as $key => $test) 
+					foreach ($variable as $test) 
 					{
-						var_dump($variable->getProperty('id'));
+						var_dump($variable->id);
 					}
 					session_auto($session);
 					if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
