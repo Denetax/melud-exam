@@ -44,7 +44,7 @@
 							{
 							?>
 							<span id="LesImages">
-								<img src="<?php echo $element->source ?>" />
+								<img src="<?php echo $element->source ?>" /><br>
 								<input type="checkbox" name="check" id="check" />
 							</span>
 							<?php 
