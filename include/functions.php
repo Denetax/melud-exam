@@ -7,9 +7,9 @@
 	
 	function connexionBdd()
 	{		
-		//pgsql:host=localhost;port=5432;dbname=testdb;user=bruce;password=mypass
+		//pgsql:host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com;port=5432;dbname=testdb;user=bruce;password=mypass
 		try {
-			  $db = new PDO("pgsql:host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com;dbname=nom_db", "d5iqngvvkvdj0o", "DlgzzsaQvO0PamJBLqxj5fxlKK");
+			  $db = new PDO("pgsql:host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com;dbname=d5iqngvvkvdj0o", "vcgyjwcpqrizgf", "DlgzzsaQvO0PamJBLqxj5fxlKK");
 			  echo 'Connexion OK';
 			}
 			catch(PDOException $e) {
