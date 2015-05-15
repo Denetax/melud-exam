@@ -42,9 +42,9 @@
 							$coupe = split('/', $url_img);
 							// var_dump($coupe); 
 							$laBoucle = count($coupe);
-							for ($i=0; $i <= $laBoucle; $i++) { 
-								var_dump($laBoucle[$i]);
-								if($laBoucle[$i] == "p320x320")
+							foreach ($coupe as $value) {
+								// var_dump($laBoucle[$i]);
+								if($value == "p320x320")
 								{
 								?>
 								<span id="LesImages">
