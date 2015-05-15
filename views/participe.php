@@ -32,6 +32,9 @@
 				{ ?>
 					<?php
 					$test = recup_user_picture_concours($session);
+					?>
+					<div id="picture_fb">
+					<?php
 					foreach ($test as $variable) 
 					{
 						foreach ($variable->images as $element) {
@@ -40,15 +43,15 @@
 							if(count($coupe) == 7)
 							{
 							?>
-							<div id="picture_fb">
-							<img src="<?php echo $element->source ?>" width="50" />
-							</div><br>
+								<img src="<?php echo $element->source ?>" style="fla" />
 							<?php 
 							}
 							?>
 
 						 <? }
-					}
+					} ?>
+					</div>
+					<?php
 					session_auto($session);
 					if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
 					{
