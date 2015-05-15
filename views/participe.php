@@ -48,8 +48,8 @@
 								<input type="radio" name="check" id="check" />
 							</span>
 							<?php 
-							var_dump($coupe);
 							}
+							var_dump($coupe);
 							?>
 
 						 <? }
