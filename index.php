@@ -28,7 +28,7 @@
 				</div>
 			</div>
 			<h2>Jeux Concours</h2>
-			<img src="http://melud-exam.fr/views/web/images/photo-1428954376791-d9ae785dfb2d.jpg" />
+			<img src="https://melud-exam.herokuapp.com/web/img/photo-1428954376791-d9ae785dfb2d.jpg" />
 			<?php
 				if($session)
 				{ ?>
