@@ -27,7 +27,7 @@
 					<img src="http://melud-exam.fr/views/web/images/title.png"/>
 				</div>
 			</div>
-			<h2>Jeux Concours - Fait ton affiche de cinéma d'horreur</h2>
+			<h2>Jeux Concours</h2>
 			<p>
 				Vote
 			</p>
