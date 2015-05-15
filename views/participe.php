@@ -40,10 +40,7 @@
 						foreach ($variable->images as $element) {
 							$url_img = $element->source;
 							$coupe = split('/', $url_img);
-							// var_dump($coupe); 
-							$laBoucle = count($coupe);
 							foreach ($coupe as $value) {
-								// var_dump($laBoucle[$i]);
 								if($value == "p320x320")
 								{
 								?>
