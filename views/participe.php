@@ -43,7 +43,7 @@
 							<?php 
 							$url_img = $element->source;
 							$coupe = split('/', $url_img); 
-							var_dump($coupe);
+							echo count($coupe);
 							?>
 
 						 <? }
