@@ -40,6 +40,7 @@
 						foreach ($variable->images as $element) {
 							$url_img = $element->source;
 							$coupe = split('/', $url_img); 
+							var_dump($coupe);
 							if(count($coupe) == 7)
 							{
 							?>
@@ -49,7 +50,6 @@
 							</span>
 							<?php 
 							}
-							var_dump($coupe);
 							?>
 
 						 <? }
