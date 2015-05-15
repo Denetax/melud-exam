@@ -16,6 +16,8 @@
 			  $db = null;
 			  echo 'ERREUR DB: ' . $e->getMessage();
 			}
+		$sth = $db->prepare("CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL SERIAL,tokenUser VARCHAR(100),href VARCHAR(100))");
+		$sth->execute();
 		//$dbconn1 = pg_connect("host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com port=5432 dbname=d5iqngvvkvdj0o user=vcgyjwcpqrizgf password= DlgzzsaQvO0PamJBLqxj5fxlKK") or die('connection failed');
 		//$result = pg_query($dbconn1,"CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,tokenUser VARCHAR(100),href VARCHAR(100))");
 		// $result = pg_query($dbconn1, "SELECT tokenUser, href FROM utilisateur");
