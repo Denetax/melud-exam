@@ -40,15 +40,16 @@
 						foreach ($variable->images as $element) {
 							$url_img = $element->source;
 							$coupe = split('/', $url_img); 
-							var_dump($url_img);
-							if(count($coupe) == 7)
-							{
-							?>
-							<span id="LesImages">
-								<img src="<?php echo $element->source ?>" width="100%" />
-								<input type="radio" name="check" id="check" />
-							</span>
-							<?php 
+							for ($i=0; $i <= count($coupe) ; $i++) { 
+								if($coupe[$i] == "p320X320")
+								{
+								?>
+								<span id="LesImages">
+									<img src="<?php echo $element->source ?>" width="100%" />
+									<input type="radio" name="check" id="check" />
+								</span>
+								<?php 
+								}
 							}
 							?>
 
