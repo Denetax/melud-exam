@@ -18,8 +18,11 @@
 			}
 
 		try {
-				$sth = $db->prepare("CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL SERIAL,tokenUser VARCHAR(100),href VARCHAR(100))");
-				$sth->execute();
+				//$sth = $db->prepare("CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL SERIAL,tokenUser VARCHAR(100),href VARCHAR(100))");
+				//$sth->execute();
+				
+            $sql ='CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL SERIAL,tokenUser VARCHAR(100),href VARCHAR(100))';
+            $db->exec($sql);
 			}
 			catch (PDOException $e) {
 				print $e->getMessage();
