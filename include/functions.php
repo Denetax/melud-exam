@@ -9,7 +9,7 @@
 	{		
 		//pgsql:host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com;port=5432;dbname=d5iqngvvkvdj0o;user=vcgyjwcpqrizgf;password=DlgzzsaQvO0PamJBLqxj5fxlKK
 		try {
-			  $db = new PDO("pgsql:host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com;port=5432;dbname=d5iqngvvkvdj0o;user=vcgyjwcpqrizgf;password=DlgzzsaQvO0PamJBLqxj5fxlKK");
+			  $db = new PDO("pgsql:host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com;port=5432;dbname=d83d3aeifsc9ir;user=qvgrnmrngeochj;password=ByPWUf6LDRo4Cflah_kraHAExL");
 			  echo 'Connexion OK';
 			}
 			catch(PDOException $e) {
