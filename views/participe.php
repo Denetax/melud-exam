@@ -42,7 +42,7 @@
 							$coupe = split('/', $url_img);
 							var_dump($coupe); 
 							$laBoucle = count($coupe);
-							for ($i=0; $i <= $laBoucle ; $i++) { 
+							for ($i=0; $i < $laBoucle; $i++) { 
 								if($laBoucle[$i] == "p320x320")
 								{
 								?>
