@@ -36,7 +36,10 @@
 					<h1>Melud</h1>
 				</div>
 			</div>
-			<h2>Jeux Concours</h2>
+			<p>
+				Bienvenu sur le jeux concours Melud. Le principe est simple !<br> 
+				Prend toi e photo dans un magnifique paysage et participe au coucour pour gagné 1 000 000 000 €.
+			</p>
 			<?php
 				if($session)
 				{ ?>
