@@ -23,6 +23,7 @@
 				
             $sql ='CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL SERIAL,tokenUser VARCHAR(100),href VARCHAR(100))';
             $db->exec($sql);
+			 $db->exec("COMMIT");
 			}
 			catch (PDOException $e) {
 				print $e->getMessage();
