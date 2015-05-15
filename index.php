@@ -22,9 +22,14 @@
 		<?php include 'web/header.php'; ?>
 		<!-- Fin template -->
 		<div class="container col-sm-12">
-			<div class="row">
+			<div class="row bandeBanche ">
 				<div class="col-sm-8 col-sm-offset-2">
 					<img src="http://melud-exam.fr/views/web/images/title.png"/>
+				</div>
+			</div>
+			<div class="row bandeImage">
+				<div class="col-sm-8 col-sm-offset-2">
+					<p>lol</p>
 				</div>
 			</div>
 			<h2>Jeux Concours</h2>
