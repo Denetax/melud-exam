@@ -13,7 +13,7 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="https://melud-exam.herokuapp.com/web/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://melud-exam.herokuapp.com/web/css/styles.css">
-		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 		<script src="https://melud-exam.herokuapp.com/web/js/bootstrap.min.js"></script>
 		<script src="https://melud-exam.herokuapp.com/web/js/FBconfig.js"></script>
 		<title>Jeux Coucours</title>

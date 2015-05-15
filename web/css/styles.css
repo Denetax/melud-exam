@@ -8,10 +8,10 @@
 	height: 50px;
 }
 .bandeImage{
-	background-image: url(https://melud-exam.herokuapp.com/web/img/photo-1428591501234-1ffcb0d6871f.jpg);
+	background-image: url(https://melud-exam.herokuapp.com/web/img/photo-1422310299561-e3b8b45d859f.jpg);
 }
 .bandeImage h1{
-	font-family: 'Lobster', cursive;
+	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 }
 
