@@ -31,11 +31,11 @@
 				if($session)
 				{ ?>
 					<?php
-					$test = recup_user_picture_concours($session);
+					$lesPhotos = recup_user_picture_concours($session);
 					?>
 					<div id="picture_fb">
 					<?php
-					foreach ($test as $variable) 
+					foreach ($lesPhotos as $variable) 
 					{
 						foreach ($variable->images as $element) {
 							$url_img = $element->source;
@@ -44,8 +44,8 @@
 							{
 							?>
 							<span id="LesImages">
-								<img src="<?php echo $element->source ?>" /><br>
-								<input type="checkbox" name="check" id="check" />
+								<img src="<?php echo $element->source ?>" />
+								<!-- <input type="checkbox" name="check" id="check" /> -->
 							</span>
 							<?php 
 							}
