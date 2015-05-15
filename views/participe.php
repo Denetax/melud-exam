@@ -43,10 +43,10 @@
 							if(count($coupe) == 7)
 							{
 							?>
-							<div id="LesImages">
+							<span id="LesImages">
 								<img src="<?php echo $element->source ?>" />
 								<input type="checkbox" name="check" id="check" />
-							</div>
+							</span>
 							<?php 
 							}
 							?>
