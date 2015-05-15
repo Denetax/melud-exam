@@ -35,15 +35,16 @@
 					foreach ($test as $variable) 
 					{
 						foreach ($variable->images as $element) {
-							// var_dump($element);
+							$url_img = $element->source;
+							$coupe = split('/', $url_img); 
+							if(count($coupe) == 7)
+							{
 							?>
 							<div id="picture_fb">
 							<img src="<?php echo $element->source ?>" width="50" />
 							</div><br>
 							<?php 
-							$url_img = $element->source;
-							$coupe = split('/', $url_img); 
-							echo count($coupe);
+							}
 							?>
 
 						 <? }
