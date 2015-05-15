@@ -22,8 +22,8 @@
 		<?php include 'web/header.php'; ?>
 		<!-- Fin template -->
 		<div class="container col-sm-12">
-			<div class="row bandeBanche" style="height:50px">
-				<div class="col-sm-8 col-sm-offset-2">
+			<div class="row bandeBanche" style="height:50px; line-height:50px;">
+				<div class="col-sm-8">
 					<?php if(!$session){
 						echo "<a href=".$loginUrl.">Se Connecter</a><br><br>";
 					} ?>
