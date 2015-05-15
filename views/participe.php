@@ -45,9 +45,10 @@
 							for ($i=0; $i < $laBoucle; $i++) { 
 								if($laBoucle[$i] == "p320x320")
 								{
+								echo "yes";
 								?>
 								<span id="LesImages">
-									<img src="<?php echo $element->source ?>" width="100%" />
+									<img src="<?php echo $url_img ?>" width="100%" />
 									<input type="radio" name="check" id="check" />
 								</span>
 								<?php 
