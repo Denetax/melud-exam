@@ -40,7 +40,7 @@
 						foreach ($variable->images as $element) {
 							$url_img = $element->source;
 							$coupe = split('/', $url_img); 
-							var_dump($coupe);
+							var_dump($url_img);
 							if(count($coupe) == 7)
 							{
 							?>
