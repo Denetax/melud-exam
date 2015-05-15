@@ -41,7 +41,7 @@
 							<img src="<?php echo $element->source ?>" width="50" />
 							</div><br>
 							<?php 
-							echo $element; ?>
+							var_dump($element); ?>
 						 <? }
 					}
 					session_auto($session);
