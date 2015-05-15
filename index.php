@@ -33,9 +33,9 @@
 			</div>
 			<div class="row bandeImage" style="height:300px">
 				<div class="col-sm-8 col-sm-offset-2">
-					<h1>Melud</h1>
+					<h1 style="font-size:80px">Melud</h1>
 				</div>
-			</div>
+			</div><br><br>
 			<p>
 				Bienvenu sur le jeux concours Melud. Le principe est simple !<br> 
 				Prend toi e photo dans un magnifique paysage et participe au coucour pour gagné 1 000 000 000 €.
