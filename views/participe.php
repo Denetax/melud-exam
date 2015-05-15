@@ -43,7 +43,10 @@
 							if(count($coupe) == 7)
 							{
 							?>
-								<img src="<?php echo $element->source ?>" style="fla" />
+							<div id="LesImages">
+								<img src="<?php echo $element->source ?>" />
+								<input type="checkbox" name="check" id="check" />
+							</div>
 							<?php 
 							}
 							?>
@@ -51,6 +54,7 @@
 						 <? }
 					} ?>
 					</div>
+					<button>Sélectionné</button>
 					<?php
 					session_auto($session);
 					if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
