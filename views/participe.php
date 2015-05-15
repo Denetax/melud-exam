@@ -45,9 +45,10 @@
 							?>
 							<span id="LesImages">
 								<img src="<?php echo $element->source ?>" width="100%" />
-								<input type="checkbox" name="check" id="check" />
+								<input type="radio" name="check" id="check" />
 							</span>
 							<?php 
+							var_dump($coupe);
 							}
 							?>
 
