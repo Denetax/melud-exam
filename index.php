@@ -26,6 +26,7 @@
 			<div class="row bandeBanche" style="height:50px; line-height:50px;">
 				<div class="col-sm-8">
 					<?php if($session == ""){
+						$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']);
 						echo "<a href=".$loginUrl.">Se Connecter</a><br><br>";
 					} ?>
 				</div>
