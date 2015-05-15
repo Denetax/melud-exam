@@ -22,11 +22,14 @@
 		<?php include 'web/header.php'; ?>
 		<!-- Fin template -->
 		<div class="container col-sm-12">
-			<div class="row bandeBanche ">
+			<div class="row bandeBanche" style="height:50px">
 				<div class="col-sm-8 col-sm-offset-2">
+					<?php if(!$session){
+						echo "<a href=".$loginUrl.">Se Connecter</a><br><br>";
+					} ?>
 				</div>
 			</div>
-			<div class="row bandeImage">
+			<div class="row bandeImage" style="height:300px">
 				<div class="col-sm-8 col-sm-offset-2">
 					<img src="http://melud-exam.fr/views/web/images/title.png"/>
 				</div>
@@ -48,11 +51,11 @@
 					</div>
 				<?php
 				}
-				else
-				{
-					$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']);
-					echo "<a href=".$loginUrl." class='btn btn-primary btn-lg'>Se Connecter</a><br><br>";
-				}
+				// else
+				// {
+				// 	$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']);
+				// 	echo "<a href=".$loginUrl." class='btn btn-primary btn-lg'>Se Connecter</a><br><br>";
+				// }
 			?>
 			<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
 		</div>
