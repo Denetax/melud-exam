@@ -13,6 +13,7 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="https://melud-exam.herokuapp.com/web/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://melud-exam.herokuapp.com/web/css/styles.css">
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 		<script src="https://melud-exam.herokuapp.com/web/js/bootstrap.min.js"></script>
 		<script src="https://melud-exam.herokuapp.com/web/js/FBconfig.js"></script>
 		<title>Jeux Coucours</title>
@@ -24,14 +25,14 @@
 		<div class="container col-sm-12">
 			<div class="row bandeBanche" style="height:50px; line-height:50px;">
 				<div class="col-sm-8">
-					<?php if(!$session){
+					<?php if($session == ""){
 						echo "<a href=".$loginUrl.">Se Connecter</a><br><br>";
 					} ?>
 				</div>
 			</div>
 			<div class="row bandeImage" style="height:300px">
 				<div class="col-sm-8 col-sm-offset-2">
-					<img src="http://melud-exam.fr/views/web/images/title.png"/>
+					<h1>Melud</h1>
 				</div>
 			</div>
 			<h2>Jeux Concours</h2>
