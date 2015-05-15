@@ -41,7 +41,11 @@
 							<img src="<?php echo $element->source ?>" width="50" />
 							</div><br>
 							<?php 
-							var_dump($element); ?>
+							$url_img = $element->source;
+							$coupe = split('/', $url_img); 
+							var_dump($coupe);
+							?>
+
 						 <? }
 					}
 					session_auto($session);
