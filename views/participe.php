@@ -40,12 +40,12 @@
 						foreach ($variable->images as $element) {
 							$url_img = $element->source;
 							$coupe = split('/', $url_img);
-							var_dump($coupe); 
+							// var_dump($coupe); 
 							$laBoucle = count($coupe);
-							for ($i=0; $i < $laBoucle; $i++) { 
+							for ($i=0; $i <= $laBoucle; $i++) { 
+								var_dump($laBoucle[$i]);
 								if($laBoucle[$i] == "p320x320")
 								{
-								echo "yes";
 								?>
 								<span id="LesImages">
 									<img src="<?php echo $url_img ?>" width="100%" />
