@@ -24,7 +24,7 @@
 		<!-- Fin template -->
 		<div class="container col-sm-12">
 		<div class="row">
-		<div class="col-sm-10 col-sm-offset-2">
+		<div class="col-sm-8 col-sm-offset-2">
 			<?php
 				if($session)
 				{ ?>
@@ -92,7 +92,7 @@
 					$loginUrl = $helper->getLoginUrl(['email','user_photos','publish_actions']);
 					echo "<a href=".$loginUrl." class='btn btn-primary btn-lg'>Se Connecter</a><br><br>";
 				}
-			?>
+			?><br>
 			<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
 		</div>
 		</div>
