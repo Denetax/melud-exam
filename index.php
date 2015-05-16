@@ -22,7 +22,6 @@
 		<!-- template header -->
 		<?php include 'web/header.php'; ?>
 		<!-- Fin template -->
-		<div class="row">
 			<div class="container col-sm-12">
 				<div class="row bandeBanche" style="height:50px; line-height:50px;">
 					<div class="col-sm-8">
@@ -39,7 +38,6 @@
 					<?php } ?>
 				</div>
 			</div>
-		</div>
 		<div class="row bandeImage" style="height:300px">
 			<div class="container col-sm-8 col-sm-offset-2">
 				<h1 style="font-size:80px">Melud</h1>
