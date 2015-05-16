@@ -26,9 +26,11 @@
 				<div class="row bandeBanche" style="height:50px; line-height:50px;">
 					<div class="col-sm-8">
 						<?php if($session == ""){
-							$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']);
-							echo "<a href=".$loginUrl.">Se Connecter</a><br><br>";
-						}else{ ?>
+							$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']); ?>
+						<ul class="nav nav-pills">
+							<li role="presentation"><a href="<?php echo $loginUrl ?>">Se Connecter</a></li>
+						</ul>
+						<?php }else{ ?>
 						<?php session_auto($session); ?>
 						<ul class="nav nav-pills">
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/participe.php">Je Participe</a></li>
@@ -37,7 +39,7 @@
 						<?php } ?>	
 					</div>
 				</div>
-				<div class="row bandeImage" style="height:300px">
+				<div class="row bandeImage" style="height:300px; margin-top:20px;">
 					<div class="col-sm-8 col-sm-offset-2">
 						<h1 style="font-size:80px">Melud</h1>
 						<p>
