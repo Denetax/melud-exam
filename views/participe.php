@@ -65,13 +65,21 @@
 					Récupére une image de ton album pour participer au concours.
 				</p>
 				<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
-					<div class="input-group input-group-lg">
-  						<span class="input-group-addon" id="sizing-addon1">#</span>
-  						<input type="text" class="form-control" id="nameAlbum" name="nameAlbum" placeholder="Nom de l'album" aria-describedby="sizing-addon1" required>
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="input-group input-group-lg">
+		  						<span class="input-group-addon" id="sizing-addon1">#</span>
+		  						<input type="text" class="form-control" id="nameAlbum" name="nameAlbum" placeholder="Nom de l'album" aria-describedby="sizing-addon1" required>
+							</div>
+						</div>
 					</div>
-					<div class="input-group input-group-lg">
-  						<span class="input-group-addon" id="sizing-addon1">#</span>
-  						<input type="text" class="form-control" id="descAlbum" name="descAlbum" placeholder="Description de l'album" aria-describedby="sizing-addon1" required>
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="input-group input-group-lg">
+		  						<span class="input-group-addon" id="sizing-addon1">#</span>
+		  						<input type="text" class="form-control" id="descAlbum" name="descAlbum" placeholder="Description de l'album" aria-describedby="sizing-addon1" required>
+							</div>
+						</div>
 					</div>
 					<input type="file" id="fichier" name="fichier" class="filestyle" data-buttonName="btn-primary">
 					<button id="participer" name="participer">Valider</button>
