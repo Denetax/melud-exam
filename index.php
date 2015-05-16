@@ -30,7 +30,7 @@
 							echo "<a href=".$loginUrl.">Se Connecter</a><br><br>";
 						}else{ ?>
 						<?php session_auto($session); ?>
-						<ul class="nav nav-tabs">
+						<ul class="nav nav-pills">
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/participe.php">Je Participe</a></li>
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/vote.php">Je vote</a></li>
 						</ul>
