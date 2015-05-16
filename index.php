@@ -33,13 +33,13 @@
 						<ul class="nav nav-tabs">
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/participe.php">Je Participe</a></li>
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/vote.php">Je vote</a></li>
-						</ul>	
+						</ul>
+						<?php } ?>	
 					</div>
-					<?php } ?>
 				</div>
 			</div>
 		<div class="row bandeImage" style="height:300px">
-			<div class="container col-sm-8 col-sm-offset-2">
+			<div class="col-sm-8 col-sm-offset-2">
 				<h1 style="font-size:80px">Melud</h1>
 				<p>
 				Bienvenue sur le jeux concours Melud dédié à la photographie. <br>
