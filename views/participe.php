@@ -21,7 +21,8 @@
 		<?php //include 'web/header.php'; ?>
 		<!-- Fin template -->
 		<div class="container col-sm-12">
-			<h2>Jeux Concours</h2>
+		<div class="row">
+		<div class="col-sm-8 col-sm-offset-2">
 			<?php
 				if($session)
 				{ ?>
@@ -85,6 +86,8 @@
 				}
 			?>
 			<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
+		</div>
+		</div>
 		</div>
 		<!-- template footer -->
 		<?php //include 'web/footer.php'; ?>
