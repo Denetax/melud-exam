@@ -35,10 +35,10 @@
 				<div class="col-sm-8 col-sm-offset-2">
 					<h1 style="font-size:80px">Melud</h1>
 					<p>
-				Bienvenue sur le jeux concours Melud dédié à la photographie. <br>
-				Le principe est simple, 
-				prend toi en photo dans un magnifique paysage
-				pour participe au coucours.
+					Bienvenue sur le jeux concours Melud dédié à la photographie. <br>
+					Le principe est simple, 
+					prend toi en photo dans un magnifique paysage
+					pour participe au coucours.
 					</p>
 				</div>
 			</div><br><br>
@@ -64,6 +64,20 @@
 				// 	echo "<a href=".$loginUrl." class='btn btn-primary btn-lg'>Se Connecter</a><br><br>";
 				// }
 			?>
+			<div class="row">
+				<div class="col-sm-3">
+					<img src="https://melud-exam.herokuapp.com/web/img/80652197.jpg">
+				</div>
+				<div class="col-sm-3">
+					<img src="https://melud-exam.herokuapp.com/web/img/82e2ae94.jpg">
+				</div>
+				<div class="col-sm-3">
+					<img src="https://melud-exam.herokuapp.com/web/img/photo-1415298910336-daa47babb3cc.jpg">
+				</div>
+				<div class="col-sm-3">
+					<img src="https://melud-exam.herokuapp.com/web/img/photo-1428954376791-d9ae785dfb2d.jpg">
+				</div>
+			</div>
 			<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
 		</div>
 		<!-- template footer -->
