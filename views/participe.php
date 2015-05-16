@@ -29,8 +29,8 @@
 			<?php
 				if($session)
 				{ ?>
-				<a href="" id="firstBlock">Upload Desktop</a>
-				<a href="" id="secondBlock">Upload Facebook</a>
+				<a href="#" id="firstBlock">Upload Desktop</a>
+				<a href="#" id="secondBlock">Upload Facebook</a>
 				<div id="blockUploadFacebook">
 				<?php $lesPhotos = recup_user_picture_concours($session); ?>
 				<div id="picture_fb">
@@ -83,7 +83,7 @@
 						</div>
 					</div>
 					<input type="file" id="fichier" name="fichier" class="filestyle" data-buttonName="btn-primary">
-					<button type="button" class="btn btn-default" id="participer" name="participer">Valider</button>
+					<button class="btn btn-default" id="participer" name="participer">Valider</button>
 				</form>
 			<?php }	?>
 			</div>
