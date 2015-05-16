@@ -72,7 +72,7 @@
 		  						<input type="text" class="form-control" id="nameAlbum" name="nameAlbum" placeholder="Nom de l'album" aria-describedby="sizing-addon1" required>
 							</div>
 						</div>
-					</div><br><br>
+					</div><br>
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="input-group input-group-lg">
@@ -81,7 +81,9 @@
 							</div>
 						</div>
 					</div>
-					<input id="input-1a" name="fichier" type="file" class="file" data-show-preview="false">
+					<span class="btn btn-default btn-file">
+						Upload <input id="input-1a" name="fichier" type="file" class="file">
+					</span>
 					<!-- <input type="file" id="fichier" name="fichier" class="filestyle" data-buttonName="btn-primary"> -->
 					<button id="participer" name="participer">Valider</button>
 				</form>
