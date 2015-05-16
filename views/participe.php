@@ -18,14 +18,9 @@
 	</head>
 	<body>
 		<!-- template header -->
-		<?php include 'web/header.php'; ?>
+		<?php //include 'web/header.php'; ?>
 		<!-- Fin template -->
 		<div class="container col-sm-12">
-			<div class="row">
-				<div class="col-sm-8 col-sm-offset-2">
-					<img src="http://melud-exam.fr/views/web/images/title.png"/>
-				</div>
-			</div>
 			<h2>Jeux Concours</h2>
 			<?php
 				if($session)
@@ -61,9 +56,6 @@
 					createAlbum($session, $_FILES['fichier']['tmp_name'], $_POST['nameAlbum'], $_POST['descAlbum']);
 					echo "Votre photo est upload, votre participation au concours est pris en compte";	
 				}else{ ?>
-				<p>
-					Récupére une image de ton album pour participer au concours.
-				</p>
 				<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
 					<div class="row">
 						<div class="col-sm-6">
@@ -95,7 +87,7 @@
 			<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
 		</div>
 		<!-- template footer -->
-		<?php include 'web/footer.php'; ?>
+		<?php //include 'web/footer.php'; ?>
 		<!-- Fin template -->
 	</body>
 </html>
