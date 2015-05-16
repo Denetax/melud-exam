@@ -12,8 +12,10 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="https://melud-exam.herokuapp.com/web/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://melud-exam.herokuapp.com/web/css/styles.css">
+		<script src="https://melud-exam.herokuapp.com/web/js/jquery-2.1.4.min.js"></script>
 		<script src="https://melud-exam.herokuapp.com/web/js/bootstrap.min.js"></script>
 		<script src="https://melud-exam.herokuapp.com/web/js/FBconfig.js"></script>
+		<script src="https://melud-exam.herokuapp.com/web/js/app.js"></script>
 		<title>Jeux Coucours</title>
 	</head>
 	<body>
@@ -22,10 +24,13 @@
 		<!-- Fin template -->
 		<div class="container col-sm-12">
 		<div class="row">
-		<div class="col-sm-8 col-sm-offset-2">
+		<div class="col-sm-10 col-sm-offset-2">
 			<?php
 				if($session)
 				{ ?>
+				<a href="#" id="firstBlock">Upload Desktop</a>
+				<a href="#" id="secondBlock">Upload Facebook</a>
+				<div id="blockUploadFacebook">
 				<?php $lesPhotos = recup_user_picture_concours($session); ?>
 				<div id="picture_fb">
 					<?php
@@ -50,6 +55,8 @@
 						 <? }
 					} ?>
 				</div>
+				</div>
+				<div id="blockUploadDesktop">
 				<?php
 				session_auto($session);
 				if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
@@ -75,10 +82,11 @@
 						</div>
 					</div>
 					<input type="file" id="fichier" name="fichier" class="filestyle" data-buttonName="btn-primary">
-					<button id="participer" name="participer">Valider</button>
+					<button type="button" class="btn btn-default" id="participer" name="participer">Valider</button>
 				</form>
-			<?php }	
-				}
+			<?php }	?>
+			</div>
+				<?php } 
 				else
 				{
 					$loginUrl = $helper->getLoginUrl(['email','user_photos','publish_actions']);
