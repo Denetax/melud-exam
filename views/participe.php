@@ -81,8 +81,8 @@
 		  						<input type="text" class="form-control" id="descAlbum" name="descAlbum" placeholder="Description de l'album" aria-describedby="sizing-addon1" required>
 							</div>
 						</div>
-					</div>
-					<input type="file" id="fichier" name="fichier" class="filestyle" data-buttonName="btn-primary">
+					</div><br>
+					<input type="file" id="fichier" name="fichier" class="filestyle" data-buttonName="btn-primary"><br>
 					<button class="btn btn-default" id="participer" name="participer">Valider</button>
 				</form>
 			<?php }	?>
