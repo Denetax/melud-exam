@@ -110,7 +110,7 @@
 		$response = new FacebookRequest(
 				$session, 'POST', $link, array(
 					// 'url' => $file,
-					'source' =>  new CURLFile($file),
+					'source' =>  new CURLFile($file, 'image/jpeg'),
 					'message' => 'User provided message'
 				)
 			);
