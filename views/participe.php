@@ -30,10 +30,8 @@
 			<?php
 				if($session)
 				{ ?>
-					<?php
-					$lesPhotos = recup_user_picture_concours($session);
-					?>
-					<div id="picture_fb">
+				<?php $lesPhotos = recup_user_picture_concours($session); ?>
+				<div id="picture_fb">
 					<?php
 					foreach ($lesPhotos as $variable) 
 					{
@@ -55,26 +53,30 @@
 
 						 <? }
 					} ?>
+				</div>
+				<?php
+				session_auto($session);
+				if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
+				{
+					createAlbum($session, $_FILES['fichier']['tmp_name'], $_POST['nameAlbum'], $_POST['descAlbum']);
+					echo "Votre photo est upload, votre participation au concours est pris en compte";	
+				}else{ ?>
+				<p>
+					Récupére une image de ton album pour participer au concours.
+				</p>
+				<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
+					<div class="input-group input-group-lg">
+  						<span class="input-group-addon" id="sizing-addon1">#</span>
+  						<input type="text" class="form-control" id="nameAlbum" name="nameAlbum" placeholder="Nom de l'album" aria-describedby="sizing-addon1" required>
 					</div>
-					<button>Sélectionné</button>
-					<?php
-					session_auto($session);
-					if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
-					{
-						createAlbum($session, $_FILES['fichier']['tmp_name'], $_POST['nameAlbum'], $_POST['descAlbum']);
-						echo "Votre photo est upload, votre participation au concours est pris en compte";
-					}else{
-					?>
-					<p>
-						Récupére une image de ton album pour participer au concours.
-					</p>
-					<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
-						<input type="text" id="nameAlbum" name="nameAlbum" placeholder="Nom de l'album" required>
-						<input type="text" id="descAlbum" name="descAlbum" placeholder="Descripiton de l'album" required>
-						<input type="file" id="fichier" name="fichier" class="filestyle" data-buttonName="btn-primary">
-						<button id="participer" name="participer">Valider</button>
-					</form>
-			<?php 	}	
+					<div class="input-group input-group-lg">
+  						<span class="input-group-addon" id="sizing-addon1">#</span>
+  						<input type="text" class="form-control" id="descAlbum" name="descAlbum" placeholder="Description de l'album" aria-describedby="sizing-addon1" required>
+					</div>
+					<input type="file" id="fichier" name="fichier" class="filestyle" data-buttonName="btn-primary">
+					<button id="participer" name="participer">Valider</button>
+				</form>
+			<?php }	
 				}
 				else
 				{
