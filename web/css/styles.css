@@ -28,6 +28,11 @@
 .container input{
 	color: #000000;
 }
+#picture_fb{
+	width: 800px;
+	height: 300px;
+	overflow-y: scroll; 
+}
 #picture_fb img{
 	width: 20%;
 }

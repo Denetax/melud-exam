@@ -81,10 +81,7 @@
 							</div>
 						</div>
 					</div>
-					<span class="btn btn-default btn-file">
-						Upload <input id="input-1a" name="fichier" type="file" class="file">
-					</span>
-					<!-- <input type="file" id="fichier" name="fichier" class="filestyle" data-buttonName="btn-primary"> -->
+					<input type="file" id="fichier" name="fichier" class="filestyle" data-buttonName="btn-primary">
 					<button id="participer" name="participer">Valider</button>
 				</form>
 			<?php }	
