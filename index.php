@@ -28,7 +28,14 @@
 					<?php if($session == ""){
 						$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']);
 						echo "<a href=".$loginUrl.">Se Connecter</a><br><br>";
-					} ?>
+					}else{ ?>
+					<?php session_auto($session); ?>
+					<ul class="nav nav-tabs">
+						<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/participe.php">Je Participe</a></li>
+						<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/vote.php">Je vote</a></li>
+					</ul>	
+				</div>
+				<?php } ?>
 				</div>
 			</div>
 			<div class="row bandeImage" style="height:300px">
@@ -77,7 +84,7 @@
 				<div class="col-sm-3">
 					<img src="https://melud-exam.herokuapp.com/web/img/photo-1428954376791-d9ae785dfb2d.jpg">
 				</div>
-			</div><br><br>
+			</div><br>
 			<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
 		</div>
 		<!-- template footer -->
