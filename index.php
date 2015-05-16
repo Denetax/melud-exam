@@ -48,29 +48,7 @@
 					pour participe au coucours.
 					</p>
 				</div>
-			</div><br><br>
-			<?php
-				if($session)
-				{ ?>
-					<?php session_auto($session); ?>
-					<div class="row">
-						<div class="col-sm-6 col-sm-offset-3">
-							<div class="col-sm-6">
-								<a href="https://melud-exam.herokuapp.com/views/participe.php" class="btn btn-primary btn-lg">Je Participe</a>
-							</div>
-							<div class="col-sm-6">
-								<a href="https://melud-exam.herokuapp.com/views/vote.php" class="btn btn-warning btn-lg">Je vote</a> <br><br>
-							</div>
-						</div>
-					</div>
-				<?php
-				}
-				// else
-				// {
-				// 	$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']);
-				// 	echo "<a href=".$loginUrl." class='btn btn-primary btn-lg'>Se Connecter</a><br><br>";
-				// }
-			?>
+			</div>
 			<div class="row">
 				<div class="col-sm-3">
 					<img src="https://melud-exam.herokuapp.com/web/img/80652197.jpg">
