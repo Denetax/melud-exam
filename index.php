@@ -19,7 +19,12 @@
 	</head>
 	<body>
 		<!-- template header -->
-		<?php //include 'web/header.php'; ?>
+		<?php //include 'web/header.php'; 
+		$db = new SQLiteDatabase('fb_data_photos.sqlite');
+		$q = @$db->query('SELECT * FROM test');
+		$result = $q->fetchSingle();
+		var_dump($result);
+		?>
 		<!-- Fin template -->
 		<div class="container col-sm-12">
 				<div class="row bandeBanche" style="height:50px; line-height:50px;">
