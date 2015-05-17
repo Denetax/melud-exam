@@ -27,8 +27,8 @@
 				if($session)
 				{ ?>
 				<ul class="nav nav-pills">
-					<li role="presentation"><a href="#" id="firstBlock">Upload Desktop</a></li>
-					<li role="presentation"><a href="#" id="secondBlock">Upload Facebook</a></li>
+					<li role="presentation"><a href="#" id="firstBlock">Upload Facebook</a></li>
+					<li role="presentation"><a href="#" id="secondBlock">Upload PC</a></li>
 				</ul>
 				<div id="blockUploadFacebook">
 				<?php $lesPhotos = recup_user_picture_concours($session); ?>
