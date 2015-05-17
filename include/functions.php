@@ -9,25 +9,26 @@
 	{		
 		//pgsql:host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com;port=5432;dbname=d5iqngvvkvdj0o;user=vcgyjwcpqrizgf;password=DlgzzsaQvO0PamJBLqxj5fxlKK
 		try {
-			  $db = new PDO("pgsql:host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com;port=5432;dbname=d83d3aeifsc9ir;user=qvgrnmrngeochj;password=ByPWUf6LDRo4Cflah_kraHAExL");
-			  echo 'Connexion OK';
+				$db = new PDO("pgsql:host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com;port=5432;dbname=d83d3aeifsc9ir;user=qvgrnmrngeochj;password=ByPWUf6LDRo4Cflah_kraHAExL");
+				echo 'Connexion OK';
+				$sql ='CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL SERIAL,tokenUser VARCHAR(100),href VARCHAR(100))';
+				alert($sql);
+				$db->exec($sql);
 			}
 			catch(PDOException $e) {
 			  $db = null;
 			  echo 'ERREUR DB: ' . $e->getMessage();
 			}
 
-		try {
-				//$sth = $db->prepare("CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL SERIAL,tokenUser VARCHAR(100),href VARCHAR(100))");
-				//$sth->execute();
+		// try {
+				// //$sth = $db->prepare("CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL SERIAL,tokenUser VARCHAR(100),href VARCHAR(100))");
+				// //$sth->execute();
 				
-            $sql ='CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL SERIAL,tokenUser VARCHAR(100),href VARCHAR(100))';
-            $db->exec($sql);
-			 $db->exec("COMMIT");
-			}
-			catch (PDOException $e) {
-				print $e->getMessage();
-		  }
+
+			// }
+			// catch (PDOException $e) {
+				// print $e->getMessage();
+		  // }
 		//$dbconn1 = pg_connect("host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com port=5432 dbname=d5iqngvvkvdj0o user=vcgyjwcpqrizgf password= DlgzzsaQvO0PamJBLqxj5fxlKK") or die('connection failed');
 		//$result = pg_query($dbconn1,"CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,tokenUser VARCHAR(100),href VARCHAR(100))");
 		// $result = pg_query($dbconn1, "SELECT tokenUser, href FROM utilisateur");
