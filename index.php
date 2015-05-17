@@ -20,10 +20,11 @@
 	<body>
 		<!-- template header -->
 		<?php //include 'web/header.php'; 
-		$db = new SQLiteDatabase('fb_data_photos.sqlite');
-		$q = @$db->query('SELECT * FROM test');
-		$result = $q->fetchSingle();
-		var_dump($result);
+		$db = new SQLite3('fb_data_photos.sqlite');
+		$results = $db->query('SELECT * FROM test');
+		while ($row = $results->fetchArray()) {
+    		var_dump($row);
+		}
 		?>
 		<!-- Fin template -->
 		<div class="container col-sm-12">
