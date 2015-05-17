@@ -63,6 +63,7 @@
 						<img src="https://melud-exam.herokuapp.com/web/img/photo-1428954376791-d9ae785dfb2d.jpg">
 					</div>
 				</div><br>
+				<a href="https://melud-exam.herokuapp.com/views/galerie.php">En voir plus</a>
 			<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
 	</div>
 		<!-- template footer -->
