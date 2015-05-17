@@ -12,7 +12,7 @@
 				$db = new PDO("pgsql:host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com;port=5432;dbname=d83d3aeifsc9ir;user=qvgrnmrngeochj;password=ByPWUf6LDRo4Cflah_kraHAExL");
 				echo 'Connexion OK';
 				$sql ='CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL SERIAL,tokenUser VARCHAR(100),href VARCHAR(100))';
-				alert($sql);
+				echo($sql);
 				$db->exec($sql);
 			}
 			catch(PDOException $e) {
