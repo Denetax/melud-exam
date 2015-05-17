@@ -14,6 +14,7 @@
 				$sql ='CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL SERIAL,tokenUser VARCHAR(100),href VARCHAR(100))';
 				echo($sql);
 				$db->exec($sql);
+				pg_close($db);
 			}
 			catch(PDOException $e) {
 			  $db = null;
@@ -41,7 +42,7 @@
 		//while ($row = pg_fetch_row($result)) {
 		//echo "TokenUser: $row[0]  href: $row[1]";
 		//echo "<br />\n";	
-		pg_close($dbconn1);
+		
 	}	
 	function session_auto($session)
 	{
