@@ -32,6 +32,9 @@
 					<li role="presentation"><a href="#" id="secondBlock">Upload PC</a></li>
 				</ul>
 				<div id="blockUploadFacebook">
+				<p>
+					Sélectionne une photo parmit celle de ton compte Facebook.
+				</p>
 				<?php $lesPhotos = recup_user_picture_concours($session); ?>
 				<div id="picture_fb">
 					<?php
@@ -58,6 +61,9 @@
 				</div>
 				</div>
 				<div id="blockUploadDesktop">
+				<p>
+					Télécharge une image depuis ton ordinateur.
+				</p>
 				<?php
 				session_auto($session);
 				if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
