@@ -30,7 +30,7 @@
 	color: #000000;
 }
 #picture_fb{
-	width: 800px;
+	width: 100%;
 	height: 300px;
 	overflow-y: scroll; 
 }
