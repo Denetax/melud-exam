@@ -23,9 +23,6 @@
 		<?php //include 'web/header.php'; ?>
 		<!-- Fin template -->
 		<div class="container col-sm-12">
-		<div class="row">
-		<div class="col-sm-2"></div>
-		<div class="col-sm-8">
 			<?php
 				if($session)
 				{ ?>
@@ -96,9 +93,6 @@
 				}
 			?><br>
 			<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
-		</div>
-		<div class="col-sm-2"></div>
-		</div>
 		</div>
 		<!-- template footer -->
 		<?php //include 'web/footer.php'; ?>
