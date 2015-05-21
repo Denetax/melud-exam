@@ -10,11 +10,11 @@
 		//pgsql:host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com;port=5432;dbname=d5iqngvvkvdj0o;user=vcgyjwcpqrizgf;password=DlgzzsaQvO0PamJBLqxj5fxlKK
 		try {
 				$db = new PDO("pgsql:host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com;port=5432;dbname=d83d3aeifsc9ir;user=qvgrnmrngeochj;password=ByPWUf6LDRo4Cflah_kraHAExL");
-				var_dump($db);
-				print_r($db);
+				echo $db;
+				// var_dump($db);
+				// print_r($db);
 				echo 'Connexion OK';
 				$sql ='CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL SERIAL,tokenUser VARCHAR(100),href VARCHAR(100))';
-				echo($sql);
 				$db->exec($sql);
 				pg_close($db);
 			}
