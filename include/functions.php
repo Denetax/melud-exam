@@ -32,11 +32,12 @@
 			// catch (PDOException $e) {
 				// print $e->getMessage();
 		  // }
-		$dbconn1 = pg_connect("host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com port=5432 dbname=d83d3aeifsc9ir user=qvgrnmrngeochj password= ByPWUf6LDRo4Cflah_kraHAExL") or die('connection failed');
-		var_dump($dbconn1);
+		$dbconn2 = pg_connect("host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com port=5432 dbname=d83d3aeifsc9ir user=qvgrnmrngeochj password= ByPWUf6LDRo4Cflah_kraHAExL") or die('connection failed');
+		var_dump($dbconn2);
 		//$result = pg_query($dbconn1,"CREATE TABLE utilisateur(id INT PRIMARY KEY NOT NULL,tokenUser VARCHAR(100),href VARCHAR(100))");
-		$result = pg_query($dbconn1,"INSERT INTO utilisateur (tokenUser, href VALUES ('oghruoufeu651781', 'http://blablabla.fr'))");
+		$result = pg_query($dbconn2,"INSERT INTO utilisateur (tokenUser, href) VALUES ('oghruoufeu651781', 'http://blablabla.fr')");
 		var_dump($result);
+		pg_close($dbconn2);
 		// $result = pg_query($dbconn1, "SELECT tokenUser, href FROM utilisateur");
 		// if (!$result) {
 		  // echo "Une erreur s'est produite.\n";
