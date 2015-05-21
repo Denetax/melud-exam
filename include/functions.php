@@ -36,7 +36,7 @@
 		var_dump($dbconn2);
 		//$result = pg_query($dbconn1,"CREATE TABLE utilisateur(id INT PRIMARY KEY NOT NULL,tokenUser VARCHAR(100),href VARCHAR(100))");
 		//$result = pg_query($dbconn2,"INSERT INTO utilisateur (tokenUser, href) VALUES ('oghruoufeu651781', 'http://blablabla.fr')");
-		$result = pg_query($dbconn2, "INSERT INTO utilisateur(tokenUser, href) VALUES('+1 123 456 7890', 'John');");
+		$result = pg_query($dbconn2, "INSERT INTO utilisateur(id,tokenUser, href) VALUES('65','+1 123 456 7890', 'John');");
 		var_dump($result);
 	 echo pg_last_error($dbconn2);
 		pg_close($dbconn2);
