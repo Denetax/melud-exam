@@ -39,6 +39,7 @@
 		while ($row = pg_fetch_row($result)) {
 		echo "TokenUser: $row[0] TokenUser: $row[1]  href: $row[2]";
 		echo "<br />\n";	
+		}
 		echo pg_last_error($dbconn2);
 		pg_close($dbconn2);
 		
