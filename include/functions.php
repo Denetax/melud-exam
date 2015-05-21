@@ -8,20 +8,20 @@
 	function connexionBdd()
 	{		
 		//pgsql:host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com;port=5432;dbname=d5iqngvvkvdj0o;user=vcgyjwcpqrizgf;password=DlgzzsaQvO0PamJBLqxj5fxlKK
-		try {
-				$db = new PDO("pgsql:host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com;port=5432;dbname=d83d3aeifsc9ir;user=qvgrnmrngeochj;password=ByPWUf6LDRo4Cflah_kraHAExL");
-				echo $db;
-				// var_dump($db);
-				// print_r($db);
-				echo 'Connexion OK';
-				$sql ='CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL SERIAL,tokenUser VARCHAR(100),href VARCHAR(100))';
-				$db->exec($sql);
-				pg_close($db);
-			}
-			catch(PDOException $e) {
-			  $db = null;
-			  echo 'ERREUR DB: ' . $e->getMessage();
-			}
+		// try {
+				// $db = new PDO("pgsql:host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com;port=5432;dbname=d83d3aeifsc9ir;user=qvgrnmrngeochj;password=ByPWUf6LDRo4Cflah_kraHAExL");
+				// echo $db;
+				// // var_dump($db);
+				// // print_r($db);
+				// echo 'Connexion OK';
+				// $sql ='CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL SERIAL,tokenUser VARCHAR(100),href VARCHAR(100))';
+				// $db->exec($sql);
+				// pg_close($db);
+			// }
+			// catch(PDOException $e) {
+			  // $db = null;
+			  // echo 'ERREUR DB: ' . $e->getMessage();
+			// }
 
 		// try {
 				// //$sth = $db->prepare("CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL SERIAL,tokenUser VARCHAR(100),href VARCHAR(100))");
@@ -34,7 +34,7 @@
 		  // }
 		$dbconn1 = pg_connect("host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com port=5432 dbname=d83d3aeifsc9ir user=qvgrnmrngeochj password= ByPWUf6LDRo4Cflah_kraHAExL") or die('connection failed');
 		var_dump($dbconn1);
-		$result = pg_query($dbconn1,"CREATE TABLE utilisateur1(id INT PRIMARY KEY NOT NULL,tokenUser VARCHAR(100),href VARCHAR(100))");
+		$result = pg_query($dbconn1,"CREATE TABLE utilisateur(id INT PRIMARY KEY NOT NULL,tokenUser VARCHAR(100),href VARCHAR(100))");
 		var_dump($result);
 		// $result = pg_query($dbconn1, "SELECT tokenUser, href FROM utilisateur");
 		// if (!$result) {
