@@ -38,6 +38,7 @@
 		echo pg_last_error($dbconn2);
 		//$result = pg_query($dbconn2,"INSERT INTO utilisateur (tokenUser, href) VALUES ('oghruoufeu651781', 'http://blablabla.fr')");
 		$result = pg_query($dbconn2, "INSERT INTO utilisateur3(tokenUser, href) VALUES('+1 123 456 7890', 'John');");
+		$result = pg_query($dbconn2, "INSERT INTO utilisateur3(tokenUser, href) VALUES('+1 123 456 7890', 'John');");
 		echo pg_last_error($dbconn2);
 		pg_close($dbconn2);
 		
