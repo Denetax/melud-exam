@@ -117,12 +117,11 @@
 						<h4 class="modal-title">Confirmation</h4>
 					</div>
 					<div class="modal-body">
-						<p>Do you want to save changes you made to document before closing?</p>
-						<p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+						<img id="imgSelected" src="" width="100%" />
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Retour</button>
+						<button type="button" class="btn btn-primary">Valider</button>
 					</div>
 				</div>
 			</div>
