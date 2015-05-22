@@ -7,54 +7,23 @@
 	
 	function connexionBdd()
 	{		
-		//pgsql:host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com;port=5432;dbname=d5iqngvvkvdj0o;user=vcgyjwcpqrizgf;password=DlgzzsaQvO0PamJBLqxj5fxlKK
-		// try {
-				// $db = new PDO("pgsql:host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com;port=5432;dbname=d83d3aeifsc9ir;user=qvgrnmrngeochj;password=ByPWUf6LDRo4Cflah_kraHAExL");
-				// echo $db;
-				// // var_dump($db);
-				// // print_r($db);
-				// echo 'Connexion OK';
-				// $sql ='CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL SERIAL,tokenUser VARCHAR(100),href VARCHAR(100))';
-				// $db->exec($sql);
-				// pg_close($db);
-			// }
-			// catch(PDOException $e) {
-			  // $db = null;
-			  // echo 'ERREUR DB: ' . $e->getMessage();
-			// }
-
-		// try {
-				// //$sth = $db->prepare("CREATE TABLE utilisateur2(id INT PRIMARY KEY NOT NULL SERIAL,tokenUser VARCHAR(100),href VARCHAR(100))");
-				// //$sth->execute();
-				
-
-			// }
-			// catch (PDOException $e) {
-				// print $e->getMessage();
-		  // }
 		$dbconn2 = pg_connect("host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com port=5432 dbname=d83d3aeifsc9ir user=qvgrnmrngeochj password= ByPWUf6LDRo4Cflah_kraHAExL") or die('connection failed');
 		//$result = pg_query($dbconn2,"CREATE TABLE utilisateur3(id SERIAL PRIMARY KEY NOT NULL,tokenUser VARCHAR(100),href VARCHAR(100))");
 		//$result = pg_query($dbconn2,"INSERT INTO utilisateur (tokenUser, href) VALUES ('oghruoufeu651781', 'http://blablabla.fr')");
-		$result = pg_query($dbconn2, "SELECT id,tokenUser, href FROM utilisateur3");
-		while ($row = pg_fetch_row($result)) {
-		echo "TokenUser: $row[0] TokenUser: $row[1]  href: $row[2]";
-		echo "<br />\n";	
-		}
-		echo pg_last_error($dbconn2);
-		pg_close($dbconn2);
-		
-		// $result = pg_query($dbconn1, "SELECT tokenUser, href FROM utilisateur");
-		// if (!$result) {
-		  // echo "Une erreur s'est produite.\n";
-		// }
-		//$result = pg_query($dbconn1, "DROP TABLE utilisateur");
-		//pg_query($dbconn1, "INSERT INTO utilisateur (tokenUser, href VALUES ('oghruoufeu651781', 'http://blablabla.fr'))");
-		
+		//$result = pg_query($dbconn2, "SELECT id,tokenUser, href FROM utilisateur3");
 		//while ($row = pg_fetch_row($result)) {
-		//echo "TokenUser: $row[0]  href: $row[1]";
+		//echo "TokenUser: $row[0] TokenUser: $row[1]  href: $row[2]";
 		//echo "<br />\n";	
-		
+		//}
+		//echo pg_last_error($dbconn2);
+		//pg_close($dbconn2);
+		return $dbconn2;
 	}	
+	function Query($db,$requete)
+	{
+		$result = pg_query($db,$requete);
+		return $result;
+	}
 	function session_auto($session)
 	{
 		if($session != ""){
