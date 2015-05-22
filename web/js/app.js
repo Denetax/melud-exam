@@ -3,7 +3,7 @@ $(document).ready(function(){
 	$('#firstBlock').click(function(){
 		$('#blockUploadDesktop').fadeOut();
 		$('#blockUploadFacebook').fadeIn();
-		console.log($("#LesImages").children());
+		console.log($("#picture_fb").children());
 	});
 
 	$('#secondBlock').click(function(){
