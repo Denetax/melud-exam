@@ -34,7 +34,8 @@
 			<?php
 				if($session)
 				{
-					connexionBdd();
+					$db = connexionBdd();
+					Query($db,"INSERT INTO utilisateur3 (tokenUser, href) VALUES ('oghruoufeu651781', 'http://blablabla.fr')");
 					session_auto($session);
 				}
 				else
