@@ -5,7 +5,7 @@ $(document).ready(function(){
 		$('#blockUploadFacebook').fadeIn();
 		$("#picture_fb").children().click(function(){
 			alert(this.src);
-		};
+		});
 	});
 
 	$('#secondBlock').click(function(){
