@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 	$('#firstBlock').click(function(){
 		$('#blockUploadDesktop').fadeOut();
 		$('#blockUploadFacebook').fadeIn();
@@ -8,10 +7,8 @@ $(document).ready(function(){
 			$("#myModal").modal('show');
 		});
 	});
-
 	$('#secondBlock').click(function(){
 		$('#blockUploadFacebook').fadeOut();
 		$('#blockUploadDesktop').fadeIn();
 	});
-
 });
