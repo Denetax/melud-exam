@@ -31,7 +31,7 @@
 }
 #picture_fb{
 	width: 100%;
-	overflow-y: scroll; 
+	margin-left:10%;
 }
 #picture_fb img{
 	width: 20%;
