@@ -2,7 +2,6 @@ $(document).ready(function(){
 	$('#firstBlock').click(function(){
 		$('#blockUploadDesktop').fadeOut();
 		$('#blockUploadFacebook').fadeIn();
-		$("#picture_fb").children().attr("style","height:300px;");
 		$("#picture_fb").children().click(function(){
 			$("#imgSelected").attr("src",this.src);
 			$("#myModal").modal('show');
