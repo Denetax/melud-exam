@@ -47,10 +47,7 @@
 								if($value == "p320x320")
 								{
 								?>
-								<!--<span id="LesImages">-->
 									<img src="<?php echo $url_img ?>" width="100%" />
-									<!-- <input type="radio" name="check" id="check" />
-								</span> -->
 								<?php 
 								}
 							}
