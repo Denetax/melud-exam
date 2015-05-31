@@ -8,7 +8,7 @@
 	function connexionBdd()
 	{		
 		$dbconn2 = pg_connect("host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com port=5432 dbname=d83d3aeifsc9ir user=qvgrnmrngeochj password= ByPWUf6LDRo4Cflah_kraHAExL") or die('connection failed');
-		$result = pg_query($dbconn2,"CREATE TABLE utilisateur4(id SERIAL PRIMARY KEY NOT NULL,tokenUser VARCHAR(255),href VARCHAR(100))");
+		$result = pg_query($dbconn2,"CREATE TABLE utilisateur5(id SERIAL PRIMARY KEY NOT NULL,tokenUser VARCHAR(255),href VARCHAR(255))");
 		//$result = pg_query($dbconn2,"INSERT INTO utilisateur (tokenUser, href) VALUES ('oghruoufeu651781', 'http://blablabla.fr')");
 		//$result = pg_query($dbconn2, "SELECT id,tokenUser, href FROM utilisateur3");
 		//while ($row = pg_fetch_row($result)) {
