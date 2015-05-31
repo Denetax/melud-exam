@@ -4,6 +4,7 @@ $(document).ready(function(){
 		$('#blockUploadFacebook').fadeIn();
 		$("#picture_fb").children().click(function(){
 			$("#imgSelected").attr("src",this.src);
+			console.log($("#inputSrc"));
 			$("#inputSrc").attr("value",this.src);
 			$("#myModal").modal('show');
 		});
