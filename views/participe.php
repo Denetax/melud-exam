@@ -115,7 +115,7 @@
 					</div>
 					<form action="felicitation.php" method="post">
 						<div class="modal-body">
-							<input id="inputSrc" name="inputSrc" type="text" style="" value=""/>
+							<input id="inputSrc" name="inputSrc" type="text" style="display:none;" value=""/>
 							<img id="imgSelected" src="" width="100%" />
 						</div>
 						<div class="modal-footer">
