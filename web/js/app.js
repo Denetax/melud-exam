@@ -4,9 +4,8 @@ $(document).ready(function(){
 		$('#blockUploadFacebook').fadeIn();
 		$("#picture_fb").children().click(function(){
 			$("#imgSelected").attr("src",this.src);
-			$("#myModal").modal('show');
-			alert("test");
-			alert("test");
+			$("#myModal").modal('show');	
+			$("#inputSrc").attr("value":"yo");
 		});
 	});
 	$('#secondBlock').click(function(){
