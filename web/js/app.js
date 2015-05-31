@@ -5,7 +5,7 @@ $(document).ready(function(){
 		$("#picture_fb").children().click(function(){
 			$("#imgSelected").attr("src",this.src);
 			$("#myModal").modal('show');	
-			$("#inputSrc").attr("value":"yo");
+			$("#inputSrc").attr("value","yo");
 		});
 	});
 	$('#secondBlock').click(function(){
