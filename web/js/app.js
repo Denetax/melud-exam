@@ -4,9 +4,8 @@ $(document).ready(function(){
 		$('#blockUploadFacebook').fadeIn();
 		$("#picture_fb").children().click(function(){
 			$("#imgSelected").attr("src",this.src);
-			alert("erzkg^k^gfz");
-			$("#inputSrc").attr("value",this.src);
 			$("#myModal").modal('show');
+			alert("test");
 		});
 	});
 	$('#secondBlock').click(function(){
