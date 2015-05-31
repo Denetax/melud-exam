@@ -113,14 +113,16 @@
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<h4 class="modal-title">Sélection de votre photos</h4>
 					</div>
-					<div class="modal-body">
-						<input id="inputSrc" type="text" style="" value=""/>
-						<img id="imgSelected" src="" width="100%" />
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Retour</button>
-						<button id="buttonSendPhoto" type="button" class="btn btn-primary">Valider</button>
-					</div>
+					<form action="felicitation.php" method="post">
+						<div class="modal-body">
+							<input id="inputSrc" name="inputSrc" type="text" style="" value=""/>
+							<img id="imgSelected" src="" width="100%" />
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Retour</button>
+							<button id="buttonSendPhoto" type="button" class="btn btn-primary">Valider</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
