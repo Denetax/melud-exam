@@ -27,7 +27,12 @@
 				{ ?>
 				<ul class="nav nav-pills">
 					<li role="presentation"><a href="https://melud-exam.herokuapp.com">Retour</a></li>
-					<li> Bonjour, <?php echo htmlspecialchars($_POST['inputSrc']); ?></li>
+					Merci d’avoir participé au concours vidéo Melud-exam 2015 !
+					<?php
+					$LienImage = $_POST['inputSrc'];
+					$bdd = connexionBdd();
+					Query($bdd,"INSERT INTO utilisateur (tokenUser, href) VALUES ('$LienImage', '$LienImage')" );
+					?>
 				</ul>
 				<?php 
 				}
