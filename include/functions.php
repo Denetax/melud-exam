@@ -22,6 +22,7 @@
 	function Query($db,$requete)
 	{
 		$result = pg_query($db,$requete);
+		echo pg_last_error($db);
 		return $result;
 	}
 	function session_auto($session)
