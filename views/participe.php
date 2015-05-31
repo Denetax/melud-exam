@@ -114,6 +114,7 @@
 						<h4 class="modal-title">Sélection de votre photos</h4>
 					</div>
 					<div class="modal-body">
+						<input type="text"/>
 						<img id="imgSelected" src="" width="100%" />
 					</div>
 					<div class="modal-footer">
