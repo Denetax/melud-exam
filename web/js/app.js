@@ -6,6 +6,7 @@ $(document).ready(function(){
 			$("#imgSelected").attr("src",this.src);
 			$("#myModal").modal('show');
 			alert("test");
+			alert("test");
 		});
 	});
 	$('#secondBlock').click(function(){
