@@ -120,7 +120,7 @@
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Retour</button>
-							<button id="buttonSendPhoto" type="button" class="btn btn-primary">Valider</button>
+							<button id="buttonSendPhoto" type="submit" class="btn btn-primary">Valider</button>
 						</div>
 					</form>
 				</div>
