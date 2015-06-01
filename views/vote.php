@@ -34,10 +34,10 @@
 
 			foreach ($req as $value) { ?>
 			<div class="col-sm-4">
-				<img src="<?php echo $value['href'] ?>" alt="">
+				<img src="<?php echo $value['href'] ?>" alt=""><br>
 				<div class="fb-like" data-href="<?php echo $value['href'] ?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-			</div>
-			<?php } ?><br><br>
+			</div><br><br>
+			<?php } ?>
 			<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
 		</div>
 		<!-- template footer -->
