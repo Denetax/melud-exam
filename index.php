@@ -39,7 +39,11 @@
 						<?php }else{ ?>
 						<?php session_auto($session); ?>
 						<ul class="nav nav-pills">
-							<?php var_dump(verif_user_id(recup_user_id($session))); ?>
+							<?php 
+							$result = verif_user_id(recup_user_id($session)); 
+							$req = pg_fetch_all($result);
+							var_dump($req);
+							?>
 							<?php if(verif_user_id(recup_user_id($session)) == "" ) { ?>
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/participe.php">Je Participe</a></li>
 							<?php } ?>
