@@ -34,7 +34,7 @@
 					$bdd = connexionBdd();
 					$user_exist = verif_user_id($id_user);
 					var_dump($user_exist);
-					if ($user_exist == "")
+					if ($user_exist == false)
 					{
 						Query($bdd,"INSERT INTO utilisateur5 (tokenUser, href) VALUES ('$id_user', '$LienImage')" );
 					}

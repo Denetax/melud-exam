@@ -76,7 +76,10 @@
 	{
 		$bdd = connexionBdd();
 		$result = Query($bdd,"SELECT * FROM utilisateur5 WHERE tokenUser = '$id'" );
-		return $result;
+		
+		$req = pg_fetch_all($result);
+		
+		return $req;
 	}
 
 	// function data_test($session)

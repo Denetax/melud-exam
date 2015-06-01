@@ -41,10 +41,8 @@
 						<ul class="nav nav-pills">
 							<?php 
 							$result = verif_user_id(recup_user_id($session)); 
-							$req = pg_fetch_all($result);
-							var_dump($req);
 							?>
-							<?php if( $req == false ) { ?>
+							<?php if( $result == false ) { ?>
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/participe.php">Je Participe</a></li>
 							<?php } ?>
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/vote.php">Je vote</a></li>
