@@ -75,7 +75,7 @@
 	function verif_user_id($id)
 	{
 		$bdd = connexionBdd();
-		$result = Query($bdd,"SELECT * FROM utilisateur5 WHERE tokenUser = $id" );
+		$result = Query($bdd,"SELECT * FROM utilisateur5 WHERE tokenUser = '$id'" );
 		return $result;
 	}
 
