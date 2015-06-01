@@ -35,7 +35,7 @@
 			<div class="col-sm-4">
 				<img src="<?php echo $value['href'] ?>" alt="">
 			</div>
-			<?php } ?><br>
+			<?php } ?><br><br>
 			<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
 		</div>
 		<!-- template footer -->
