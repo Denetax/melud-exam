@@ -34,9 +34,9 @@
 			<?php 
 
 			$bdd = connexionBdd();
-			Query($bdd,"SELECT * FROM utilisateur5" );
+			$result = Query($bdd,"SELECT * FROM utilisateur5" );
 
-			// var_dump($result);
+			var_dump($result);
 
 			?>
 			<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
