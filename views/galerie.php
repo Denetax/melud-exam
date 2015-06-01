@@ -27,19 +27,8 @@
 				{ ?>
 				<ul class="nav nav-pills">
 					<li role="presentation"><a href="https://melud-exam.herokuapp.com">Retour</a></li>
-					<?php
-					$LienImage = $_POST['inputSrc'];
-					echo $LienImage;
-					$bdd = connexionBdd();
-					Query($bdd,"INSERT INTO utilisateur5 (tokenUser, href) VALUES ('$LienImage', '$LienImage')" );
-					?>
 				</ul>
 				<?php 
-				}
-				else
-				{
-					$loginUrl = $helper->getLoginUrl(['email','user_photos','publish_actions']);
-					echo "<a href=".$loginUrl." class='btn btn-primary btn-lg'>Se Connecter</a><br><br>";
 				}
 			?><br>
 			<?php 
