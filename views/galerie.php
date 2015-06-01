@@ -36,7 +36,9 @@
 			$bdd = connexionBdd();
 			$result = Query($bdd,"SELECT * FROM utilisateur5" );
 
-			var_dump($result);
+			$req = pg_fetch_all($result);
+
+			var_dump($req);
 
 			?>
 			<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
