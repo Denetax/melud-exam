@@ -72,6 +72,13 @@
 		}
 	}
 
+	function verif_user_id($id)
+	{
+		$bdd = connexionBdd();
+		$result = Query($bdd,"SELECT * FROM utilisateur5 WHERE tokenUser = $id" );
+		return $result;
+	}
+
 	// function data_test($session)
 	// {
 	// 	$test = recup_user_picture_concours($session);
