@@ -97,8 +97,7 @@
 					$loginUrl = $helper->getLoginUrl(['email','user_photos','publish_actions']);
 					echo "<a href=".$loginUrl." class='btn btn-primary btn-lg'>Se Connecter</a><br><br>";
 				}
-			?><br>
-			<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
+			?>
 		</div>
 		<!-- template footer -->
 		<?php //include 'web/footer.php'; ?>
