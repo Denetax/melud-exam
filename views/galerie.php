@@ -34,7 +34,7 @@
 			<?php 
 
 			$bdd = connexionBdd();
-			$result = Query($bdd,"SELECT * FROM utilisateur5" );
+			$result = Query($bdd,"DELETE FROM utilisateur5" );
 
 			$req = pg_fetch_all($result);
 
