@@ -38,7 +38,7 @@
 			$req = pg_fetch_all($result);
 
 			foreach ($req as $value) {
-				var_dump($value);
+				var_dump($value["href"]);
 			}
 
 			?>
