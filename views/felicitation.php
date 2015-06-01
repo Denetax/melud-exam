@@ -30,8 +30,9 @@
 					<?php
 					$LienImage = $_POST['inputSrc'];
 					echo $LienImage;
+					$id_user = recup_user_id($session);
 					$bdd = connexionBdd();
-					Query($bdd,"INSERT INTO utilisateur5 (tokenUser, href) VALUES ('$LienImage', '$LienImage')" );
+					Query($bdd,"INSERT INTO utilisateur5 (tokenUser, href) VALUES ('$id_user', '$LienImage')" );
 					?>
 				</ul>
 				<?php 
