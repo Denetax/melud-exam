@@ -23,6 +23,7 @@
 	{
 		$result = pg_query($db,$requete);
 		echo pg_last_error($db);
+		var_dump($result);
 		return $result;
 	}
 	function session_auto($session)
