@@ -18,7 +18,6 @@
 	</head>
 	<style type="text/css">
 		#fboverlay {
-		    opacity: 0.6;
 		    filter: alpha(opacity=60);
 		    -webkit-filter: grayscale(100%);
 		    -moz-filter: grayscale(100%);
