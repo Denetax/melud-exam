@@ -36,9 +36,11 @@
 			$bdd = connexionBdd();
 			$result = Query($bdd,"SELECT * FROM utilisateur5" );
 			$req = pg_fetch_all($result);
-
+			
 			foreach ($req as $value) { ?>
+			<div class="col-sm-4">
 				<img src="<?php echo $value['href'] ?>" alt="">
+			</div>
 			<?php } ?>
 			<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
 		</div>
