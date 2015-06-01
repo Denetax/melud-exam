@@ -38,7 +38,7 @@
 			$req = pg_fetch_all($result);
 
 			foreach ($req as $value) { ?>
-				<img src"<?php echo $value['href'] ?>" alt="">
+				<img src="<?php echo $value['href'] ?>" alt="">
 			<?php } ?>
 			<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
 		</div>
