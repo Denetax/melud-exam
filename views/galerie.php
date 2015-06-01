@@ -37,7 +37,7 @@
 			$result = Query($bdd,"SELECT * FROM utilisateur5" );
 			$req = pg_fetch_all($result);
 
-			foreach ($result as $value) {
+			foreach ($req as $value) {
 				var_dump($value);
 			}
 
