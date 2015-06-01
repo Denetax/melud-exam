@@ -25,7 +25,7 @@
 			<ul class="nav nav-pills">
 				<li role="presentation"><a href="https://melud-exam.herokuapp.com">Retour</a></li>
 			</ul>
-			<h1 style="color:#000">Votez pour votre photographie favorite.</h1>
+			<h1 style="color:#000">Votez pour vos photographies favorites.</h1>
 			<?php 
 
 			$bdd = connexionBdd();

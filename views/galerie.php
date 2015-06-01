@@ -25,6 +25,7 @@
 			<ul class="nav nav-pills">
 				<li role="presentation"><a href="https://melud-exam.herokuapp.com">Retour</a></li>
 			</ul>
+			<h1 style="color:#000">Galerie d'Images.</h1>
 			<?php 
 
 			$bdd = connexionBdd();

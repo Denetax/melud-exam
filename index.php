@@ -39,7 +39,6 @@
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/participe.php">Je Participe</a></li>
 							<?php } ?>
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/vote.php">Je vote</a></li>
-							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/galerie.php">Photos participante</a></li>
 						</ul>
 						<?php } ?>	
 					</div>
