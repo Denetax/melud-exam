@@ -41,7 +41,7 @@
 					}
 					$album = recup_user_picture_album_concours($session);
 					foreach ($album as $value) {
-						var_dump($value->names);
+						var_dump($value->name);
 					}
 
 				}
