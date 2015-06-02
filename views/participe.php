@@ -72,7 +72,7 @@
 					foreach ($album as $value) {
 						// if (true){
 						echo $value->name;
-						if (getVraiNameAlbum($value->name) != false){
+						if (getVraiNameAlbum($value->name)){
 							// var_dump($value->name);
 							// var_dump($value->id);
 							echo $value->name;
