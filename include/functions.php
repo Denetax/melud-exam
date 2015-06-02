@@ -8,7 +8,7 @@
 	{		
 		$dbconn2 = pg_connect("host=ec2-54-217-202-108.eu-west-1.compute.amazonaws.com port=5432 dbname=d83d3aeifsc9ir user=qvgrnmrngeochj password= ByPWUf6LDRo4Cflah_kraHAExL") or die('connection failed');
 		// $result = pg_query($dbconn2,"CREATE TABLE db_concours(id SERIAL PRIMARY KEY NOT NULL,tokenUser VARCHAR(255),href VARCHAR(255),nomAlbum VARCHAR(100))");
-		//$result = pg_query($dbconn2,"delete from db_concours ");
+		$result = pg_query($dbconn2,"delete from db_concours ");
 		return $dbconn2;
 	}
 
