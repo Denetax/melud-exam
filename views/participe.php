@@ -64,6 +64,8 @@
 				</p>
 				<?php
 				session_auto($session);
+				$mom = recup_user_picture_album_concours($session);
+				var_dump($mom);
 				if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
 				{
 					createAlbum($session, $_FILES['fichier']['tmp_name'], $_POST['nameAlbum'], $_POST['descAlbum']);
