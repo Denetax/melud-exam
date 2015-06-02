@@ -33,11 +33,10 @@
 					$id_user = recup_user_id($session);
 					$bdd = connexionBdd();
 					$user_exist = verif_user_id($id_user);
-					var_dump($user_exist);
-					if ($user_exist == false)
-					{
+					/*if ($user_exist == false)
+					{*/
 						Query($bdd,"INSERT INTO db_concours (tokenUser, href) VALUES ('$id_user', '$LienImage')" );
-					}
+					//}
 				}
 				
 			?><br>

@@ -35,9 +35,9 @@
 							<?php 
 							$result = verif_user_id(recup_user_id($session)); 
 							?>
-							<?php if( $result == false ) { ?>
+							<?php //if( $result == false ) { ?>
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/participe.php">Je Participe</a></li>
-							<?php } ?>
+							<?php //} ?>
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/vote.php">Je vote</a></li>
 						</ul>
 						<?php } ?>	
