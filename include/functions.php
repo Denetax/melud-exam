@@ -88,6 +88,20 @@
 		}
 	}
 
+
+	function recup_user_picture_album_concours_photos($session,$id)
+	{
+		$monId = recup_user_id($session);
+		if($session != ""){
+			$_SESSION['fb-token'] = (string) $session->getAccessToken();
+			$request_user = new FacebookRequest($session,"GET","/".$monId."/".$id."/photos");
+			$request_user_executed = $request_user->execute(); 
+			$user = $request_user_executed->getGraphObject('Facebook\GraphUser')->asArray();
+			return $user["data"];
+		}
+	}
+
+
 	function verif_user_id($id)
 	{
 		$bdd = connexionBdd();
