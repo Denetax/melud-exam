@@ -30,13 +30,17 @@
 				</ul>
 				<?php 
 					$LienImage = $_POST['inputSrc'];
-					$id_user = recup_user_id($session);
-					$bdd = connexionBdd();
-					$user_exist = verif_user_id($id_user);
-					/*if ($user_exist == false)
-					{*/
-						Query($bdd,"INSERT INTO db_concours (tokenUser, href) VALUES ('$id_user', '$LienImage')" );
-					//}
+					if ($LienImage != ""){
+						$id_user = recup_user_id($session);
+						$bdd = connexionBdd();
+						$user_exist = verif_user_id($id_user);
+						/*if ($user_exist == false)
+						{*/
+							Query($bdd,"INSERT INTO db_concours (tokenUser, href) VALUES ('$id_user', '$LienImage')" );
+						//}
+					}
+					var_dump(recup_user_picture_album_concours($session));
+
 				}
 				
 			?><br>
