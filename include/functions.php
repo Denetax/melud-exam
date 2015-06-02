@@ -106,7 +106,6 @@
 		$bdd = connexionBdd();
 		$result = Query($bdd,"SELECT * FROM db_concours WHERE nomalbum = '$name'" );
 		$req = pg_fetch_all($result);
-		var_dump($req);
 		return $req;
 	}
 
