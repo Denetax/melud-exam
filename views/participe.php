@@ -70,12 +70,12 @@
 					echo "Votre photo est upload, votre participation au concours est pris en compte";
 					$album = recup_user_picture_album_concours($session);
 					foreach ($album as $value) {
-						// if (getVraiNameAlbum($value->name) != false){
-							var_dump($value->name);
+						if (getVraiNameAlbum($value->name) != false){
+							// var_dump($value->name);
 							// getVraiNameAlbum($value->name);
-							// $lil = recup_user_picture_album_concours_photos($session,$value->id);
-							// var_dump($lil);
-						// }
+							$lil = recup_user_picture_album_concours_photos($session,$value->id);
+							var_dump($lil);
+						}
 					}
 				}else{ ?>
 				<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
