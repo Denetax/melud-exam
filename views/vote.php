@@ -16,16 +16,6 @@
 		<script src="https://melud-exam.herokuapp.com/web/js/app.js"></script>
 		<title>Jeux Coucours</title>
 	</head>
-	<style type="text/css">
-		#fboverlay {
-		    filter: alpha(opacity=60);
-		    -webkit-filter: grayscale(100%);
-		    -moz-filter: grayscale(100%);
-		    -o-filter: grayscale(100%);
-		    -ms-filter: grayscale(100%);
-		    filter: grayscale(100%);
-		}
-	</style>
 	<body>
 		<!-- template header -->
 		<?php //include 'web/header.php'; ?>
@@ -45,7 +35,8 @@
 			foreach ($req as $value) { ?>
 			<div id="photoVote" class="col-md-4">
 				<img src="<?php echo $value['href'] ?>" alt=""><br><br>
-				<div id="fboverlay" class="fb-like" data-href="<?php echo $value['href'] ?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+				
+				<div id="fboverlay" class="fb-like" data-href="<?php echo $value['href'] ?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
 			</div>
 			<?php } ?>
 		</div>
