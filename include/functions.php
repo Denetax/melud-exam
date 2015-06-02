@@ -85,8 +85,8 @@
  		$nameUser = $graphObject->getProperty('name');
  		$id_user = $graphObject->getProperty('id');
  		$bdd = connexionBdd();
- 		Query($bdd,"INSERT INTO db_concours (tokenUser, nomAlbum, nameUser) VALUES ('$id_user', '$nameAlbum', $nameUser)" );
-
+ 		Query($bdd,"INSERT INTO db_concours (tokenUser, href, nomalbum, nameuser) VALUES ('$id_user', '', '$nameAlbum', $nameUser)" );
+ 		$error = pg_last_error($bdd);
  		$link = "/".$id_user."/photos";
 
 		$response = new FacebookRequest(
