@@ -43,7 +43,7 @@
 			$req = pg_fetch_all($result);
 
 			foreach ($req as $value) { ?>
-			<div id="photoVote" class="col-sm-4">
+			<div id="photoVote" class="col-md-4">
 				<img src="<?php echo $value['href'] ?>" alt=""><br><br>
 				<div id="fboverlay" class="fb-like" data-href="<?php echo $value['href'] ?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 			</div>
