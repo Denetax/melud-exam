@@ -1,4 +1,3 @@
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
 <?php 
 	use Facebook\FacebookSession;
 	use Facebook\FacebookRedirectLoginHelper;
