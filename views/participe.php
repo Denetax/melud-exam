@@ -58,19 +58,25 @@
 					} ?>
 				</div>
 				</div>
-				<?php
-				session_auto($session);
-
-				if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
-				{
-					createAlbum($session, $_FILES['fichier']['tmp_name'], $_POST['nameAlbum'], $_POST['descAlbum']);
-					echo "Votre photo est upload, votre participation au concours est pris en compte";
-					header('Location:https://melud-exam.herokuapp.com/views/felicitation.php');
-				}else{ ?>
 				<div id="blockUploadDesktop">
 				<p>
 					Télécharge une image depuis ton ordinateur.
 				</p>
+				<?php
+				session_auto($session);
+				if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
+				{
+					createAlbum($session, $_FILES['fichier']['tmp_name'], $_POST['nameAlbum'], $_POST['descAlbum']);
+					echo "Votre photo est upload, votre participation au concours est pris en compte";
+					$album = recup_user_picture_album_concours($session);
+					foreach ($album as $value) {
+						// if (getVraiNameAlbum($value->name) != false){
+							getVraiNameAlbum($value->name);
+							// $lil = recup_user_picture_album_concours_photos($session,$value->id);
+							// var_dump($lil);
+						// }
+					}
+				}else{ ?>
 				<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
 					<div class="row">
 						<div class="col-sm-6">
