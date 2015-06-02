@@ -71,6 +71,7 @@
 					$album = recup_user_picture_album_concours($session);
 					foreach ($album as $value) {
 						if (getVraiNameAlbum($value->name)){
+							$listPhotoAlbum = recup_user_picture_album_concours_photos($session,$value->id);
 							foreach ($listPhotoAlbum as $tof) 
 							{
 								foreach ($tof->images as $elem) {
