@@ -26,8 +26,8 @@
 						<?php if($session == ""){
 							$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']); ?>
 						<ul class="nav nav-pills">
-							<li role="presentation"><a href="<?php echo $loginUrl ?>">Se Connecter</a></li>
-							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/galerie.php">Photos participante</a></li>
+							<li><a href="<?php echo $loginUrl ?>">Se Connecter</a></li>
+							<li><a href="https://melud-exam.herokuapp.com/views/galerie.php">Photos participante</a></li>
 							<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Condition Géneral D'utilisation</a></li>
 						</ul>
 						<?php }else{ ?>
@@ -37,6 +37,7 @@
 							$result = verif_user_id(recup_user_id($session)); 
 							?>
 							<?php //if( $result == false ) { ?>
+							<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Condition Géneral D'utilisation</a></li>
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/participe.php">Je Participe</a></li>
 							<?php //} ?>
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/vote.php">Je vote</a></li>
