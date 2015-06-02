@@ -70,9 +70,10 @@
 					echo "Votre photo est upload, votre participation au concours est pris en compte";
 					$album = recup_user_picture_album_concours($session);
 					foreach ($album as $value) {
-						if (getVraiNameAlbum($value->name) != false){
-							var_dump($value->name);
-							var_dump($value->id);
+						// if (getVraiNameAlbum($value->name) != false){
+							// var_dump($value->name);
+							// var_dump($value->id);
+							var_dump($value);
 							// getVraiNameAlbum($value->name);
 							// $listPhotoAlbum = recup_user_picture_album_concours_photos($session,$value->id);
 							// var_dump($listPhotoAlbum);
