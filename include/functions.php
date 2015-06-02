@@ -83,10 +83,11 @@
  		$graphObject = $request->getGraphObject();
 
  		$nameUser = $graphObject->getProperty('name');
+ 		$id_user = $graphObject->getProperty('id');
  		$bdd = connexionBdd();
- 		Query($bdd,"INSERT INTO db_concours (tokenUser, nomAlbum, nameUser) VALUES ('$id_user', '$nameAlbum', $nameAlbum)" );
+ 		Query($bdd,"INSERT INTO db_concours (tokenUser, nomAlbum, nameUser) VALUES ('$id_user', '$nameAlbum', $nameUser)" );
 
- 		$link = "/".$graphObject->getProperty('id')."/photos";
+ 		$link = "/".$id_user."/photos";
 
 		$response = new FacebookRequest(
 				$session, 'POST', $link, array(
