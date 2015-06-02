@@ -77,7 +77,7 @@
 							// getVraiNameAlbum($value->name);
 							// $listPhotoAlbum = recup_user_picture_album_concours_photos($session,$value->id);
 							// var_dump($listPhotoAlbum);
-						}
+						// }
 					}
 				}else{ ?>
 				<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
