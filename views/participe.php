@@ -68,7 +68,7 @@
 				{
 					createAlbum($session, $_FILES['fichier']['tmp_name'], $_POST['nameAlbum'], $_POST['descAlbum']);
 					echo "Votre photo est upload, votre participation au concours est pris en compte";
-					header('Location:https://melud-exam.herokuapp.com');	
+					// header('Location:https://melud-exam.herokuapp.com');	
 				}else{ ?>
 				<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
 					<div class="row">
