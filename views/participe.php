@@ -92,11 +92,6 @@
 			<?php }	?>
 			</div>
 				<?php } 
-				else
-				{
-					$loginUrl = $helper->getLoginUrl(['email','user_photos','publish_actions']);
-					echo "<a href=".$loginUrl." class='btn btn-primary btn-lg'>Se Connecter</a><br><br>";
-				}
 			?>
 		</div>
 		<!-- template footer -->
