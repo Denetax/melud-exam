@@ -73,8 +73,8 @@
 						if (getVraiNameAlbum($value->name) != false){
 							// var_dump($value->name);
 							// getVraiNameAlbum($value->name);
-							$lil = recup_user_picture_album_concours_photos($session,$value->id);
-							var_dump($lil);
+							$listPhotoAlbum = recup_user_picture_album_concours_photos($session,$value->id);
+							var_dump($listPhotoAlbum);
 						}
 					}
 				}else{ ?>
