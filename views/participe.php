@@ -71,13 +71,19 @@
 					$album = recup_user_picture_album_concours($session);
 					foreach ($album as $value) {
 						if (getVraiNameAlbum($value->name)){
-							// var_dump($value->name);
-							// var_dump($value->id);
-							// echo $value->name;
-							// var_dump($value);
-							// getVraiNameAlbum($value->name);
-							$listPhotoAlbum = recup_user_picture_album_concours_photos($session,$value->id);
-							var_dump($listPhotoAlbum);
+							foreach ($listPhotoAlbum as $tof) 
+							{
+								foreach ($tof->images as $elem) {
+									$url_img_alb = $elem->source;
+									$coupe_tof = split('/', $url_img_alb);
+									foreach ($coupe_tof as $val) {
+										if($val == "p320x320")
+										{
+											echo $url_img_alb;
+										}
+									}
+								}
+							}
 						}
 						// }
 					}
