@@ -20,7 +20,7 @@
 	<body>
 		<!-- template header -->
 		<!-- Fin template -->
-		<?php //connexionBdd(); ?>
+		<?php connexionBdd(); ?>
 		<div class="container col-sm-12">
 				<div class="row bandeBanche" style="height:50px; line-height:50px;">
 					<div class="col-sm-8">
