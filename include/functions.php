@@ -47,10 +47,20 @@
 			$request_user_executed = $request_user->execute(); 
 			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
 			$monId = $user->getProperty('id');
-			var_dump($monId);
-			$test = $user->getProperty('name');
-			var_dump($test);
 			return $monId;
+		}
+	}
+
+	function recup_user_name($session)
+	{
+		$monId="";
+		if($session != ""){
+			$_SESSION['fb-token'] = (string) $session->getAccessToken();
+			$request_user = new FacebookRequest($session,"GET","/me");
+			$request_user_executed = $request_user->execute(); 
+			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
+			$name = $user->getProperty('name');
+			return $name;
 		}
 	}
 
@@ -85,7 +95,7 @@
 		$request = $create_album->execute();
  		$graphObject = $request->getGraphObject();
 
- 		$nameUser = $graphObject->getProperty('name');
+ 		$nameUser = recup_user_name($session);
  		$id_user = $graphObject->getProperty('id');
 
  		$bdd = connexionBdd();
