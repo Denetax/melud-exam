@@ -35,8 +35,9 @@
 
 			foreach ($req as $value) { ?>
 			<div id="photoVote" class="col-md-4">
-				<img src="<?php echo $value['href'] ?>" alt=""><br><br>
-				
+				<img src="<?php echo $value['href'] ?>" alt=""></br></br>
+				<input id="inputNameUser" value="<?php echo $value['nameUser'] ?>"  type="text" style="display:none;"/>
+				<input id="inputSrc" name="inputSrc" type="text" style="display:none;" value=""/>
 				<div id="fboverlay" class="fb-like" data-href="<?php echo $value['href'] ?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
 			</div>
 			<?php } ?>
@@ -50,7 +51,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4 class="modal-title">Voter pour </h4>
+						<h4 id="titreNomUser" class="modal-title">Voter pour  </h4>
 					</div>
 					<div class="modal-body">
 						<img id="imgSelected" src="" width="100%" />

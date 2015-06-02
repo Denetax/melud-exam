@@ -16,6 +16,8 @@ $(document).ready(function(){
 	});
 	
 	$("#photoVote img").click(function(){
+			var inputNameUser = $("inputNameUser").val();
+			$("titreNomUser").val("Voter pour la photo de"+ inputNameUser);
 			var LienImage = this.src;
 			$("#imgSelected").attr("src",LienImage);
 			$("#myModalVote").modal('show');	
