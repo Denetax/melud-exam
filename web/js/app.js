@@ -20,4 +20,10 @@ $(document).ready(function(){
 			$("#imgSelected").attr("src",LienImage);
 			$("#myModalVote").modal('show');	
 		});
+		
+	$("#photoGalerie img").click(function(){
+			var LienImage = this.src;
+			$("#imgSelected").attr("src",LienImage);
+			$("#myModalGalerie").modal('show');	
+		});
 });
