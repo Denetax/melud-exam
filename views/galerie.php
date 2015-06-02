@@ -31,11 +31,11 @@
 
 			foreach ($req as $value) 
 			{ 
-			?>
+				?>
 				<div id="photoGalerie"class="col-sm-4">
 					<img src="<?php echo $value['href'] ?>"/>
 				</div>
-			<?php 
+				<?php 
 			}
 			?>
 		</div>
