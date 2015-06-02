@@ -13,4 +13,10 @@ $(document).ready(function(){
 		$('#blockUploadFacebook').fadeOut();
 		$('#blockUploadDesktop').fadeIn();
 	});
+	
+	$("#photoVote img").click(function(){
+			var LienImage = this.src;
+			$("#imgSelected").attr("src",LienImage);
+			$("#myModalVote").modal('show');	
+		});
 });

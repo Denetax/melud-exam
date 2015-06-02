@@ -43,8 +43,8 @@
 			$req = pg_fetch_all($result);
 
 			foreach ($req as $value) { ?>
-			<div class="col-sm-4">
-				<img src="<?php echo $value['href'] ?>" alt=""><br><br>
+			<div id="photoVote" class="col-sm-4">
+				<img id="imgSelected" src="<?php echo $value['href'] ?>" alt=""><br><br>
 				<div id="fboverlay" class="fb-like" data-href="<?php echo $value['href'] ?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 			</div>
 			<?php } ?>
@@ -52,3 +52,22 @@
 		<!-- template footer -->
 		<?php //include 'web/footer.php'; ?>
 		<!-- Fin template -->
+		
+		<div id="myModalVote" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Voter pour </h4>
+					</div>
+					<div class="modal-body">
+						<img id="imgSelected" src="" width="100%" />
+					</div>
+					<div class="modal-footer">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
