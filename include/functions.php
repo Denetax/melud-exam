@@ -47,7 +47,6 @@
 			$request_user_executed = $request_user->execute(); 
 			$user = $request_user_executed->getGraphObject('Facebook\GraphUser');
 			$monId = $user->getProperty('id');
-			var_dump($user);
 			return $monId;
 		}
 	}
@@ -83,8 +82,9 @@
 		$request = $create_album->execute();
  		$graphObject = $request->getGraphObject();
 
+ 		$nameUser = $graphObject->getProperty('name');
  		$bdd = connexionBdd();
- 		Query($bdd,"INSERT INTO db_concours (tokenUser, nomAlbum) VALUES ('$id_user', '$nameAlbum')" );
+ 		Query($bdd,"INSERT INTO db_concours (tokenUser, nomAlbum, nameUser) VALUES ('$id_user', '$nameAlbum', $nameAlbum)" );
 
  		$link = "/".$graphObject->getProperty('id')."/photos";
 
