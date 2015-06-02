@@ -20,7 +20,7 @@
 		<!-- template header -->
 		<!-- Fin template -->
 		<div class="container col-sm-12">
-						<h1 style="font-size:80px">Condition d'utilisation Melud-exam</h1>
+						<h1>Condition d'utilisation Melud-exam</h1>
 						<p>
 						Le présent document a pour objet de d'finir les modalités et conditions dans lesquelles d'une part,  Melud-exam , ci-aprés dénommé l'EDITEUR, 
 						met à la disposition de ses utilisateurs le site,
