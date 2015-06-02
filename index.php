@@ -28,6 +28,7 @@
 						<ul class="nav nav-pills">
 							<li role="presentation"><a href="<?php echo $loginUrl ?>">Se Connecter</a></li>
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/galerie.php">Photos participante</a></li>
+							<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Condition Géneral D'utilisation</a></li>
 						</ul>
 						<?php }else{ ?>
 						<?php session_auto($session); ?>

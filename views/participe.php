@@ -28,6 +28,7 @@
 				{ ?>
 				<ul class="nav nav-pills">
 					<li role="presentation"><a href="https://melud-exam.herokuapp.com">Retour</a></li>
+					<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Condition Géneral D'utilisation</a></li>
 					<li role="presentation"><a href="#" id="firstBlock">Upload Facebook</a></li>
 					<li role="presentation"><a href="#" id="secondBlock">Upload PC</a></li>
 				</ul>
