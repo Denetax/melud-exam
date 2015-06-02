@@ -101,6 +101,15 @@
 		}
 	}
 
+	function getVraiNameAlbum($name){
+
+		$bdd = connexionBdd();
+		$result = Query($bdd,"SELECT * FROM db_concours WHERE  nameuser = '$name'" );
+		$req = pg_fetch_all($result);
+
+		return $req;
+	}
+
 
 	function verif_user_id($id)
 	{
