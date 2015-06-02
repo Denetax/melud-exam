@@ -36,7 +36,7 @@
 					var_dump($user_exist);
 					if ($user_exist == false)
 					{
-						Query($bdd,"INSERT INTO utilisateur5 (tokenUser, href) VALUES ('$id_user', '$LienImage')" );
+						Query($bdd,"INSERT INTO db_concours (tokenUser, href) VALUES ('$id_user', '$LienImage')" );
 					}
 				}
 				

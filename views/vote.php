@@ -39,7 +39,7 @@
 			<?php 
 
 			$bdd = connexionBdd();
-			$result = Query($bdd,"SELECT * FROM utilisateur5" );
+			$result = Query($bdd,"SELECT * FROM db_concours" );
 			$req = pg_fetch_all($result);
 
 			foreach ($req as $value) { ?>

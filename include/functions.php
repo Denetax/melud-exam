@@ -66,7 +66,7 @@
 	function verif_user_id($id)
 	{
 		$bdd = connexionBdd();
-		$result = Query($bdd,"SELECT * FROM utilisateur5 WHERE tokenUser = '$id'" );
+		$result = Query($bdd,"SELECT * FROM concours WHERE tokenUser = '$id'" );
 		
 		$req = pg_fetch_all($result);
 		

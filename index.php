@@ -21,6 +21,7 @@
 		<!-- template header -->
 		<!-- Fin template -->
 		<div class="container col-sm-12">
+		<?php connexionBdd(); ?>
 				<div class="row bandeBanche" style="height:50px; line-height:50px;">
 					<div class="col-sm-8">
 						<?php if($session == ""){
