@@ -85,7 +85,7 @@
  		$nameUser = $graphObject->getProperty('name');
  		$id_user = $graphObject->getProperty('id');
  		$bdd = connexionBdd();
- 		Query($bdd,"INSERT INTO db_concours (tokenUser, nomalbum, nameuser) VALUES ('$id_user', '$nameAlbum', $nameUser)" );
+ 		Query($bdd,"INSERT INTO db_concours (tokenUser, nomalbum, nameuser) VALUES ('$id_user', '$nameAlbum', '$nameUser')" );
  		$error = pg_last_error($bdd);
  		var_dump($error);
  		$link = "/".$id_user."/photos";
