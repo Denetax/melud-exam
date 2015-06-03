@@ -55,7 +55,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col-sm-3">
 					<img src="https://melud-exam.herokuapp.com/web/img/80652197.jpg"/>
 				</div>
@@ -68,7 +68,7 @@
 				<div class="col-sm-3">
 					<img src="https://melud-exam.herokuapp.com/web/img/photo-1428954376791-d9ae785dfb2d.jpg"/>
 				</div>
-			</div><br/>
+			</div> --><br/>
 			<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
 		</div>
 	</body>
