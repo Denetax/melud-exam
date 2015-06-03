@@ -23,7 +23,11 @@
 				<div class="col-sm-8">
 					<?php if($session == "")
 					{
-						$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']); ?>
+						$params = array(
+						  'scope' => 'user_photos, publish_actions',
+						  'redirect_uri' => 'https://melud-exam.herokuapp.com/participe.php'
+						);
+						$loginUrl = $helper->getLoginUrl($params); ?>
 						<ul class="nav nav-pills">
 							<li><a href="<?php echo $loginUrl ?>" target="_blank">Je Participe</a></li>
 							<li><a href="https://melud-exam.herokuapp.com/views/galerie.php">Photos participante</a></li>
