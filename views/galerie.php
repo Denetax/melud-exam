@@ -28,16 +28,19 @@
 			$bdd = connexionBdd();
 			$result = Query($bdd,"SELECT * FROM db_concours" );
 			$req = pg_fetch_all($result);
-
+			?> 
+			<div id="photoGalerie"> 
+			<?php>
 			foreach ($req as $value) 
 			{ 
 				?>
-				<div id="photoGalerie"class="col-sm-4">
-					<img src="<?php echo $value['href'] ?>"/>
+				<div style="height:200px;">
+					<img style="overflow:hidden:" class="col-sm-4" src="<?php echo $value['href'] ?>"/>
 				</div>
 				<?php 
 			}
 			?>
+			</div>
 		</div>
 		<div id="myModalGalerie" class="modal fade">
 			<div class="modal-dialog">
