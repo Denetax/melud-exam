@@ -35,9 +35,9 @@
 					{ 
 						session_auto($session); ?>
 						<ul class="nav nav-pills">
-							<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Condition Géneral D'utilisation</a></li>
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/participe.php">Je Participe</a></li>
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/vote.php">Je vote</a></li>
+							<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Mentions Légales</a></li>
 						</ul>
 					<?php 
 					} 
