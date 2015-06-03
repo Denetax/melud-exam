@@ -7,21 +7,21 @@
 	
 	FacebookSession::setDefaultApplication(APPID, APPSECRET);
 	
-	$helper = new FacebookRedirectLoginHelper('https://melud-exam.herokuapp.com/participe.php');
+	//$helper = new FacebookRedirectLoginHelper('https://melud-exam.herokuapp.com/participe.php');
 
 	if(isset($_SESSION) && isset($_SESSION['fb-token']))
 	{
 		$session = new FacebookSession($_SESSION['fb-token']);
 	}
-	else
-	{
-		try {
-				$session = $helper->getSessionFromRedirect();
-			} catch(FacebookRequestException $ex) {
-				echo "Erreur Facebook";
-			} catch(\Exception $ex) {
-				echo "Probleme Local";
-			}
-	}
+	// else
+	// {
+		// try {
+				// $session = $helper->getSessionFromRedirect();
+			// } catch(FacebookRequestException $ex) {
+				// echo "Erreur Facebook";
+			// } catch(\Exception $ex) {
+				// echo "Probleme Local";
+			// }
+	// }
 
 ?>
