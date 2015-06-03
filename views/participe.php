@@ -80,8 +80,8 @@
 									foreach ($coupe_tof as $val) {
 										if($val == "p320x320")
 										{
-											//echo $url_img_alb;
-											echo "yes";
+											echo $url_img_alb;
+											//echo "yes";
 										}
 									}
 								}
