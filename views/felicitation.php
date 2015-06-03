@@ -30,7 +30,6 @@
 					if ($LienImage != ""){
 						$id_user = recup_user_id($session);
 						$name_user = recup_user_name($session);
-						$bdd = connexionBdd();
 						$user_exist = verif_user_name($name_user);
 						if($user_exist){
 							upload_change_photo_user($LienImage, $name_user);
