@@ -17,9 +17,9 @@
 	</head>
 	<body>
 		<div class="container col-sm-12">
-						<li>
-							<a href="https://melud-exam.herokuapp.com">Retour</a>
-						</li>
+						<ul class="nav nav-pills">
+							<li><a href="https://melud-exam.herokuapp.com">Retour</a></li>
+						</ul>
 						<h1 style="text-align:center;">Condition d'utilisation Melud-exam</h1>
 						<p style="font-size:12px;text-align:left;">
 							Le présent document a pour objet de d'finir les modalités et conditions dans lesquelles d'une part,  Melud-exam , ci-aprés dénommé l'EDITEUR, 
