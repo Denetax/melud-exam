@@ -30,7 +30,7 @@
 			$req = pg_fetch_all($result);
 			?> 
 			<div id="photoGalerie"> 
-			<?php>
+			<?php
 			foreach ($req as $value) 
 			{ 
 				?>

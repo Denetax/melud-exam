@@ -23,7 +23,7 @@ $(document).ready(function(){
 			$("#myModalVote").modal('show');	
 		});
 		
-	$("#photoGalerie div img").click(function(){
+	$("#photoGalerie div.img").click(function(){
 			var LienImage = this.src;
 			$("#imgSelected").attr("src",LienImage);
 			$("#myModalGalerie").modal('show');	
