@@ -23,11 +23,10 @@
 				<div class="col-sm-8">
 					<?php if($session == "")
 					{
-						$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']); 
-						$VoteUrl = $helper->getLoginUrl(['email']); ?>
+						$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']); ?>
 						<ul class="nav nav-pills">
 							<li><a href="<?php echo $loginUrl ?>">Je Participe</a></li>
-							<li><a href="<?php echo $VoteUrl ?>">Je vote</a></li>
+							<li><a href="https://melud-exam.herokuapp.com/views/vote.php">Je vote</a></li>
 							<li><a href="https://melud-exam.herokuapp.com/views/galerie.php">Photos participante</a></li>
 							<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Mentions Légales</a></li>
 						</ul>
@@ -40,7 +39,7 @@
 							<?php 
 							$result = verif_user_id(recup_user_id($session)); 
 							?>
-							<li><a href="<?php echo $loginUrl ?>">Je Participe</a></li>
+							<li><a href="https://melud-exam.herokuapp.com/views/participe.php">Je Participe</a></li>
 							<li><a href="https://melud-exam.herokuapp.com/views/vote.php">Je vote</a></li>
 							<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Mentions Légales</a></li>
 						</ul>
