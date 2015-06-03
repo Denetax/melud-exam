@@ -80,9 +80,7 @@
 									foreach ($coupe_tof as $val) {
 										if($val == "p320x320")
 										{
-											//updateLinehref($url_img_alb);
-											echo $url_img_alb;
-											//echo "yes";
+											updateLinehref($url_img_alb, $value->name);
 										}
 									}
 								}
