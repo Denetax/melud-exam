@@ -18,7 +18,6 @@
 		<title>Jeux Coucours</title>
 	</head>
 	<body>
-		<?php //connexionBdd(); ?>
 		<div class="container col-sm-12">
 			<div class="row bandeBanche" style="height:50px; line-height:50px;">
 				<div class="col-sm-8">
@@ -36,13 +35,8 @@
 					{ 
 						session_auto($session); ?>
 						<ul class="nav nav-pills">
-							<?php 
-							// $result = verif_user_id(recup_user_id($session)); 
-							?>
-							<?php //if( $result == false ) { ?>
 							<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Condition Géneral D'utilisation</a></li>
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/participe.php">Je Participe</a></li>
-							<?php //} ?>
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/vote.php">Je vote</a></li>
 						</ul>
 					<?php 
