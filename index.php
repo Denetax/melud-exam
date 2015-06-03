@@ -24,10 +24,7 @@
 				<div class="col-sm-8">
 					<?php if($session == "")
 					{
-						$params = array(
-						  'scope' => 'user_photos, publish_actions'
-						);
-						$loginUrl = $helper->getLoginUrl($params); ?>
+						$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']); ?>
 						<ul class="nav nav-pills">
 							<li><a href="<?php echo $loginUrl ?>">Se connecter</a></li>
 							<li><a href="https://melud-exam.herokuapp.com/views/galerie.php">Photos participante</a></li>
