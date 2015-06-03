@@ -34,7 +34,7 @@
 			foreach ($req as $value) 
 			{ 
 				?>
-				<div class="col-md-4" style="height:300px;overflow:hidden;">
+				<div class="col-sm-4" style="height:300px;overflow:hidden;">
 					<img src="<?php echo $value['href'] ?>"/>
 				</div>
 				<?php 
