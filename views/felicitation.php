@@ -31,8 +31,12 @@
 						$id_user = recup_user_id($session);
 						$name_user = recup_user_name($session);
 						$bdd = connexionBdd();
-						$user_exist = verif_user_id($id_user);
-						Query($bdd,"INSERT INTO db_concours (tokenUser, href, nameuser) VALUES ('$id_user', '$LienImage', '$name_user')" );
+						$user_exist = verif_user_name($name_user);
+						if($user_exist){
+							upload_change_photo_user($LienImage, $name_user);
+						}else{
+							insert_photo_via_facebook($id_user, $LienImage, $name_user);
+						}
 					}
 				}			
 			?><br/>
