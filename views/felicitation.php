@@ -25,6 +25,9 @@
 					<ul class="nav nav-pills">
 						<li role="presentation"><a href="https://melud-exam.herokuapp.com">Retour</a></li>
 					</ul>
+					<div id ="miseEnFormeFeliciation" class="col-md-offset-2 col-md-8"> 
+						
+					</div>
 					<?php 
 					$LienImage = $_POST['inputSrc'];
 					if ($LienImage != ""){
