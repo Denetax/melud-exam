@@ -9,30 +9,31 @@
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="https://melud-exam.herokuapp.com/web/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://melud-exam.herokuapp.com/web/css/styles.css">
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="https://melud-exam.herokuapp.com/web/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://melud-exam.herokuapp.com/web/css/styles.css"/>
 		<script src="https://melud-exam.herokuapp.com/web/js/bootstrap.min.js"></script>
 		<script src="https://melud-exam.herokuapp.com/web/js/FBconfig.js"></script>
 		<title>Jeux Coucours</title>
 	</head>
 	<body>
-		<!-- template header -->
-		<!-- Fin template -->
-		<?php //connexionBdd(); ?>
 		<div class="container col-sm-12">
-				<div class="row bandeBanche" style="height:50px; line-height:50px;">
-					<div class="col-sm-8">
-						<?php if($session == ""){
-							$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']); ?>
+			<div class="row bandeBanche" style="height:50px; line-height:50px;">
+				<div class="col-sm-8">
+					<?php if($session == "")
+					{
+						$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']); ?>
 						<ul class="nav nav-pills">
 							<li><a href="<?php echo $loginUrl ?>">Se Connecter</a></li>
 							<li><a href="https://melud-exam.herokuapp.com/views/galerie.php">Photos participante</a></li>
 							<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Condition Géneral D'utilisation</a></li>
 						</ul>
-						<?php }else{ ?>
-						<?php session_auto($session); ?>
+					<?php 
+					}
+					else
+					{ 
+						session_auto($session); ?>
 						<ul class="nav nav-pills">
 							<?php 
 							$result = verif_user_id(recup_user_id($session)); 
@@ -43,38 +44,37 @@
 							<?php //} ?>
 							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/vote.php">Je vote</a></li>
 						</ul>
-						<?php } ?>	
-					</div>
+					<?php 
+					} 
+					?>	
 				</div>
-				<div class="row bandeImage" style="height:300px; margin-top:20px;">
-					<div class="col-sm-8 col-sm-offset-2">
-						<h1 style="font-size:80px">Melud</h1>
-						<p>
+			</div>
+			<div class="row bandeImage" style="height:300px; margin-top:20px;">
+				<div class="col-sm-8 col-sm-offset-2">
+					<h1 style="font-size:80px">Melud</h1>
+					<p>
 						Bienvenue sur le jeux concours Melud dédié à la photographie. <br>
 						Le principe est simple, 
 						prend toi en photo dans un magnifique paysage
 						pour participe au coucours.
-						</p>
-					</div>
+					</p>
 				</div>
-				<div class="row">
-					<div class="col-sm-3">
-						<img src="https://melud-exam.herokuapp.com/web/img/80652197.jpg">
-					</div>
-					<div class="col-sm-3">
-						<img src="https://melud-exam.herokuapp.com/web/img/82e2ae94.jpg">
-					</div>
-					<div class="col-sm-3">
-						<img src="https://melud-exam.herokuapp.com/web/img/photo-1415298910336-daa47babb3cc.jpg">
-					</div>
-					<div class="col-sm-3">
-						<img src="https://melud-exam.herokuapp.com/web/img/photo-1428954376791-d9ae785dfb2d.jpg">
-					</div>
-				</div><br>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<img src="https://melud-exam.herokuapp.com/web/img/80652197.jpg"/>
+				</div>
+				<div class="col-sm-3">
+					<img src="https://melud-exam.herokuapp.com/web/img/82e2ae94.jpg"/>
+				</div>
+				<div class="col-sm-3">
+					<img src="https://melud-exam.herokuapp.com/web/img/photo-1415298910336-daa47babb3cc.jpg"/>
+				</div>
+				<div class="col-sm-3">
+					<img src="https://melud-exam.herokuapp.com/web/img/photo-1428954376791-d9ae785dfb2d.jpg"/>
+				</div>
+			</div><br/>
 			<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
-	</div>
-		<!-- template footer -->
-		<?php //include 'web/footer.php'; ?>
-		<!-- Fin template -->
+		</div>
 	</body>
 </html>

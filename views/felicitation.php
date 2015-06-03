@@ -20,20 +20,18 @@
 		<div class="container col-sm-12">
 			<?php
 				if($session)
-				{ ?>
-				<ul class="nav nav-pills">
-					<li role="presentation"><a href="https://melud-exam.herokuapp.com">Retour</a></li>
-				</ul>
-				<?php 
+				{ 
+					?>
+					<ul class="nav nav-pills">
+						<li role="presentation"><a href="https://melud-exam.herokuapp.com">Retour</a></li>
+					</ul>
+					<?php 
 					$LienImage = $_POST['inputSrc'];
 					if ($LienImage != ""){
 						$id_user = recup_user_id($session);
 						$bdd = connexionBdd();
 						$user_exist = verif_user_id($id_user);
-						/*if ($user_exist == false)
-						{*/
-							Query($bdd,"INSERT INTO db_concours (tokenUser, href) VALUES ('$id_user', '$LienImage')" );
-						//}
+						Query($bdd,"INSERT INTO db_concours (tokenUser, href) VALUES ('$id_user', '$LienImage')" );
 					}
 					$album = recup_user_picture_album_concours($session);
 					foreach ($album as $value) {
@@ -43,10 +41,8 @@
 							// var_dump($lil);
 						// }
 					}
-
-				}
-				
-			?><br>
+				}			
+			?><br/>
 		</div>
 	</body>
 </html>
