@@ -25,7 +25,7 @@
 					{
 						$params = array(
 						  'scope' => 'user_photos, publish_actions',
-						  'redirect_uri' => 'https://melud-exam.herokuapp.com/participe.php'
+						  'redirect_uri' => 'https://www.facebook.com/meludexam/app_1574686139449224'
 						);
 						$loginUrl = $helper->getLoginUrl($params); ?>
 						<ul class="nav nav-pills">
