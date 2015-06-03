@@ -29,17 +29,10 @@
 					$LienImage = $_POST['inputSrc'];
 					if ($LienImage != ""){
 						$id_user = recup_user_id($session);
+						$name_user = recup_user_name($session);
 						$bdd = connexionBdd();
 						$user_exist = verif_user_id($id_user);
-						Query($bdd,"INSERT INTO db_concours (tokenUser, href) VALUES ('$id_user', '$LienImage')" );
-					}
-					$album = recup_user_picture_album_concours($session);
-					foreach ($album as $value) {
-						// if (getVraiNameAlbum($value->name) != false){
-							//getVraiNameAlbum($value->name);
-							// $lil = recup_user_picture_album_concours_photos($session,$value->id);
-							// var_dump($lil);
-						// }
+						Query($bdd,"INSERT INTO db_concours (tokenUser, href, nameuser) VALUES ('$id_user', '$LienImage', '$name_user')" );
 					}
 				}			
 			?><br/>

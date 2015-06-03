@@ -20,7 +20,7 @@
 		<div class="container col-sm-12">
 			<ul class="nav nav-pills">
 				<li><a href="https://melud-exam.herokuapp.com">Retour</a></li>
-				<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Condition Géneral D'utilisation</a></li>
+				<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Mentions Légales</a></li>
 			</ul>
 			<h1 style="color:#000">Votez pour vos photographies favorites.</h1>
 			

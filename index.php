@@ -27,7 +27,7 @@
 						<ul class="nav nav-pills">
 							<li><a href="<?php echo $loginUrl ?>">Se Connecter</a></li>
 							<li><a href="https://melud-exam.herokuapp.com/views/galerie.php">Photos participante</a></li>
-							<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Condition Géneral D'utilisation</a></li>
+							<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Mentions Légales</a></li>
 						</ul>
 					<?php 
 					}
