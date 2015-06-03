@@ -29,7 +29,7 @@
 						);
 						$loginUrl = $helper->getLoginUrl($params); ?>
 						<ul class="nav nav-pills">
-							<li><a href="<?php echo $loginUrl; ?>" >Je Participe</a></li>
+							<li><a href="<?php echo $loginUrl ?>">Se connecter</a></li>
 							<li><a href="https://melud-exam.herokuapp.com/views/galerie.php">Photos participante</a></li>
 							<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Mentions Légales</a></li>
 						</ul>
