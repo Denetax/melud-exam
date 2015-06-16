@@ -32,9 +32,16 @@
 								$listPhotos = recup_user_picture_album_concours_photos($session, $tof->id);
 								foreach ($listPhotos as $good) 
 								{
-									echo "/////////////////";
-									var_dump($good);
-									echo "/////////////////";
+									foreach ($tof->images as $elem) {
+										$url_img_alb = $elem->source;
+										$coupe_tof = split('/', $url_img_alb);
+										foreach ($coupe_tof as $val) {
+											if($val == "p320x320")
+											{
+												var_dump($val);
+											}
+										}
+									}
 								}
 								
 							}?>
