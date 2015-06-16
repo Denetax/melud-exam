@@ -26,7 +26,12 @@
 				<p>
 					Sélectionne une photo parmit celle de ton compte Facebook.
 				</p>
-				<?php $lesAlbums = recup_user_picture_album_concours($session); var_dump($lesAlbums);?>
+				<?php 	$lesAlbums = recup_user_picture_album_concours($session); 
+						foreach ($lesAlbums as $tof) 
+							{
+								var_dump($tof->id);
+							}
+						var_dump($lesAlbums);?>
 					
 				<div id="picture_fb">
 					
