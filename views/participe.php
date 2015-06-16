@@ -29,9 +29,14 @@
 				<?php 	$lesAlbums = recup_user_picture_album_concours($session); 
 						foreach ($lesAlbums as $tof) 
 							{
-								var_dump($tof->id);
-							}
-						var_dump($lesAlbums);?>
+								$listPhotos = recup_user_picture_album_concours_photos($session, $tof->id);
+								foreach ($listPhotos as $good) 
+								{
+									echo $good;
+									echo "/////////////////";
+								}
+								
+							}?>
 					
 				<div id="picture_fb">
 					
