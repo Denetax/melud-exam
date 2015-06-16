@@ -30,9 +30,10 @@
 						foreach ($lesAlbums as $tof) 
 							{
 								$listPhotos = recup_user_picture_album_concours_photos($session, $tof->id);
+								var_dump($listPhotos);
 								foreach ($listPhotos as $good) 
 								{
-									echo $good;
+									//echo $good;
 									echo "/////////////////";
 								}
 								
