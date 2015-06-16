@@ -38,7 +38,10 @@
 										foreach ($coupe_tof as $val) {
 											if($val == "p320x320")
 											{
+												echo "//////////// <br/><br/>";
 												var_dump($url_img_alb);
+												var_dump($$tof->id);
+												echo "////////////<br/><br/>";
 											}
 										}
 									}
