@@ -26,26 +26,10 @@
 				<p>
 					Sélectionne une photo parmit celle de ton compte Facebook.
 				</p>
-				<?php $lesPhotos = recup_user_picture_concours($session); ?>
+				<?php $lesAlbums = recup_user_picture_album_concours($session); var_dump($lesAlbums);?>
+					
 				<div id="picture_fb">
-					<?php
-					foreach ($lesPhotos as $variable) 
-					{
-						foreach ($variable->images as $element) {
-							$url_img = $element->source;
-							$coupe = split('/', $url_img);
-							foreach ($coupe as $value) {
-								if($value == "p320x320")
-								{
-								?>
-									<img src="<?php echo $url_img ?>" width="100%" />
-								<?php 
-								}
-							}
-							?>
-
-						 <? }
-					} ?>
+					
 				</div>
 				</div>
 				<div id="blockUploadDesktop">
@@ -70,7 +54,6 @@
 									foreach ($coupe_tof as $val) {
 										if($val == "p320x320")
 										{
-											var_dump($url_img_alb);
 											updateLinehref($url_img_alb, $value->name);
 										}
 									}
