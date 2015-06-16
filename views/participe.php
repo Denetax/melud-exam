@@ -40,7 +40,7 @@
 											{
 												echo "//////////// <br/><br/>";
 												var_dump($url_img_alb);
-												var_dump($$tof->id);
+												var_dump($tof->id);
 												echo "////////////<br/><br/>";
 											}
 										}
