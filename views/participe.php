@@ -32,7 +32,7 @@
 								$listPhotos = recup_user_picture_album_concours_photos($session, $tof->id);
 								foreach ($listPhotos as $good) 
 								{
-									foreach ($tof->images as $elem) {
+									foreach ($good->images as $elem) {
 										$url_img_alb = $elem->source;
 										$coupe_tof = split('/', $url_img_alb);
 										foreach ($coupe_tof as $val) {
@@ -78,7 +78,6 @@
 								}
 							}
 						}
-						// }
 					}
 				}else{ ?>
 				<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
