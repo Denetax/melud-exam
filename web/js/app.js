@@ -29,5 +29,5 @@ $(document).ready(function(){
 			$("#myModalGalerie").modal('show');	
 		});
 		
-	console.log($("#ImageAlbum img"));
+	console.log($("#ImageAlbum img").children().attr("class");
 });
