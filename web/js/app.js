@@ -28,4 +28,6 @@ $(document).ready(function(){
 			$("#imgSelected").attr("src",LienImage);
 			$("#myModalGalerie").modal('show');	
 		});
+		
+	console.log($("#ImageAlbum img").attr("class"));
 });
