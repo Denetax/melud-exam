@@ -33,8 +33,9 @@ $(document).ready(function(){
 		$.each($("#ImageAlbum img"),function(index,value){
 			if(id == value.className)
 			{
-				console.log(value.alt);
-				$(".id").show;"
+				//console.log(value.alt);
+				console.log
+				//$(".id").show;
 			};
 			//console.log(value.className);
 			//console.log(value.alt);
