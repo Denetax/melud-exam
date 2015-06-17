@@ -55,10 +55,6 @@
 					</p>
 				</div>
 			</div>
-			<?php 
-				$page = "https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xfa1/v/t1.0-9/p320x320/295450_321730364615230_364064530_n.jpg?oh=1ac507bfc183f8f264bf7011c1ba4d27&oe=56078D4D&__gda__=1441451754_1c605e834f0b8d9f08f560e6ea99adeb";
-				getCountLikeFacebook($page); 
-			?>
 			<!-- <div class="row">
 				<div class="col-sm-3">
 					<img src="https://melud-exam.herokuapp.com/web/img/80652197.jpg"/>

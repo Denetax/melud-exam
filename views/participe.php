@@ -6,7 +6,7 @@
 	require '../SDKPHP/autoload.php';
 	require '../controllers/SessionController.php';
 
-	include '../web/header.php'
+	include '../web/header.php';
 ?>
 	<body>
 		<!-- template header -->
