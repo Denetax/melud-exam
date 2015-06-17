@@ -109,6 +109,13 @@
 		return $req;
 	}
 
+	function getAllUserParticipe(){
+		$bdd = connexionBdd();
+		$result = Query($bdd,"SELECT * FROM db_concours" );
+		$req = pg_fetch_all($result);
+		return $req;
+	}
+
 	function updateLinehref($url, $name){
 		$bdd = connexionBdd();
 		$result =  Query($bdd, "UPDATE db_concours SET href = '$url' WHERE nomalbum = '$name'");
