@@ -140,6 +140,17 @@
 		return $req;
 	}
 
+	function getCountLikeFacebook($page)
+	{
+    	$url = "https://api.facebook.com/method/links.getStats?urls=".urlencode($page)."&format=json";
+    	$data = json_decode(file_get_contents($url));
+ 
+    	if(!isset($data[0]->like_count)){ return 'erreur'; }
+ 		
+ 		var_dump($data[0]->like_count);
+    	return $data[0]->like_count;
+	}
+
 	function createAlbum($session, $file, $nameAlbum, $descAlbum){
 		$album_details = array(
         	'message'=> $descAlbum,

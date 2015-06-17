@@ -55,6 +55,10 @@
 					</p>
 				</div>
 			</div>
+			<?php 
+				$page = "https://www.facebook.com/photo.php?fbid=10204821739532502&set=t.1419971546&type=1&theater";
+				getCountLikeFacebook($page); 
+			?>
 			<!-- <div class="row">
 				<div class="col-sm-3">
 					<img src="https://melud-exam.herokuapp.com/web/img/80652197.jpg"/>
