@@ -31,6 +31,6 @@ $(document).ready(function(){
 		
 	
 	$.each($("#ImageAlbum img"),function(index,value){
-		console.log(value);
+		console.log(value.attr("class"));
 	});
 });
