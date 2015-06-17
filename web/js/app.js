@@ -31,10 +31,7 @@ $(document).ready(function(){
 		
 	
 	$.each($("#ImageAlbum img"),function(index,value){
-		var res = value.split(" "); 
-		console.log(res);
-		var res1 = res[1].split("="); 
-		console.log(res1);
-		
+		//var res = value.split(" "); 
+		console.log(value);
 	});
 });
