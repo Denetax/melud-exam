@@ -31,7 +31,6 @@ $(document).ready(function(){
 		
 	
 	$.each($("#ImageAlbum img"),function(index,value){
-		//var res = value.split(" "); 
 		console.log(value.className);
 	});
 });

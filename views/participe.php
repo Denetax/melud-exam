@@ -41,7 +41,7 @@
 											if($val == "p320x320")
 											{
 												?>
-													<img class="<?php echo $tof->id ?>" src="<?php echo $url_img_alb ?>" width="20%" />
+													<img alt="<?php echo $tof->name ?>" class="<?php echo $tof->id ?>" src="<?php echo $url_img_alb ?>" width="20%" />
 												<?php
 											}
 										}
