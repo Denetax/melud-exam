@@ -30,11 +30,12 @@ $(document).ready(function(){
 		});
 	$( "#listAlbum div" ).click(function() {
 		var id = this.id;
+		$("#ImageAlbum").hide();
 		$.each($("#ImageAlbum img"),function(index,value){
 			if(id == value.className)
 			{
 				//console.log(value.alt);
-				console.log($("."+id));
+				$("."+id).show();;
 				//$(".id").show;
 			};
 			//console.log(value.className);
