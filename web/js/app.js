@@ -34,6 +34,7 @@ $(document).ready(function(){
 			if(id == value.className)
 			{
 				console.log(value.alt);
+				$(".id").show;"
 			};
 			//console.log(value.className);
 			//console.log(value.alt);
