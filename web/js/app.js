@@ -31,6 +31,7 @@ $(document).ready(function(){
 		
 	$("ImageAlbum")
 	$.each($("#ImageAlbum img"),function(index,value){
+	
 		console.log(value.className);
 		console.log(value.alt);
 	});

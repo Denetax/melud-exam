@@ -30,7 +30,7 @@
 					$lesAlbums = recup_user_picture_album_concours($session); 
 					foreach ($lesAlbums as $tof) 
 						{
-							echo $tof->id;
+							?> <div id="<?php echo $tof->id ?>"><?php echo $tof->name ?></div> <?php
 						}
 					?>
 				<div id="ImageAlbum">
