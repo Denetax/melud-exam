@@ -30,7 +30,7 @@ $(document).ready(function(){
 		});
 	$( "#listAlbum div" ).click(function() {
 		var id = this.id;
-		$("#ImageAlbum").hide();
+		$("#ImageAlbum img").hide();
 		$.each($("#ImageAlbum img"),function(index,value){
 			if(id == value.className)
 			{
