@@ -13,7 +13,9 @@ include '../web/header.php';
 $Participant = getAllUserParticipe();
 
 foreach ($Participant as $res) {
-	var_dump($res);
+	echo $res['nameuser']."<br>";
+	echo $res['href']."<br>";
+	echo getCountLikeFacebook($res['href'])."<br><br>";
 }
 
 ?>
