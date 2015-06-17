@@ -28,11 +28,16 @@ $(document).ready(function(){
 			$("#imgSelected").attr("src",LienImage);
 			$("#myModalGalerie").modal('show');	
 		});
-		
-	$("ImageAlbum")
-	$.each($("#ImageAlbum img"),function(index,value){
-	
-		console.log(value.className);
-		console.log(value.alt);
+	$( "#listAlbum div" ).click(function() {
+		var id = this.id;
+		$.each($("#ImageAlbum img"),function(index,value){
+			if(id == value.className)
+			{
+				
+			};
+			console.log(value.className);
+			console.log(value.alt);
+		});
 	});
+	
 });

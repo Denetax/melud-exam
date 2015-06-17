@@ -26,6 +26,7 @@
 				<p>
 					Sélectionne une photo parmit celle de ton compte Facebook.
 				</p>
+				<div id="listAlbum">
 				<?php
 					$lesAlbums = recup_user_picture_album_concours($session); 
 					foreach ($lesAlbums as $tof) 
@@ -33,6 +34,7 @@
 							?> <div id="<?php echo $tof->id ?>"><?php echo $tof->name ?></div> <?php
 						}
 					?>
+				</div>
 				<div id="ImageAlbum">
 				<?php
 						$lesAlbums = recup_user_picture_album_concours($session); 
