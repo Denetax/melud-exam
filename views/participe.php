@@ -26,7 +26,8 @@
 				<p>
 					Sélectionne une photo parmit celle de ton compte Facebook.
 				</p>
-				<?php 	$lesAlbums = recup_user_picture_album_concours($session); 
+				<?php 	
+						$lesAlbums = recup_user_picture_album_concours($session); 
 						foreach ($lesAlbums as $tof) 
 							{
 								$listPhotos = recup_user_picture_album_concours_photos($session, $tof->id);
@@ -38,10 +39,9 @@
 										foreach ($coupe_tof as $val) {
 											if($val == "p320x320")
 											{
-												echo "//////////// <br/><br/>";
-												var_dump($url_img_alb);
-												var_dump($tof->id);
-												echo "////////////<br/><br/>";
+												?>
+													<img id="<?php $tof->id ?>" src="<?php echo $url_img_alb ?>" width="100%" />
+												<?php
 											}
 										}
 									}
