@@ -30,7 +30,7 @@ $(document).ready(function(){
 		});
 		
 	
-	$.each($("#ImageAlbum img"),function(index,value){
-		console.log(value.class);
+	$.each($("#ImageAlbum img").attr("class"),function(index,value){
+		console.log(value);
 	});
 });
