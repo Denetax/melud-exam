@@ -7,7 +7,6 @@ $(document).ready(function(){
 	});
 	$("#ImageAlbum").children().click(function(){
 			var LienImage = this.src;
-			console.log(LienImage);
 			$("#imgSelected").attr("src",LienImage);
 			$("#inputSrc").attr("value",LienImage);
 			$("#myModal").modal('show');	

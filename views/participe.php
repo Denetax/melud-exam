@@ -31,7 +31,11 @@
 						$lesAlbums = recup_user_picture_album_concours($session); 
 						foreach ($lesAlbums as $tof) 
 							{
-								?> <div id="<?php echo $tof->id ?>"><?php echo $tof->name ?></div> <?php
+								?>
+									<div class="col-sm-3">
+										<div id="<?php echo $tof->id ?>"><?php echo $tof->name ?></div> 
+									</div>
+								<?php
 							}
 						?>
 					</div>
