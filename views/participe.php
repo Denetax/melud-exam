@@ -55,7 +55,7 @@
 												if($val == "p320x320")
 												{
 													?>
-														<img alt="<?php echo $tof->name ?>" class="<?php echo $tof->id ?>" src="<?php echo $url_img_alb ?>"  style="display:none;width:20%;"/>
+														<img alt="<?php echo $tof->name ?>" class="<?php echo $tof->id ?>" src="<?php echo $url_img_alb ?>"  style="display:none;"/>
 													<?php
 												}
 											}
@@ -122,6 +122,7 @@
 		<!-- template footer -->
 		<?php //include 'web/footer.php'; ?>
 		<!-- Fin template -->
+		<div class="loader"></div> 
 		<div id="myModal" class="modal fade">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -142,6 +143,11 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			$(window).load(function() {
+				$(".loader").fadeOut("1000");
+			})
+		</script>
 	</body>
 </html>
 
