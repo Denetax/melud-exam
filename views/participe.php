@@ -34,7 +34,7 @@
 								?>
 									<div class="col-sm-3">
 										<div></div>
-										<div style="display:none;" id="<?php echo $tof->id ?>"><?php echo $tof->name ?></div> 
+										<div id="<?php echo $tof->id ?>"><?php echo $tof->name ?></div> 
 									</div>
 								<?php
 							}
@@ -55,7 +55,7 @@
 												if($val == "p320x320")
 												{
 													?>
-														<img alt="<?php echo $tof->name ?>" class="<?php echo $tof->id ?>" src="<?php echo $url_img_alb ?>" width="20%" />
+														<img alt="<?php echo $tof->name ?>" class="<?php echo $tof->id ?>" src="<?php echo $url_img_alb ?>"  style="display:none;width:20%;"/>
 													<?php
 												}
 											}
