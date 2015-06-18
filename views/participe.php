@@ -68,6 +68,7 @@
 				<p>
 					Télécharge une image depuis ton ordinateur.
 				</p>
+				<div class="loader"></div> 
 				<?php
 				session_auto($session);
 				if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
@@ -122,7 +123,6 @@
 		<!-- template footer -->
 		<?php //include 'web/footer.php'; ?>
 		<!-- Fin template -->
-		<div class="loader"></div> 
 		<div id="myModal" class="modal fade">
 			<div class="modal-dialog">
 				<div class="modal-content">
