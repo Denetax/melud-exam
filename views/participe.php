@@ -32,7 +32,7 @@
 						foreach ($lesAlbums as $tof) 
 							{
 								?>
-									<div class="col-sm-3">
+									<div class="col-sm-3 MiseEnFormeAlbum">
 										<div></div>
 										<div id="<?php echo $tof->id ?>"><?php echo $tof->name ?></div> 
 									</div>
