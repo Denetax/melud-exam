@@ -61,9 +61,10 @@
 .MiseEnFormeAlbum{
 	text-align:center;
 	border:1px solid black;
-	-moz-box-shadow: 10px 10px 5px 0px #656565;
-	-webkit-box-shadow: 10px 10px 5px 0px #656565;	
-	-o-box-shadow: 10px 10px 5px 0px #656565;
-	box-shadow: 10px 10px 5px 0px #656565;
-	filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+	height:300px;
+}
+.MiseEnFormeCoverAlbum{
+	width:100%;
+	overflow:hidden;
+	background-color:black;
 }
