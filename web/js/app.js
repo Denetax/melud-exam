@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	$.pageLoader() ;
 	$('#firstBlock').click(function(){
 		$('#blockUploadDesktop').fadeOut();
 		$('#blockUploadFacebook').fadeIn();
