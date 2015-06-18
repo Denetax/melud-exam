@@ -55,9 +55,9 @@
 												if($val == "p320x320")
 												{
 													?>
-													<div class="col-sm-3">
-														<img alt="<?php echo $tof->name ?>" class="<?php echo $tof->id ?>" src="<?php echo $url_img_alb ?>"  style="display:none;"/>
-													</div>
+														<div class="col-sm-3">
+															<img alt="<?php echo $tof->name ?>" class="<?php echo $tof->id ?>" src="<?php echo $url_img_alb ?>"  style="display:none;"/>
+														</div>
 													<?php
 												}
 											}
