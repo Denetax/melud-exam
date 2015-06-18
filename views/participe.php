@@ -24,7 +24,7 @@
 				</ul>
 				<div id="blockUploadFacebook">
 					<p>
-						Sélectionne une photo parmit celle de ton compte Facebook.
+						Pour participer au concours melud-exam tu doit d'abord selectioner ton album puis ton image
 					</p>
 					<div id="listAlbum">
 					<?php
