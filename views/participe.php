@@ -55,7 +55,9 @@
 												if($val == "p320x320")
 												{
 													?>
+													<div class="col-sm-3">
 														<img alt="<?php echo $tof->name ?>" class="<?php echo $tof->id ?>" src="<?php echo $url_img_alb ?>"  style="display:none;"/>
+													</div>
 													<?php
 												}
 											}
@@ -68,7 +70,6 @@
 				<p>
 					Télécharge une image depuis ton ordinateur.
 				</p>
-				<div class="loader"></div> 
 				<?php
 				session_auto($session);
 				if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
@@ -143,11 +144,6 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript">
-			$(window).load(function() {
-				$(".loader").fadeOut("1000");
-			})
-		</script>
 	</body>
 </html>
 
