@@ -29,7 +29,7 @@ $(document).ready(function(){
 			$("#imgSelected").attr("src",LienImage);
 			$("#myModalGalerie").modal('show');	
 		});
-	$( "#listAlbum div" ).click(function() {
+	$( "#listAlbum").children().children.click(function() {
 		var id = this.id;
 		$("#ImageAlbum img").hide();
 		$.each($("#ImageAlbum img"),function(index,value){

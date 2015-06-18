@@ -33,6 +33,7 @@
 							{
 								?>
 									<div class="col-sm-3">
+										<div></div>
 										<div id="<?php echo $tof->id ?>"><?php echo $tof->name ?></div> 
 									</div>
 								<?php
