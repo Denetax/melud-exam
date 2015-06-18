@@ -61,10 +61,8 @@
 .MiseEnFormeAlbum{
 	text-align:center;
 	border:1px solid black;
-	height:300px;
 }
 .MiseEnFormeCoverAlbum{
 	width:100%;
 	overflow:hidden;
-	background-color:black;
 }
