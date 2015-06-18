@@ -7,6 +7,7 @@ $(document).ready(function(){
 	});
 	$("#ImageAlbum").children().click(function(){
 			var LienImage = this.src;
+			console.log(LienImage);
 			$("#imgSelected").attr("src",LienImage);
 			$("#inputSrc").attr("value",LienImage);
 			$("#myModal").modal('show');	
@@ -35,7 +36,7 @@ $(document).ready(function(){
 		$.each($("#ImageAlbum img"),function(index,value){
 			if(id == value.className)
 			{
-				$("."+id).show();;
+				$("."+id).show();
 			};
 		});
 	});
