@@ -23,47 +23,41 @@
 					<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Mentions Légales</a></li>
 				</ul>
 				<div id="blockUploadFacebook">
-				<p>
-					Sélectionne une photo parmit celle de ton compte Facebook.
-				</p>
-				<div id="listAlbum">
-				<?php
-					$lesAlbums = recup_user_picture_album_concours($session); 
-					foreach ($lesAlbums as $tof) 
-						{
-							?> <div id="<?php echo $tof->id ?>"><?php echo $tof->name ?></div> <?php
-						}
-					?>
-				</div>
-				<div id="ImageAlbum">
-				<?php
+					<p>
+						Sélectionne une photo parmit celle de ton compte Facebook.
+					</p>
+					<div id="listAlbum">
+					<?php
 						$lesAlbums = recup_user_picture_album_concours($session); 
 						foreach ($lesAlbums as $tof) 
 							{
-								$listPhotos = recup_user_picture_album_concours_photos($session, $tof->id);
-								foreach ($listPhotos as $good) 
+								?> <div id="<?php echo $tof->id ?>"><?php echo $tof->name ?></div> <?php
+							}
+						?>
+					</div>
+					<div id="ImageAlbum">
+					<?php
+							$lesAlbums = recup_user_picture_album_concours($session); 
+							foreach ($lesAlbums as $tof) 
 								{
-									foreach ($good->images as $elem) {
-										$url_img_alb = $elem->source;
-										$coupe_tof = split('/', $url_img_alb);
-										foreach ($coupe_tof as $val) {
-											if($val == "p320x320")
-											{
-												?>
-													<img alt="<?php echo $tof->name ?>" class="<?php echo $tof->id ?>" src="<?php echo $url_img_alb ?>" width="20%" />
-												<?php
+									$listPhotos = recup_user_picture_album_concours_photos($session, $tof->id);
+									foreach ($listPhotos as $good) 
+									{
+										foreach ($good->images as $elem) {
+											$url_img_alb = $elem->source;
+											$coupe_tof = split('/', $url_img_alb);
+											foreach ($coupe_tof as $val) {
+												if($val == "p320x320")
+												{
+													?>
+														<img alt="<?php echo $tof->name ?>" class="<?php echo $tof->id ?>" src="<?php echo $url_img_alb ?>" width="20%" />
+													<?php
+												}
 											}
 										}
-									}
-								}
-								
-							}?>
-							
-						
-				</div>
-				<div id="picture_fb">
-					
-				</div>
+									}	
+								}?>		
+					</div>
 				</div>
 				<div id="blockUploadDesktop">
 				<p>

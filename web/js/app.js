@@ -5,7 +5,7 @@ $(document).ready(function(){
 		$('#blockUploadFacebook').fadeIn();
 		
 	});
-	$("#picture_fb").children().click(function(){
+	$("#ImageAlbum").children().click(function(){
 			var LienImage = this.src;
 			$("#imgSelected").attr("src",LienImage);
 			$("#inputSrc").attr("value",LienImage);
@@ -35,12 +35,8 @@ $(document).ready(function(){
 		$.each($("#ImageAlbum img"),function(index,value){
 			if(id == value.className)
 			{
-				//console.log(value.alt);
 				$("."+id).show();;
-				//$(".id").show;
 			};
-			//console.log(value.className);
-			//console.log(value.alt);
 		});
 	});
 	
