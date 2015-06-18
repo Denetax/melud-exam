@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	$("#ImageAlbum img").hide();
 	$('#firstBlock').click(function(){
 		$('#blockUploadDesktop').fadeOut();
 		$('#blockUploadFacebook').fadeIn();
