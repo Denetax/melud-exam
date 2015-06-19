@@ -36,6 +36,7 @@ $(document).ready(function(){
 			if(id == value.className)
 			{
 				$("."+id).parents().show();
+				$("."+id).show();
 			};
 		});
 	});
