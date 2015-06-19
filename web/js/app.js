@@ -35,7 +35,7 @@ $(document).ready(function(){
 		$.each($("#ImageAlbum img"),function(index,value){
 			if(id == value.className)
 			{
-				$("."+id).show();
+				$("."+id).parents().show();
 			};
 		});
 	});
