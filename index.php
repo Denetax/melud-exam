@@ -7,7 +7,7 @@
 	use Facebook\FacebookRequest;
 	use Facebook\GraphObject;
 
-	connexionBdd();
+	// connexionBdd();
 ?>
 <!DOCTYPE html>
 <html>
