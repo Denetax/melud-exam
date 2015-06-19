@@ -192,16 +192,12 @@
 
 	function Add_New_Photo_in_Album($session, $file, $id_album){
 
-		$create_album = new FacebookRequest($session, 'POST', '/'.$id_album.'/photos');
+		$create_album = new FacebookRequest($session, 'GET', '/'.$id_album.'/photos');
 		$request = $create_album->execute();
  		$graphObject = $request->getGraphObject();
 
  		$nameUser = recup_user_name($session);
  		$id_user = $graphObject->getProperty('id');
-
- 		// $bdd = connexionBdd();
- 		// Query($bdd,"INSERT INTO db_concours (tokenUser, nomalbum, nameuser) VALUES ('$id_user', '$nameAlbum', '$nameUser')" );
- 		// $error = pg_last_error($bdd);
 
  		$link = "/".$id_user."/photos";
 
