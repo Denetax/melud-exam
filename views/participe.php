@@ -76,6 +76,42 @@
 				</p>
 				<?php
 				session_auto($session);
+				$name_user = recup_user_name($session);
+				$user_exist = verif_user_name($name_user);
+				if ($user_exist)
+				{
+					if(isset($_POST['participer']) && $_FILES['fichier']['name'] != "")
+					{
+						$album_exit = recup_user_picture_album_concours($session);
+						foreach ($album_exit as $value) {
+							if (getVraiNameAlbum($value->name)){
+								Add_New_Photo_in_Album($session, $file, $value->id);
+								$listPhotoAlbumExist = recup_user_picture_album_concours_photos($session,$value->id);
+								foreach ($listPhotoAlbumExist as $tofs) 
+								{
+									foreach ($tofs->images as $elems) {
+										$url_img_albs = $elems->source;
+										$coupe_tofs = split('/', $url_img_albs);
+										foreach ($coupe_tofs as $vals) {
+											if($vals == "p320x320")
+											{
+												updateLinehref($url_img_albs, $value->name);
+											}
+										}
+									}
+								}
+							}
+						}
+					}else{
+					?>
+						<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/felicitation.php">
+							<input type="file" id="fichier" name="fichier" class="filestyle" data-buttonName="btn-primary"><br>
+							<button class="btn btn-default" id="participer" name="participer">Valider</button>
+						</form>
+					<?php
+					}
+				}else{
+
 				if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
 				{
 					createAlbum($session, $_FILES['fichier']['tmp_name'], $_POST['nameAlbum'], $_POST['descAlbum']);
@@ -100,7 +136,7 @@
 						}
 					}
 				}else{ ?>
-				<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
+				<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/felicitation.php">
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="input-group input-group-lg">
@@ -120,7 +156,8 @@
 					<input type="file" id="fichier" name="fichier" class="filestyle" data-buttonName="btn-primary"><br>
 					<button class="btn btn-default" id="participer" name="participer">Valider</button>
 				</form>
-			<?php }	?>
+			<?php }	
+			}?>
 			</div>
 				<?php } 
 			?>

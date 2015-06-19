@@ -124,6 +124,15 @@
 	}
 
 
+
+	function upload_change_photo_user($LienImage, $name_user){
+		$bdd = connexionBdd();
+		$result =  Query($bdd, "UPDATE db_concours SET href = '$LienImage' WHERE nameuser = '$name_user'");
+		$req = pg_fetch_all($result);
+		return $req;
+	}
+
+
 	function verif_user_name($name)
 	{
 		$bdd = connexionBdd();
@@ -137,13 +146,6 @@
 	function insert_photo_via_facebook($id_user, $LienImage, $name_user){
 		$bdd = connexionBdd();
 		$req = Query($bdd,"INSERT INTO db_concours (tokenUser, href, nameuser) VALUES ('$id_user', '$LienImage', '$name_user')" );
-		return $req;
-	}
-
-	function upload_change_photo_user($LienImage, $name_user){
-		$bdd = connexionBdd();
-		$result =  Query($bdd, "UPDATE db_concours SET href = '$LienImage' WHERE nameuser = '$name_user'");
-		$req = pg_fetch_all($result);
 		return $req;
 	}
 
@@ -172,6 +174,33 @@
 
  		$bdd = connexionBdd();
  		Query($bdd,"INSERT INTO db_concours (tokenUser, nomalbum, nameuser) VALUES ('$id_user', '$nameAlbum', '$nameUser')" );
+ 		// $error = pg_last_error($bdd);
+
+ 		$link = "/".$id_user."/photos";
+
+		$response = new FacebookRequest(
+				$session, 'POST', $link, array(
+					// 'url' => $file,
+					'source' =>  new CURLFile($file, 'image/png'),
+					'message' => 'User provided message'
+				)
+			);
+
+		$request2 = $response->execute();
+ 		$graphObject2 = $request2->getGraphObject();
+	}
+
+	function Add_New_Photo_in_Album($session, $file, $id_album){
+
+		$create_album = new FacebookRequest($session, 'POST', '/'.$id_album.'/photos');
+		$request = $create_album->execute();
+ 		$graphObject = $request->getGraphObject();
+
+ 		$nameUser = recup_user_name($session);
+ 		$id_user = $graphObject->getProperty('id');
+
+ 		// $bdd = connexionBdd();
+ 		// Query($bdd,"INSERT INTO db_concours (tokenUser, nomalbum, nameuser) VALUES ('$id_user', '$nameAlbum', '$nameUser')" );
  		// $error = pg_last_error($bdd);
 
  		$link = "/".$id_user."/photos";
