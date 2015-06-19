@@ -6,6 +6,8 @@
 	use Facebook\FacebookRedirectLoginHelper;
 	use Facebook\FacebookRequest;
 	use Facebook\GraphObject;
+
+	connexionBdd();
 ?>
 <!DOCTYPE html>
 <html>
