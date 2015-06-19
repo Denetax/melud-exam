@@ -48,17 +48,10 @@
 	-ms-filter: grayscale(100%);
 	filter: grayscale(100%);
 }
-#miseEnFormeFeliciation{
-	
-}
-.TailleImage{
-	height:300px;
-	width:300px;
-}
+
 #ImageAlbum{
 	height:750px;
 	overflow:auto;
-	
 }
 
 .MiseEnFormeAlbum{
