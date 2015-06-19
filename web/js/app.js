@@ -31,7 +31,7 @@ $(document).ready(function(){
 		});
 	$( "#listAlbum").children().children().click(function() {
 		var id = this.id;
-		$("#ImageAlbum div").fadeOut();
+		$("#ImageAlbum div").hide();
 		$.each($("#ImageAlbum img"),function(index,value){
 			if(id == value.className)
 			{
