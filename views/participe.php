@@ -59,7 +59,7 @@
 													{
 														?>
 															
-																<img alt="<?php echo $tof->name ?>" class="<?php echo $tof->id ?>" src="<?php echo $url_img_alb ?>"  style="display:none;"/>
+																<img alt="<?php echo $tof->name ?>" class="<?php echo $tof->id ?> TailleImage" src="<?php echo $url_img_alb ?>"  style="display:none;"/>
 															
 														<?php
 													}
