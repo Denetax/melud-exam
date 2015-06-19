@@ -31,12 +31,12 @@ $(document).ready(function(){
 		});
 	$( "#listAlbum").children().children().click(function() {
 		var id = this.id;
-		$("#ImageAlbum div").hide();
+		$("#ImageAlbum div").fadeOut(3000);
 		$.each($("#ImageAlbum img"),function(index,value){
 			if(id == value.className)
 			{
-				$("."+id).parents().fadeIn();
-				$("."+id).fadeIn();
+				$("."+id).parents().fadeIn(3000);
+				$("."+id).fadeIn(3000);
 			};
 		});
 	});
