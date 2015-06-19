@@ -34,7 +34,6 @@
 								{
 									?>
 										<div class="MiseEnFormeAlbum">
-											<div class="MiseEnFormeCoverAlbum"></div>
 											<div id="<?php echo $tof->id ?>"><?php echo $tof->name ?></div> 
 										</div>
 									<?php
