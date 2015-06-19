@@ -5,7 +5,7 @@ $(document).ready(function(){
 		$('#blockUploadFacebook').fadeIn();
 		
 	});
-	$("#ImageAlbum").children().click(function(){
+	$("#ImageAlbum").children().children().click(function(){
 			var LienImage = this.src;
 			$("#imgSelected").attr("src",LienImage);
 			$("#inputSrc").attr("value",LienImage);
