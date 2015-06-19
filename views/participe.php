@@ -26,44 +26,48 @@
 					<p>
 						Pour participer au concours melud-exam tu doit d'abord selectioner ton album puis ton image
 					</p>
-					<div id="listAlbum">
-					<?php
-						$lesAlbums = recup_user_picture_album_concours($session); 
-						foreach ($lesAlbums as $tof) 
-							{
-								?>
-									<div class="MiseEnFormeAlbum">
-										<div class="MiseEnFormeCoverAlbum"></div>
-										<div id="<?php echo $tof->id ?>"><?php echo $tof->name ?></div> 
-									</div>
-								<?php
-							}
-						?>
-					</div>
-					<div id="ImageAlbum">
-					<?php
+					<div class="col-sm-3">
+						<div id="listAlbum">
+						<?php
 							$lesAlbums = recup_user_picture_album_concours($session); 
 							foreach ($lesAlbums as $tof) 
 								{
-									$listPhotos = recup_user_picture_album_concours_photos($session, $tof->id);
-									foreach ($listPhotos as $good) 
+									?>
+										<div class="MiseEnFormeAlbum">
+											<div class="MiseEnFormeCoverAlbum"></div>
+											<div id="<?php echo $tof->id ?>"><?php echo $tof->name ?></div> 
+										</div>
+									<?php
+								}
+							?>
+						</div>
+					</div>
+					<div class="col-sm-9">
+						<div id="ImageAlbum">
+						<?php
+								$lesAlbums = recup_user_picture_album_concours($session); 
+								foreach ($lesAlbums as $tof) 
 									{
-										foreach ($good->images as $elem) {
-											$url_img_alb = $elem->source;
-											$coupe_tof = split('/', $url_img_alb);
-											foreach ($coupe_tof as $val) {
-												if($val == "p320x320")
-												{
-													?>
-														<div class="col-sm-3">
-															<img alt="<?php echo $tof->name ?>" class="<?php echo $tof->id ?>" src="<?php echo $url_img_alb ?>"  style="display:none;"/>
-														</div>
-													<?php
+										$listPhotos = recup_user_picture_album_concours_photos($session, $tof->id);
+										foreach ($listPhotos as $good) 
+										{
+											foreach ($good->images as $elem) {
+												$url_img_alb = $elem->source;
+												$coupe_tof = split('/', $url_img_alb);
+												foreach ($coupe_tof as $val) {
+													if($val == "p320x320")
+													{
+														?>
+															<div class="col-sm-3">
+																<img alt="<?php echo $tof->name ?>" class="<?php echo $tof->id ?>" src="<?php echo $url_img_alb ?>"  style="display:none;"/>
+															</div>
+														<?php
+													}
 												}
 											}
-										}
-									}	
-								}?>		
+										}	
+									}?>		
+						</div>
 					</div>
 				</div>
 				<div id="blockUploadDesktop">
