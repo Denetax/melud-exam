@@ -12,7 +12,7 @@
 				<li><a href="https://melud-exam.herokuapp.com">Retour</a></li>
 				<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Mentions Légales</a></li>
 			</ul>
-			<h1 style="color:#000">Votez pour vos photographies favorites.</h1>
+			<h1>Votez pour vos photographies favorites.</h1>
 			
 			<?php 
 			$bdd = connexionBdd();

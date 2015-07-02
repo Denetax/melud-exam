@@ -16,7 +16,8 @@
 					<ul class="nav nav-pills">
 						<li role="presentation"><a href="https://melud-exam.herokuapp.com">Retour</a></li>
 					</ul>
-					<div id ="miseEnFormeFeliciation" class="col-md-offset-2 col-md-8"> 
+					<div id ="miseEnFormeFeliciation" class="col-md-offset-2 col-md-8">
+						<h1>Félicitation</h1>
 						<p>Votre participation a bien été prise en compte vous pouvez accéder au photo participante en suivant se lien ou retourner a l'accueil en appuyant sur le bouton retour </p>
 					</div>
 					<?php 

@@ -14,7 +14,7 @@
 				<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Mention Légales</a></li>
 			</ul>
 			
-			<h1 style="color:#000">Galerie d'Images.</h1>
+			<h1>Galerie d'Images.</h1>
 			<?php 
 			$bdd = connexionBdd();
 			$result = Query($bdd,"SELECT * FROM db_concours" );
