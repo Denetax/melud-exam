@@ -19,7 +19,16 @@ h1{
 	text-shadow:0px -1px rgba(0, 0, 0, 0.5)
 }
 .container{
-	background-color: #2C66B8;
+	background-color:#4A7CC2;
+	border-bottom:0.104em solid #7198C1;
+	border-top:0.104em solid #7198C1;
+	box-shadow : 0px 0px 0.8333em rgba(0, 0, 0, 0.4);
+	color:white;
+	margin-bottom:0.625em;
+	margin-top:0.9375em;
+	padding:0.1875em 0px;
+	text-align:center;
+	text-shadow:0px -1px rgba(0, 0, 0, 0.5)
 }
 .bandeBlanche{
 	background-color: #ffffff;
@@ -89,19 +98,6 @@ h1{
 	margin-right:6.5px;	
 	cursor: pointer;
 	
-}
-
-#miseEnFormeFeliciation{
-	border:1px solid black;
-	padding:10px;
-	border-radius:1px;
-	background-color:gray;
-}
-#MiseEnFormeCondGen{
-	border:1px solid black;
-	padding:10px;
-	border-radius:1px;
-	background-color:gray;
 }
 
 #loader{
