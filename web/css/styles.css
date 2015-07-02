@@ -77,6 +77,12 @@
 	border-radius:1px;
 	background-color:gray;
 }
+#MiseEnFormeCondGen{
+	border:1px solid black;
+	padding:10px;
+	border-radius:1px;
+	background-color:gray;
+}
 
 #loader{
 	position : absolute;

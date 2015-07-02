@@ -43,7 +43,7 @@
 					</div>
 					<div class="col-sm-9">
 						<div id="ImageAlbum">
-						<img  class="loader" src="../web/img/loading.gif" id="loader"/>
+						<img src="../web/img/loading.gif" id="loader"/>
 						<?php
 								$lesAlbums = recup_user_picture_album_concours($session); 
 								foreach ($lesAlbums as $tof) 
