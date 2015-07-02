@@ -59,6 +59,7 @@
 	overflow:hidden;
 	float:left;
 	margin-left:1%;
+	display:none;
 }
 
 .MiseEnFormeAlbum{
@@ -75,4 +76,8 @@
 	padding:10px;
 	border-radius:1px;
 	background-color:gray;
+}
+
+.InitImg {
+	display:none;
 }

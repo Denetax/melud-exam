@@ -58,8 +58,8 @@
 													if($val == "p320x320")
 													{
 														?>
-															<div class="SetBoxImage" style="display:none;">
-																<img alt="<?php echo $tof->name ?>" class="<?php echo $tof->id ?>" src="<?php echo $url_img_alb ?>"  style="display:none;"/>
+															<div class="SetBoxImage">
+																<img alt="<?php echo $tof->name ?>" class="<?php echo $tof->id ?> InitImg" src="<?php echo $url_img_alb ?>" />
 															</div>
 														<?php
 													}
