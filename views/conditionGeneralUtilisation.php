@@ -21,7 +21,7 @@
 				<li><a href="https://melud-exam.herokuapp.com">Retour</a></li>
 			</ul>
 			<h1>Condition d'utilisation Melud-exam</h1>
-			<div id="MiseEnFormeCondGen">
+			<div id="miseEnFormeTextCondGen">
 				<p>
 					Le présent document a pour objet de définir les modalités et conditions dans lesquelles d'une part,  Melud-exam , ci-aprés dénommé l'EDITEUR,
 					met à la disposition de ses utilisateurs le site,
