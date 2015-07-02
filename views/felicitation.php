@@ -17,7 +17,7 @@
 						<li role="presentation"><a href="https://melud-exam.herokuapp.com">Retour</a></li>
 					</ul>
 					<div id ="miseEnFormeFeliciation" class="col-md-offset-2 col-md-8"> 
-						
+						<p>votre participation a bien été prise en compte vous pouvez acc"der au photo participante en suivant se lien ou retourner a l'accueil en appuyant sur le bouton retour </p>
 					</div>
 					<?php 
 					$LienImage = $_POST['inputSrc'];
