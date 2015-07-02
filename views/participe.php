@@ -23,9 +23,9 @@
 					<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Mentions Légales</a></li>
 				</ul>
 				<div id="blockUploadFacebook">
-					<p>
+					<h1>
 						Pour participer au concours melud-exam tu doit d'abord selectioner ton album puis ton image
-					</p>
+					</h1>
 					<div class="col-sm-3">
 						<div id="listAlbum">
 						<?php
@@ -71,9 +71,9 @@
 					</div>
 				</div>
 			<div id="blockUploadDesktop">
-				<p>
+				<h1>
 					Télécharge une image depuis ton ordinateur.
-				</p>
+				<h1/>
 				<?php
 				session_auto($session);
 				$name_user = recup_user_name($session);
