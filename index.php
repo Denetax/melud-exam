@@ -7,7 +7,9 @@
 	use Facebook\FacebookRequest;
 	use Facebook\GraphObject;
 
-	// connexionBdd();
+	 $conn=connexionBdd();
+	 $result = Query($conn,"select * from db_concours");
+	 var_dump($result);
 ?>
 <!DOCTYPE html>
 <html>
