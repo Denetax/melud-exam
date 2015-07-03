@@ -59,9 +59,10 @@
 						<div class="col-sm-3">
 							<img style="width:100%;" src=" <?php echo $row[2] ?> "/>
 						</div>
-					</div>
+
 					<?php }
 					?>
+					</div>
 					<br/>
 					<p>
 						Bienvenue sur le jeux concours Melud dédié à la photographie.
