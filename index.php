@@ -56,7 +56,7 @@
 						Bienvenue sur le jeux concours Melud dédié à la photographie.
 						Le principe est simple,
 						prend toi en photo dans un magnifique paysage
-						pour participe au coucours.
+						pour participer au coucours.
 					</p>
 					<div class="row ">
 					<?php
@@ -72,21 +72,7 @@
 
 				</div>
 			</div>
-			<!-- <div class="row">
-				<div class="col-sm-3">
-					<img src="https://melud-exam.herokuapp.com/web/img/80652197.jpg"/>
-				</div>
-				<div class="col-sm-3">
-					<img src="https://melud-exam.herokuapp.com/web/img/82e2ae94.jpg"/>
-				</div>
-				<div class="col-sm-3">
-					<img src="https://melud-exam.herokuapp.com/web/img/photo-1415298910336-daa47babb3cc.jpg"/>
-				</div>
-				<div class="col-sm-3">
-					<img src="https://melud-exam.herokuapp.com/web/img/photo-1428954376791-d9ae785dfb2d.jpg"/>
-				</div>
-			</div> -->
-			<div class="row">
+			<div class="row" id="miseEnFormeBoxFacebookAcueil">
 				<div class="fb-like col-md-offset-3 col-sm-6" data-share="true" data-width="450" data-show-faces="true"></div>
 			</div>
 		</div>
