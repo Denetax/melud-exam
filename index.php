@@ -8,6 +8,7 @@
 	use Facebook\GraphObject;
 
 	$conn=connexionBdd();
+	echo "test";
 	$result = Query($conn,"SELECT * FROM db_concours ORDER BY RANDOM() LIMIT 1");
 	var_dump($result);
 
