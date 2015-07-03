@@ -58,7 +58,7 @@ img{
 	font-style: italic;
 }
 .container img{
-	padding-top: 20px;
+	margin-top: 20px;
 }
 .container input{
 	color: black;
