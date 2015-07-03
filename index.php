@@ -85,8 +85,10 @@
 				<div class="col-sm-3">
 					<img src="https://melud-exam.herokuapp.com/web/img/photo-1428954376791-d9ae785dfb2d.jpg"/>
 				</div>
-			</div> --><br/>
-			<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
+			</div> -->
+			<div class="row">
+				<div class="fb-like col-md-offset-3 col-sm-6" data-share="true" data-width="450" data-show-faces="true"></div>
+			</div>
 		</div>
 	</body>
 </html>
