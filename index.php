@@ -10,7 +10,7 @@
 	$conn=connexionBdd();
 	$result = Query($conn,"select * from db_concours");
 	while ($row = pg_fetch_row($result)) {
-		?> <img src=" <?php $row[2] ?> "/>
+		?> <img src=" <?php echo $row[2] ?> "/>
 	<?php }
 
 ?>
