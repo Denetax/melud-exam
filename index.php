@@ -52,6 +52,12 @@
 			<div class="row" style="height:300px; margin-top:20px;">
 				<div class="col-sm-12">
 					<h1 style="font-size:80px">Melud</h1>
+					<p>
+						Bienvenue sur le jeux concours Melud dédié à la photographie.
+						Le principe est simple,
+						prend toi en photo dans un magnifique paysage
+						pour participe au coucours.
+					</p>
 					<div class="row ">
 					<?php
 						while ($row = pg_fetch_row($result)) {
@@ -63,13 +69,7 @@
 					<?php }
 					?>
 					</div>
-					<br/>
-					<p>
-						Bienvenue sur le jeux concours Melud dédié à la photographie.
-						Le principe est simple, 
-						prend toi en photo dans un magnifique paysage
-						pour participe au coucours.
-					</p>
+
 				</div>
 			</div>
 			<!-- <div class="row">

@@ -120,7 +120,8 @@ img{
 
 .miseEnFormeAccueilPhoto
 {
-	height:300px;
-	overflow:hidden
+	height:215px;
+	overflow:hidden;
+	magin-bottom:10px;
 }
 
