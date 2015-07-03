@@ -7,8 +7,11 @@
 	use Facebook\FacebookRequest;
 	use Facebook\GraphObject;
 
-	 $conn=connexionBdd();
+	$conn=connexionBdd();
 	$result = Query($conn,"select * from db_concours");
+	while ($row = pg_fetch_row($result)) {
+		?> <img src=" <?php $row[2] ?> "/>
+	<?php }
 
 ?>
 <!DOCTYPE html>
@@ -51,11 +54,8 @@
 			<div class="row" style="height:300px; margin-top:20px;">
 				<div class="col-sm-12">
 					<h1 style="font-size:80px">Melud</h1>
-					<?php
-					while ($row = pg_fetch_row($result)) {
-						?> <img src="<?php $row[2]?>"/>
-					<?php}?>
-					
+
+
 					<p>
 						Bienvenue sur le jeux concours Melud dédié à la photographie. <br>
 						Le principe est simple, 
