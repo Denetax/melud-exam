@@ -26,6 +26,11 @@
 					<h1>
 						Pour participer au concours melud-exam tu doit d'abord selectioner ton album puis ton image
 					</h1>
+					<div class="row">
+						<div class="col-sm-3 EnteteAlbum">
+
+						</div>
+					</div>
 					<div class="col-sm-3">
 						<div id="listAlbum">
 						<?php
