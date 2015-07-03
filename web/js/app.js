@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	alert(window.innerHeight);
 	$("#loader").hide();
 	$('#firstBlock').click(function(){
 		$('#blockUploadDesktop').fadeOut();
