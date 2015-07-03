@@ -9,9 +9,10 @@
 
 	 $conn=connexionBdd();
 	 $result = Query($conn,"select href from db_concours");
-	 foreach ($result as $values) {
-	 	var_dump($values);
-	 }
+	 while ($row = pg_fetch_row($result)) {
+		  echo "Href: $row[2]";
+		  echo "<br />\n";
+	}
 
 ?>
 <!DOCTYPE html>
