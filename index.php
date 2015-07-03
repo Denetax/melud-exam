@@ -46,8 +46,8 @@
 					?>	
 				</div>
 			</div>
-			<div class="row bandeImage" style="height:300px; margin-top:20px;">
-				<div class="col-sm-8 col-sm-offset-2">
+			<div class="row" style="height:300px; margin-top:20px;">
+				<div class="col-sm-12">
 					<h1 style="font-size:80px">Melud</h1>
 					<p>
 						Bienvenue sur le jeux concours Melud dédié à la photographie. <br>
