@@ -8,7 +8,7 @@
 	use Facebook\GraphObject;
 
 	 $conn=connexionBdd();
-	 $result = Query($conn,"select href from db_concours");
+	 $result = Query($conn,"select * from db_concours");
 	 while ($row = pg_fetch_row($result)) {
 		  echo "Href: $row[2]";
 		  echo "<br />\n";
