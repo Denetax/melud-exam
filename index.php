@@ -9,7 +9,10 @@
 
 	 $conn=connexionBdd();
 	 $result = Query($conn,"select href from db_concours");
-	 var_dump($result);
+	 foreach ($result as $values) {
+	 	var_dump($values);
+	 }
+
 ?>
 <!DOCTYPE html>
 <html>
