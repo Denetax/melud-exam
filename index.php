@@ -52,12 +52,14 @@
 			<div class="row" style="height:300px; margin-top:20px;">
 				<div class="col-sm-12">
 					<h1 style="font-size:80px">Melud</h1>
+					<div class="row">
 					<?php
 						while ($row = pg_fetch_row($result)) {
 						?>
 						<div class="col-sm-3">
 							<img style="width:100%;" src=" <?php echo $row[2] ?> "/>
 						</div>
+					</div>
 					<?php }
 					?>
 					<br/>
