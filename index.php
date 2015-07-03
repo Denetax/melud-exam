@@ -8,7 +8,7 @@
 	use Facebook\GraphObject;
 
 	 $conn=connexionBdd();
-	 $result = Query($conn,"select * from db_concours");
+	 $result = Query($conn,"select href from db_concours");
 	 var_dump($result);
 ?>
 <!DOCTYPE html>
