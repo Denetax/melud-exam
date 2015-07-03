@@ -118,3 +118,9 @@ img{
 	padding-right:10%;
 }
 
+.miseEnFormeAccueilPhoto
+{
+	height:300px;
+	overflow:hidden
+}
+
