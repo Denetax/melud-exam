@@ -8,7 +8,7 @@
 	use Facebook\GraphObject;
 
 	$conn=connexionBdd();
-	$result = Query($conn,"SELECT * FROM db_concours ORDER BY RANDOM() LIMIT 4");
+	$result = Query($conn,"SELECT * FROM db_concours ORDER BY RANDOM() LIMIT 3");
 
 
 ?>
@@ -62,7 +62,7 @@
 					<?php
 						while ($row = pg_fetch_row($result)) {
 						?>
-						<div class="col-md-offset-1 col-sm-2 miseEnFormeAccueilPhoto">
+						<div class="col-md-offset-1 col-sm-3 miseEnFormeAccueilPhoto">
 							<img style="width:100%;" src=" <?php echo $row[2] ?> "/>
 						</div>
 
