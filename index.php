@@ -8,8 +8,7 @@
 	use Facebook\GraphObject;
 
 	$conn=connexionBdd();
-	//$result = Query($conn,"SELECT * FROM db_concours ORDER BY RANDOM() LIMIT 1");
-	$result = Query($conn,"SELECT * FROM db_concours ");
+	$result = Query($conn,"SELECT * FROM db_concours ORDER BY RANDOM() LIMIT 1");
 
 
 ?>
@@ -57,8 +56,8 @@
 						while ($row = pg_fetch_row($result)) {
 						?> <img src=" <?php echo $row[2] ?> "/>
 						<?php }
-						<br/>
 					?>
+					<br/>
 					<p>
 						Bienvenue sur le jeux concours Melud dédié à la photographie.
 						Le principe est simple, 
