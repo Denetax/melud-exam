@@ -24,7 +24,7 @@
 				</ul>
 				<div id="blockUploadFacebook">
 					<h1>
-						Pour participer au concours melud-exam tu doit d'abord selectioner ton album puis ton image
+						Pour participer au concours, vous devez d'abord selectionner votre album puis votre image
 					</h1>
 					<div class="row" style="margin-left:0px;">
 						<div class="col-sm-3 ">
