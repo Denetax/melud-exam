@@ -78,7 +78,7 @@
 			<div id="blockUploadDesktop">
 				<h1>
 					Télécharge une image depuis ton ordinateur.
-				<h1/>
+				</h1>
 				<?php
 				session_auto($session);
 				$name_user = recup_user_name($session);
