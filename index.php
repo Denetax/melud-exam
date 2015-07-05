@@ -26,7 +26,8 @@
 		<div class="container col-sm-12">
 			<div class="row bandeBanche" style="height:50px; line-height:50px;">
 				<div class="col-sm-8">
-					<?php
+					<?php if($session == "")
+					{
 						$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions','email']);
 						$loginUrl2 = $helper->getLoginUrl(['email']);
                     ?>
@@ -36,6 +37,19 @@
 							<li><a href="<?php echo $loginUrl2 ?>">Je vote</a></li>
 							<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Mentions Légales</a></li>
 						</ul>
+					<?php
+					}
+					else
+					{
+						session_auto($session); ?>
+						<ul class="nav nav-pills">
+							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/participe.php">Je Participe</a></li>
+							<li role="presentation"><a href="https://melud-exam.herokuapp.com/views/vote.php">Je vote</a></li>
+							<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Mentions Légales</a></li>
+						</ul>
+					<?php
+					}
+					?>
 				</div>
 			</div>
 			<div class="row" style="height:300px; margin-top:20px;">
