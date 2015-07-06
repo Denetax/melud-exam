@@ -26,8 +26,8 @@
 				<div class="col-sm-8">
 					<?php if($session == "")
 					{
-						$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']); 
-						$loginUrl2 = $helper->getLoginUrl(['user_photos','publish_actions']); ?>
+						$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']);
+						$loginUrl2 = $helper2->getLoginUrl(['user_photos','publish_actions']); ?>
 
 						<ul class="nav nav-pills">
 							<li><a href="<?php echo $loginUrl ?>">Je Participe</a></li>
