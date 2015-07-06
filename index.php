@@ -7,7 +7,8 @@
 	use Facebook\FacebookRequest;
 	use Facebook\GraphObject;
 
-	// connexionBdd();
+	$conn=connexionBdd();
+	$result = Query($conn,"SELECT * FROM db_concours ORDER BY RANDOM() LIMIT 3");
 ?>
 <!DOCTYPE html>
 <html>
@@ -55,6 +56,17 @@
 						prend toi en photo dans un magnifique paysage
 						pour participe au coucours.
 					</p>
+					<div class="row ">
+						<?php
+						while ($row = pg_fetch_row($result)) {
+						?>
+						<div class="col-md-offset-1 col-sm-3 miseEnFormeAccueilPhoto">
+							<img style="width:100%;" src=" <?php echo $row[2] ?> "/>
+						</div>
+
+						<?php }
+					?>
+					</div>
 				</div>
 			</div>
 			<!-- <div class="row">
