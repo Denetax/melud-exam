@@ -26,9 +26,11 @@
 				<div class="col-sm-8">
 					<?php if($session == "")
 					{
-						$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']); ?>
+						$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions','email']);
+						$loginUrl2 = $helper2->getLoginUrl(['email']); ?>
 						<ul class="nav nav-pills">
 							<li><a href="<?php echo $loginUrl ?>">Je Participe</a></li>
+							<li><a href=""<?php echo $loginUrl2 ?>"">Je vote</a></li>
 							<li><a href="https://melud-exam.herokuapp.com/views/galerie.php">Photos participante</a></li>
 							<li><a href="https://melud-exam.herokuapp.com/views/conditionGeneralUtilisation.php">Mentions Légales</a></li>
 						</ul>
