@@ -25,7 +25,7 @@
 			<div class="row bandeBanche" style="height:50px; line-height:50px;">
 				<div class="col-sm-8">
 					<?php
-						$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions']);
+						$loginUrl = $helper->getLoginUrl(['user_photos','publish_actions','email']);
 						$loginUrl2 = $helper->getLoginUrl(['email']); ?>
 
 						<ul class="nav nav-pills">
