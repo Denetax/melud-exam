@@ -2,7 +2,7 @@
 	include '../include/functions.php';
 	require '../config/config.php';
 	require '../SDKPHP/autoload.php';
-	require '../controllers/SessionController.php';
+	require '../controllers/Session2Controller.php';
 
 	include '../web/header.php';
 ?>
