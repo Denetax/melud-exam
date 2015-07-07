@@ -17,15 +17,15 @@
 	else
 	{
 		try {
-		    echo "test1"
+		    echo "test1";
 		        if($helper)
 		        {
-		            echo "test2"
+		            echo "test2";
 		            $session = $helper->getSessionFromRedirect();
                 }
                 elseif($helper2)
                 {
-                    echo "test3"
+                    echo "test3";
                     $session = $helper2->getSessionFromRedirect();
                 }
 
