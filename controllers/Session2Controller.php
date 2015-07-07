@@ -16,7 +16,6 @@
 	else
 	{
 		try {
-				echo"test2 + session = ".$session2;
 		        $session2 = $helper2->getSessionFromRedirect();
 
 			} catch(FacebookRequestException $ex) {

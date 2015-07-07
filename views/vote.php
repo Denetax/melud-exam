@@ -7,7 +7,6 @@
 	include '../web/header.php';
 ?>
 	<body>
-	<?php var_dump($session2); ?>
 		<div class="container col-sm-12">
 			<ul class="nav nav-pills">
 				<li><a href="https://melud-exam.herokuapp.com">Retour</a></li>
