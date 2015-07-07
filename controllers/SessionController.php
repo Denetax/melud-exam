@@ -8,6 +8,7 @@
 	FacebookSession::setDefaultApplication(APPID, APPSECRET);
 	
 	$helper = new FacebookRedirectLoginHelper('https://melud-exam.herokuapp.com/views/participe.php');
+	$helper2 = new FacebookRedirectLoginHelper('https://melud-exam.herokuapp.com/views/vote.php');
 
 	if(isset($_SESSION) && isset($_SESSION['fb-token']))
 	{
@@ -16,7 +17,15 @@
 	else
 	{
 		try {
-				$session = $helper->getSessionFromRedirect();
+		        if($helper)
+		        {
+		            $session = $helper->getSessionFromRedirect();
+                }
+                elseif($helper2)
+                {
+                    $session = $helper2->getSessionFromRedirect();
+                }
+
 			} catch(FacebookRequestException $ex) {
 				echo "Erreur Facebook";
 			} catch(\Exception $ex) {
