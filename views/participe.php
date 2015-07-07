@@ -10,7 +10,7 @@
 ?>
 	<body>
 		<!-- template header -->
-		<?php //include 'web/header.php'; ?>
+		<?php echo "yo"; //include 'web/header.php'; ?>
 		<!-- Fin template -->
 		<div class="container col-sm-12">
 			<?php
