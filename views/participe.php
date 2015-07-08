@@ -83,6 +83,7 @@
 				session_auto($session);
 				$id_user = recup_user_id($session);
 				$album_exist = verif_if_album_exist($id_user);
+				var_dump($album_exist);
 				if ($album_exist)
 				{
 					if(isset($_POST['participer']) && $_FILES['fichier']['name'] != "")
