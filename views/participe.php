@@ -87,6 +87,7 @@
 				{
 					if(isset($_POST['participer']) && $_FILES['fichier']['name'] != "")
 					{
+						$file = $_FILES['fichier']['tmp_name'];
 						$album_exit = recup_user_picture_album_concours($session);
 						foreach ($album_exit as $values) {
 							if (getVraiNameAlbum($values->name)){
