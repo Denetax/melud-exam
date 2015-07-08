@@ -81,9 +81,9 @@
 				</h1>
 				<?php
 				session_auto($session);
-				$name_user = recup_user_name($session);
-				$user_exist = verif_user_name($name_user);
-				if ($user_exist)
+				$id_user = recup_user_id($session);
+				$album_exist = verif_if_album_exist($id_user);
+				if ($album_exist)
 				{
 					if(isset($_POST['participer']) && $_FILES['fichier']['name'] != "")
 					{

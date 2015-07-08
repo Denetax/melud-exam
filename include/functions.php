@@ -143,6 +143,16 @@
 		return $req;
 	}
 
+	function verif_if_album_exist($id)
+	{
+		$bdd = connexionBdd();
+		$result = Query($bdd,"SELECT nomalbum FROM db_concours WHERE tokenUser = '$id'" );
+		
+		$req = pg_fetch_all($result);
+		
+		return $req;
+	}
+
 	function insert_photo_via_facebook($id_user, $LienImage, $name_user){
 		$bdd = connexionBdd();
 		$req = Query($bdd,"INSERT INTO db_concours (tokenUser, href, nameuser) VALUES ('$id_user', '$LienImage', '$name_user')" );
