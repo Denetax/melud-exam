@@ -146,7 +146,7 @@
 	function verif_if_album_exist($id)
 	{
 		$bdd = connexionBdd();
-		$result = Query($bdd,"SELECT nomalbum FROM db_concours WHERE tokenUser = '$id'" );
+		$result = Query($bdd,"SELECT nomalbum FROM db_concours WHERE nameuser = '$id'" );
 		
 		$req = pg_fetch_all($result);
 		
