@@ -85,11 +85,7 @@
 
 				$name_user = recup_user_name($session);
 				$name_exist = verif_user_name($name_user);
-				
 				$album_exist = verif_if_album_exist($name_user);
-				var_dump($id_user);
-
-
 
 				if ($name_exist)
 				{
