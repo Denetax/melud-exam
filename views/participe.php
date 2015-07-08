@@ -91,7 +91,7 @@
 
 				if ($name_exist)
 				{
-					if($album_exist != "")
+					if($album_exist != NULL)
 					{
 
 						if(isset($_POST['participer']) && $_FILES['fichier']['name'] != "")
