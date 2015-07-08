@@ -91,6 +91,8 @@
 				{
 					if(!empty($album_exist))
 					{
+						var_dump(empty($album_exist));
+						var_dump(is_null($album_exist));
 
 						if(isset($_POST['participer']) && $_FILES['fichier']['name'] != "")
 						{
