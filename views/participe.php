@@ -87,12 +87,14 @@
 				$name_exist = verif_user_name($name_user);
 				$album_exist = verif_if_album_exist($name_user);
 
+				var_dump(empty($album_exist));
+						var_dump(is_null($album_exist));
+
 				if ($name_exist)
 				{
 					if(!empty($album_exist))
 					{
-						var_dump(empty($album_exist));
-						var_dump(is_null($album_exist));
+
 
 						if(isset($_POST['participer']) && $_FILES['fichier']['name'] != "")
 						{
