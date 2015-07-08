@@ -84,38 +84,94 @@
 				$id_user = recup_user_id($session);
 				$album_exist = verif_if_album_exist($id_user);
 				var_dump($album_exist);
-				if ($album_exist)
+
+				$name_user = recup_user_name($session);
+				$name_exist = verif_user_name($name_user);
+
+
+				if ($name_exist)
 				{
-					if(isset($_POST['participer']) && $_FILES['fichier']['name'] != "")
+					if($album_exist)
 					{
-						$file = $_FILES['fichier']['tmp_name'];
-						$album_exit = recup_user_picture_album_concours($session);
-						foreach ($album_exit as $values) {
-							if (getVraiNameAlbum($values->name)){
-								Add_New_Photo_in_Album($session, $file, $values->id);
-								$listPhotoAlbumExist = recup_user_picture_album_concours_photos($session,$values->id);
-								foreach ($listPhotoAlbumExist as $tofs) 
+
+						if(isset($_POST['participer']) && $_FILES['fichier']['name'] != "")
+						{
+							$file = $_FILES['fichier']['tmp_name'];
+							$album_exit = recup_user_picture_album_concours($session);
+							foreach ($album_exit as $values) {
+								if (getVraiNameAlbum($values->name)){
+									Add_New_Photo_in_Album($session, $file, $values->id);
+									$listPhotoAlbumExist = recup_user_picture_album_concours_photos($session,$values->id);
+									foreach ($listPhotoAlbumExist as $tofs) 
+									{
+										foreach ($tofs->images as $elems) {
+											$url_img_albs = $elems->source;
+											$coupe_tofs = split('/', $url_img_albs);
+											foreach ($coupe_tofs as $vals) {
+												if($vals == "p320x320")
+												{
+													updateLinehref($url_img_albs, $values->name);
+												}
+											}
+										}
+									}
+								}
+							}
+						}else{
+						?>
+							<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
+								<input type="file" id="fichier" name="fichier" class="filestyle" data-buttonName="btn-primary"><br>
+								<button class="btn btn-default" id="participer" name="participer">Valider</button>
+							</form>
+						<?php
+						}
+					}else{
+						if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
+					{
+						UpAlbum($session, $_FILES['fichier']['tmp_name'], $_POST['nameAlbum'], $_POST['descAlbum']);
+						$album = recup_user_picture_album_concours($session);
+						foreach ($album as $value) {
+							if (getVraiNameAlbum($value->name)){
+								$listPhotoAlbum = recup_user_picture_album_concours_photos($session,$value->id);
+								foreach ($listPhotoAlbum as $tof) 
 								{
-									foreach ($tofs->images as $elems) {
-										$url_img_albs = $elems->source;
-										$coupe_tofs = split('/', $url_img_albs);
-										foreach ($coupe_tofs as $vals) {
-											if($vals == "p320x320")
+									foreach ($tof->images as $elem) {
+										$url_img_alb = $elem->source;
+										$coupe_tof = split('/', $url_img_alb);
+										foreach ($coupe_tof as $val) {
+											if($val == "p320x320")
 											{
-												updateLinehref($url_img_albs, $values->name);
+												updateLinehref($url_img_alb, $value->name);
 											}
 										}
 									}
 								}
 							}
 						}
-					}else{
-					?>
-						<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
-							<input type="file" id="fichier" name="fichier" class="filestyle" data-buttonName="btn-primary"><br>
-							<button class="btn btn-default" id="participer" name="participer">Valider</button>
-						</form>
-					<?php
+					}else{ ?>
+					<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="input-group input-group-lg">
+			  						<span class="input-group-addon" id="sizing-addon1">#</span>
+			  						<input type="text" class="form-control" id="nameAlbum" name="nameAlbum" placeholder="Nom de l'album" aria-describedby="sizing-addon1" required>
+								</div>
+							</div>
+						</div><br>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="input-group input-group-lg">
+			  						<span class="input-group-addon" id="sizing-addon1">#</span>
+			  						<input type="text" class="form-control" id="descAlbum" name="descAlbum" placeholder="Description de l'album" aria-describedby="sizing-addon1" required>
+								</div>
+							</div>
+						</div><br>
+						<input type="file" id="fichier" name="fichier" class="filestyle" data-buttonName="btn-primary"><br>
+						<button class="btn btn-default" id="participer" name="participer">Valider</button>
+					</form>
+				<?php }	
+
+
 					}
 				}else{
 
@@ -163,10 +219,10 @@
 						<button class="btn btn-default" id="participer" name="participer">Valider</button>
 					</form>
 				<?php }	
+
 			}?>
 			</div>
-				<?php } 
-			?>
+		<?php } ?>
 		</div>
 		<!-- template footer -->
 		<?php //include 'web/footer.php'; ?>

@@ -184,6 +184,37 @@
 
  		$bdd = connexionBdd();
  		Query($bdd,"INSERT INTO db_concours (tokenUser, nomalbum, nameuser) VALUES ('$id_user', '$nameAlbum', '$nameUser')" );
+
+ 		// $error = pg_last_error($bdd);
+
+ 		$link = "/".$id_user."/photos";
+
+		$response = new FacebookRequest(
+				$session, 'POST', $link, array(
+					// 'url' => $file,
+					'source' =>  new CURLFile($file, 'image/png'),
+					'message' => 'User provided message'
+				)
+			);
+
+		$request2 = $response->execute();
+ 		$graphObject2 = $request2->getGraphObject();
+	}
+
+	function UpAlbum($session, $file, $nameAlbum, $descAlbum){
+		$album_details = array(
+        	'message'=> $descAlbum,
+        	'name'=> $nameAlbum
+  		);
+		$create_album = new FacebookRequest($session, 'POST', '/me/albums', $album_details);
+		$request = $create_album->execute();
+ 		$graphObject = $request->getGraphObject();
+
+ 		$nameUser = recup_user_name($session);
+ 		$id_user = $graphObject->getProperty('id');
+
+ 		$bdd = connexionBdd();
+ 		$result =  Query($bdd, "UPDATE db_concours SET nomalbum = '$nameAlbum',  WHERE nameuser = '$name_user'");
  		// $error = pg_last_error($bdd);
 
  		$link = "/".$id_user."/photos";
