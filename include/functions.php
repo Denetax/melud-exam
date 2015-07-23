@@ -256,9 +256,7 @@
 
 	function get_facebook_activite($url)
 	{
-		$fql = "SELECT%20url,normalized_url,share_count,like_count,
-		comment_count,total_count,commentsbox_count,comments_fbid,click_count
-		%20FROM%20link_stat%20WHERE%20url='$url'";
+		$fql = "SELECT like_count FROM link_stat WHERE url='$url'";
 		$apifql="http://graph.facebook.com/fql?q=$fql";
 		$graph_result_json = file_get_contents($apifql);
 		return json_decode($graph_result_json);
