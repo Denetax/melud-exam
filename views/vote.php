@@ -27,7 +27,10 @@
 					<input id="inputNameUser" value="<?php echo $value['nameUser'] ?>"  type="text" style="display:none;"/>
 					<input id="inputSrc" name="inputSrc" type="text" style="display:none;" value=""/>
 					<div id="fboverlay" class="fb-like" data-href="<?php echo $value['href'] ?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
-					<?php var_dump(get_facebook_activite($value['href'])); ?>
+					<?php 
+						echo $value['href'];
+						var_dump(get_facebook_activite($value['href'])); 
+					?>
 				</div>
 			<?php 
 			} 
