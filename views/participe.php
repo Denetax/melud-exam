@@ -87,8 +87,6 @@
 				$name_exist = verif_user_name($name_user);
 				$album_exist = verif_if_album_exist($name_user);
 
-				var_dump($album_exist[0]['nomalbum']);
-
 					if (isset($_POST['participer']) && $_FILES['fichier']['name'] != "" && $_POST['nameAlbum'] != "" && $_POST['descAlbum'] != "")
 					{
 						createAlbum($session, $_FILES['fichier']['tmp_name'], $_POST['nameAlbum'], $_POST['descAlbum']);
