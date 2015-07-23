@@ -110,7 +110,7 @@
 							}
 						}
 					}else{ ?>
-					<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com">
+					<form enctype="multipart/form-data" method="POST" action="https://melud-exam.herokuapp.com/views/participe.php">
 						<div class="row">
 							<div class="col-sm-6">
 								<div class="input-group input-group-lg">
